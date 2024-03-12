@@ -1,0 +1,20 @@
+﻿<UserControl x:Class="Window_Final_Term_Projcet__WPF_.UCInformation"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Window_Final_Term_Projcet__WPF_"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Label Content="Place, City or Hotel" Margin="25,38,361,0" VerticalAlignment="Top" Foreground="White" Height="43" FontFamily="JetBrainsMono Nerd Font" FontSize="30"/>
+        <TextBox HorizontalAlignment="Left" Margin="25,86,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="750" Height="80"/>
+        <Label Content="Room Type" Margin="25,189,412,0" VerticalAlignment="Top" Foreground="White" Height="43" FontFamily="JetBrainsMono Nerd Font" FontSize="30"/>
+        <ComboBox HorizontalAlignment="Left" Margin="25,237,0,0" VerticalAlignment="Top" Width="750" Height="78">
+            <CheckBox/>
+            <RadioButton/>
+            <ComboBoxItem/>
+        </ComboBox>
+
+    </Grid>
+</UserControl>

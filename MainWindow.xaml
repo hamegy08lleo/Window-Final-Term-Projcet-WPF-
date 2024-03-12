@@ -6,5 +6,7 @@
         xmlns:local="clr-namespace:Window_Final_Term_Projcet__WPF_"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid/>
+    <Grid Background="#FF581717">
+        <local:UCInformation HorizontalAlignment="Center" VerticalAlignment="Center" Width="780" Height="414"/>
+    </Grid>
 </Window>
