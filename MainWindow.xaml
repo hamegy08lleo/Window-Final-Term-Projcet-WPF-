@@ -5,15 +5,62 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Window_Final_Term_Projcet__WPF_"
         mc:Ignorable="d"
-        Title="MainWindow" Height="500" Width="800">
+        Title="horizon Trail Travel" Height="500" Width="800" ResizeMode="NoResize">
     <Grid>
-        <DockPanel x:Name="panelTop" Width="800" Margin="0,0,0,338" >
+        <DockPanel x:Name="panelTop" Width="800" HorizontalAlignment="Center" VerticalAlignment="Top" >
+            <DockPanel.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF0499F7"/>
+                    <GradientStop Color="#FF68C2FA" Offset="1"/>
+                    <GradientStop Color="#FFCDEBFD" Offset="1"/>
+                    <GradientStop Color="#FF46B4F8" Offset="0.798"/>
+                </LinearGradientBrush>
+            </DockPanel.Background>
             <Image x:Name="imgLogo"  Height="100" Width="100" Margin="10,5,0,0" Source="/HorizonTrailLogo.png" Stretch="UniformToFill"/>
-            <Label Content="Horizon Trail Travel" Width="222" Margin="0,0,0,20" FontSize="24" FontFamily="Yu Gothic UI Semilight" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+            <Label Content="Horizon Trail Travel" Width="222" Margin="0,6,0,15" FontSize="24" FontFamily="Yu Gothic UI Semilight" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+            
+            <DockPanel LastChildFill="False" Margin="0,0,0,0">
+                
+                <Button x:Name="btnRegister" 
+                        Content="Register" DockPanel.Dock="Right" Width="100" Height="50" FontSize="16" Margin="5,10,10,0">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="10"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button x:Name="btnLogin"
+                        Content="Login" DockPanel.Dock="Right" Width="100" Height="50" FontSize="16" Margin="5,10,5,0" Padding="1,1,1,1">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="10"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                
+                
+                <Button x:Name="btnBooking" 
+                    Content="Booking" DockPanel.Dock="Right" Width="100"  Height="50" FontSize="16" Margin="5,10,5,0">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="10"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                
+                <Button x:Name="btnPartnership" 
+                    Content="Partnership" DockPanel.Dock="Right" Width="100" Height="50" FontSize="16" Margin="0,10,5,0">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="10"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+
+            </DockPanel>
+
         </DockPanel>
-        <DockPanel x:Name="PanelBot" Height="370" Width="800" Margin="0,135,0,0" />
-
-
-
+        <DockPanel x:Name="PanelBot" Height="370" Width="800" Margin="0,135,0,0" Background="#FFF9FDFF" />
+        
     </Grid>
 </Window>
