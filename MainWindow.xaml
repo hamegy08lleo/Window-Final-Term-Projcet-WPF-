@@ -5,6 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Window_Final_Term_Projcet__WPF_"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid/>
+        Title="MainWindow" Height="500" Width="800">
+    <Grid>
+        <DockPanel x:Name="panelTop" Width="800" Margin="0,0,0,338" >
+            <Image x:Name="imgLogo"  Height="100" Width="100" Margin="10,5,0,0" Source="/HorizonTrailLogo.png" Stretch="UniformToFill"/>
+            <Label Content="Horizon Trail Travel" Width="222" Margin="0,0,0,20" FontSize="24" FontFamily="Yu Gothic UI Semilight" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+        </DockPanel>
+        <DockPanel x:Name="PanelBot" Height="370" Width="800" Margin="0,135,0,0" />
+
+
+
+    </Grid>
 </Window>
