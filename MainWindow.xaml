@@ -7,52 +7,72 @@
         mc:Ignorable="d"
         Title="horizon Trail Travel" Height="500" Width="800" ResizeMode="NoResize">
     <Grid>
-        <DockPanel x:Name="panelTop" Width="800" HorizontalAlignment="Center" VerticalAlignment="Top" Background="#FFCDEBFD" >
+        <DockPanel x:Name="panelMenu" Height="130" Width="800" HorizontalAlignment="Center" VerticalAlignment="Top" Background="#FFD4E5EF" Margin="0,-15,0,0"  >
+           
             <Image x:Name="imgLogo"  Height="100" Width="100" Margin="10,5,0,0" Source="/HorizonTrailLogo.png" Stretch="UniformToFill"/>
-            <Label Content="Horizon Trail Travel" Width="222" Margin="0,6,0,15" FontSize="24" FontFamily="Yu Gothic UI Semilight" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
-
+            <Label x:Name="lblLogo" Content="Horizon Trail Travel" Width="222" Margin="0,6,0,15" FontSize="24" FontFamily="Yu Gothic UI Semilight" HorizontalAlignment="Left" VerticalAlignment="Bottom" MouseDown="lblLogo_MouseDown"/>
+        
             <DockPanel LastChildFill="False" Margin="0,0,0,0">
 
                 <Button x:Name="btnRegister" 
-                        Content="Register" DockPanel.Dock="Right" Width="100" Height="50" FontSize="16" Margin="5,10,10,0" Background="#FF9BD6FC">
+                        Content="Register" DockPanel.Dock="Right" Width="100" Height="50" FontSize="16" Margin="5,10,10,0" Background="#FF36ADF9" BorderBrush="#FF36ADF9" FontWeight="Bold" Foreground="White">
                     <Button.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" Value="10"/>
                         </Style>
                     </Button.Resources>
                 </Button>
-                <Button x:Name="btnLogin"
-                        Content="Login" DockPanel.Dock="Right" Width="100" Height="50" FontSize="16" Margin="5,10,5,0" Padding="1,1,1,1">
+                <Button x:Name="btnLogin" BorderThickness="3,3,3,3"
+                        Content="Login" DockPanel.Dock="Right" Width="100" Height="50" FontSize="16" Margin="5,10,5,0" Padding="1,1,1,1" FontWeight="Bold" BorderBrush="#FF36ADF9" Foreground="#FF090000">
                     <Button.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" Value="10"/>
                         </Style>
                     </Button.Resources>
+                    <Button.Background>
+                        <SolidColorBrush Color="#FF010F18" Opacity="0"/>
+                    </Button.Background>
                 </Button>
 
 
                 <Button x:Name="btnBooking" 
-                    Content="Booking" DockPanel.Dock="Right" Width="100"  Height="50" FontSize="16" Margin="5,10,5,0">
+                    Content="Booking" DockPanel.Dock="Right" Width="100"  Height="50" FontSize="16" Margin="5,10,5,0" FontWeight="Bold">
                     <Button.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" Value="10"/>
                         </Style>
                     </Button.Resources>
+                    <Button.BorderBrush>
+                        <SolidColorBrush Color="#FF707070" Opacity="0"/>
+                    </Button.BorderBrush>
+                    <Button.Background>
+                        <SolidColorBrush Color="#FFDDDDDD" Opacity="0"/>
+                    </Button.Background>
                 </Button>
 
                 <Button x:Name="btnPartnership" 
-                    Content="Partnership" DockPanel.Dock="Right" Width="100" Height="50" FontSize="16" Margin="0,10,5,0">
+                    Content="Partnership" DockPanel.Dock="Right" Width="100" Height="50" FontSize="16" Margin="0,10,5,0" FontWeight="Bold">
                     <Button.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" Value="10"/>
                         </Style>
                     </Button.Resources>
+                    <Button.BorderBrush>
+                        <SolidColorBrush Color="#FF707070" Opacity="0"/>
+                    </Button.BorderBrush>
+                    <Button.Background>
+                        <SolidColorBrush Color="#FFDDDDDD" Opacity="0"/>
+                    </Button.Background>
                 </Button>
 
             </DockPanel>
 
         </DockPanel>
-        <DockPanel x:Name="PanelBot" Height="370" Width="800" Margin="0,135,0,0" Background="#FFF9FDFF" />
 
+
+
+        <DockPanel x:Name="panelContent" Height="370" Width="800" HorizontalAlignment="Center" VerticalAlignment="Bottom">
+            
+        </DockPanel>
     </Grid>
 </Window>

@@ -16,26 +16,13 @@ using System.Windows.Shapes;
 namespace Window_Final_Term_Projcet__WPF_
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for CustomerPage.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class CustomerPage : Page
     {
-        public MainWindow()
+        public CustomerPage()
         {
             InitializeComponent();
-
         }
-
-        private void lblLogo_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            MainWindow mainWindow = new MainWindow();
-            mainWindow.Show();
-        }
-        private void Load_Main_Windows(object sender, RoutedEventArgs e)
-        {
-            MainWindow mainWindow = new MainWindow();
-            mainWindow.Show();
-        }
-       
     }
 }
