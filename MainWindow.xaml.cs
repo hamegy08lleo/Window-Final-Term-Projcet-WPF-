@@ -36,11 +36,15 @@ namespace Window_Final_Term_Projcet__WPF_
             //this.Hide();
             //mainWindow.ShowDialog();
             mainContent.Content = null;
+            mainContent.Content = new CustomerPage();
         }
-
+        private void imgLogo_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            lblLogo_MouseDown(sender, e);
+        }
         private void btnRegister_Click(object sender, RoutedEventArgs e)
         {
-            mainContent.Content = new CustomerPage();
+            
         }
 
         private void btnLogin_Click(object sender, RoutedEventArgs e)
@@ -58,10 +62,6 @@ namespace Window_Final_Term_Projcet__WPF_
 
         }
 
-        private void btnLogin_Click(object sender, RoutedEventArgs e)
-        {
-            WindowLogin windowLogin =  new WindowLogin();
-            windowLogin.Show();
-        }
+        
     }
 }

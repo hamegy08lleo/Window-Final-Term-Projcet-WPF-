@@ -9,7 +9,7 @@
     <Grid>
         <DockPanel x:Name="panelMenu" Height="130" Width="800" HorizontalAlignment="Center" VerticalAlignment="Top" Background="#FFD4E5EF" Margin="0,-15,0,0"  >
 
-            <Image x:Name="imgLogo"  Height="100" Width="100" Margin="10,5,0,0" Source="/HorizonTrailLogo.png" Stretch="UniformToFill"/>
+            <Image x:Name="imgLogo"  Height="100" Width="100" Margin="10,5,0,0" Source="/HorizonTrailLogo.png" Stretch="UniformToFill" MouseDown="imgLogo_MouseDown"/>
             <Label x:Name="lblLogo" Content="Horizon Trail Travel" Width="222" Margin="0,6,0,15" FontSize="24" FontFamily="Yu Gothic UI Semilight" HorizontalAlignment="Left" VerticalAlignment="Bottom" MouseDown="lblLogo_MouseDown"/>
 
             <StackPanel x:Name="pnlButton" Orientation="Horizontal" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,10,26">
