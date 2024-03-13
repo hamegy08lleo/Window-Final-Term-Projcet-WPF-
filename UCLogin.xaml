@@ -13,6 +13,7 @@
         <local:UCInformation HorizontalAlignment="Left" Height="0" Margin="10,119,0,0" VerticalAlignment="Top" Width="61"/>
         <Label Content="Horizon Trail Travel" FontSize="24" FontFamily="Yu Gothic UI Semilight" Margin="259,310,0,0" FontWeight="Bold" Background="{x:Null}" Foreground="Black" HorizontalAlignment="Left" Width="206" Height="47" VerticalAlignment="Top"/>
         <PasswordBox Margin="474,246,0,0" Height="40" HorizontalAlignment="Left" Width="300" VerticalAlignment="Top"/>
+        <Label Content="LOGIN" HorizontalAlignment="Left" Margin="474,42,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="26"/>
         <Image Height="300" Margin="76,10,0,0" VerticalAlignment="Top" Source="/HorizonTrailLogo.png" HorizontalAlignment="Left" Width="300"/>
 
     </Grid>
