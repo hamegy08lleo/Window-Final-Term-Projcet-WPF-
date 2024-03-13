@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace Window_Final_Term_Projcet__WPF_
 {
     /// <summary>
-    /// Interaction logic for PCustomer.xaml
+    /// Interaction logic for Pcustomer.xaml
     /// </summary>
-    public partial class PCustomer : Page
+    public partial class Pcustomer : Page
     {
-        public PCustomer()
+        public Pcustomer()
         {
             InitializeComponent();
         }

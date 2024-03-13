@@ -23,19 +23,15 @@ namespace Window_Final_Term_Projcet__WPF_
         public MainWindow()
         {
             InitializeComponent();
+            mainContent.Content = new Pcustomer();
+
 
         }
 
         private void lblLogo_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            //MainWindow mainWindow = new MainWindow();
-            //mainWindow.Owner = this;
-            //mainWindow.WindowStartupLocation = WindowStartupLocation.CenterOwner;
-            //mainWindow.Left = 100; // set the left position
-            //mainWindow.Top = 100; // set the top position
-            //this.Hide();
-            //mainWindow.ShowDialog();
             mainContent.Content = null;
+            mainContent.Content = new Pcustomer();
         }
         private void imgLogo_MouseDown(object sender, MouseButtonEventArgs e)
         {
@@ -45,15 +41,6 @@ namespace Window_Final_Term_Projcet__WPF_
         {
             WindowLogin windowLogin = new WindowLogin();
             windowLogin.ShowDialog();
-        }
-        private void btnBooking_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void btnPartnership_Click(object sender, RoutedEventArgs e)
-        {
-
         }
 
         private void btnLogin_Click(object sender, RoutedEventArgs e)
