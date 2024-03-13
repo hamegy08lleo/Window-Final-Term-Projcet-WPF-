@@ -1,4 +1,4 @@
-﻿<Page x:Class="Window_Final_Term_Projcet__WPF_.PCustomer"
+﻿<Page x:Class="Window_Final_Term_Projcet__WPF_.Pcustomer"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -6,10 +6,10 @@
       xmlns:local="clr-namespace:Window_Final_Term_Projcet__WPF_"
       mc:Ignorable="d" 
       d:DesignHeight="370" d:DesignWidth="800"
-      Title="PCustomer">
+      Title="Pcustomer">
 
     <Grid>
-        <local:UCInformation HorizontalAlignment="Left" Margin="-3,0,0,0" VerticalAlignment="Center"/>
+        <local:UCInformation HorizontalAlignment="Center" Margin="0,-48,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Page>
