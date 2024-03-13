@@ -16,19 +16,13 @@ using System.Windows.Shapes;
 namespace Window_Final_Term_Projcet__WPF_
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for UCLogin.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class UCLogin : UserControl
     {
-        public MainWindow()
+        public UCLogin()
         {
             InitializeComponent();
-        }
-
-        private void btnLogin_Click(object sender, RoutedEventArgs e)
-        {
-            WindowLogin windowLogin =  new WindowLogin();
-            windowLogin.Show();
         }
     }
 }

@@ -22,7 +22,7 @@
                     </Button.Resources>
                 </Button>
                 <Button x:Name="btnLogin"
-                        Content="Login" DockPanel.Dock="Right" Width="100" Height="50" FontSize="16" Margin="5,10,5,0" Padding="1,1,1,1">
+                        Content="Login" DockPanel.Dock="Right" Width="100" Height="50" FontSize="16" Margin="5,10,5,0" Padding="1,1,1,1" Click="btnLogin_Click">
                     <Button.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" Value="10"/>
@@ -52,7 +52,6 @@
             </DockPanel>
 
         </DockPanel>
-        <DockPanel x:Name="PanelBot" Height="370" Width="800" Margin="0,135,0,0" Background="#FFF9FDFF" />
 
     </Grid>
 </Window>

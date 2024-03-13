@@ -10,25 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Window_Final_Term_Projcet__WPF_
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for WindowLogin.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class WindowLogin : Window
     {
-        public MainWindow()
+        public WindowLogin()
         {
             InitializeComponent();
-        }
-
-        private void btnLogin_Click(object sender, RoutedEventArgs e)
-        {
-            WindowLogin windowLogin =  new WindowLogin();
-            windowLogin.Show();
         }
     }
 }
