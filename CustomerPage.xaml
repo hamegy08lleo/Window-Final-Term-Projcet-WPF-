@@ -9,7 +9,7 @@
       Title="CustomerPage">
 
     <Grid x:Name="grdMain" Background="White">
-        <local:UCInformation HorizontalAlignment="Center" VerticalAlignment="Top" Height="313" Width="800"/>
+        <local:UCInformation HorizontalAlignment="Center" VerticalAlignment="Top" Height="313" Width="800" BorderBrush="Black"/>
 
 
     </Grid>
