@@ -58,11 +58,14 @@
     <Compile Include="UCInformation.xaml.cs">
       <DependentUpon>UCInformation.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UCLogin.xaml.cs">
-      <DependentUpon>UCLogin.xaml</DependentUpon>
+    <Compile Include="UCLogo.xaml.cs">
+      <DependentUpon>UCLogo.xaml</DependentUpon>
     </Compile>
     <Compile Include="WindowLogin.xaml.cs">
       <DependentUpon>WindowLogin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WindowRegister.xaml.cs">
+      <DependentUpon>WindowRegister.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -80,11 +83,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="UCLogin.xaml">
+    <Page Include="UCLogo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="WindowLogin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WindowRegister.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -117,6 +124,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="HorizonTrailLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
