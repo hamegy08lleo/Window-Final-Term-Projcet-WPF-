@@ -23,6 +23,39 @@ namespace Window_Final_Term_Projcet__WPF_
         public MainWindow()
         {
             InitializeComponent();
+
+        }
+
+        private void lblLogo_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            //MainWindow mainWindow = new MainWindow();
+            //mainWindow.Owner = this;
+            //mainWindow.WindowStartupLocation = WindowStartupLocation.CenterOwner;
+            //mainWindow.Left = 100; // set the left position
+            //mainWindow.Top = 100; // set the top position
+            //this.Hide();
+            //mainWindow.ShowDialog();
+            mainContent.Content = null;
+        }
+
+        private void btnRegister_Click(object sender, RoutedEventArgs e)
+        {
+            mainContent.Content = new CustomerPage();
+        }
+
+        private void btnLogin_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnBooking_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnPartnership_Click(object sender, RoutedEventArgs e)
+        {
+
         }
 
         private void btnLogin_Click(object sender, RoutedEventArgs e)
