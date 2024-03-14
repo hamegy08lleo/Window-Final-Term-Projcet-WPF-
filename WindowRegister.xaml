@@ -12,6 +12,5 @@
         <Label Content="Password&#xA;" Margin="487,213,0,0" FontSize="24" Height="54" VerticalAlignment="Top" HorizontalAlignment="Left" Width="294"/>
         <PasswordBox Margin="487,250,0,0" FontSize="24" Height="40" VerticalAlignment="Top" HorizontalAlignment="Left" Width="300"/>
         <Label Content="REGISTER" HorizontalAlignment="Left" Margin="487,46,0,0" FontWeight="Bold" FontSize="26" Height="45" VerticalAlignment="Top"/>
-        <local:UCLogin HorizontalAlignment="Left" VerticalAlignment="Center" Width="482" Height="434"/>
     </Grid>
 </Window>

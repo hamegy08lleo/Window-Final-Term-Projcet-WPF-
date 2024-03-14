@@ -58,9 +58,6 @@
     <Compile Include="UCInformation.xaml.cs">
       <DependentUpon>UCInformation.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UCLogo.xaml.cs">
-      <DependentUpon>UCLogo.xaml</DependentUpon>
-    </Compile>
     <Compile Include="WindowLogin.xaml.cs">
       <DependentUpon>WindowLogin.xaml</DependentUpon>
     </Compile>
@@ -80,10 +77,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="UCInformation.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="UCLogo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

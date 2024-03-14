@@ -5,18 +5,30 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Window_Final_Term_Projcet__WPF_"
         mc:Ignorable="d"
-        Title="WindowLogin" Height="450" Width="850">
-    <Grid>
+        Title="WindowLogin" Height="450" Width="800">
+    <Grid ShowGridLines="False">
         <Grid.RowDefinitions>
-            <RowDefinition Height="73*"/>
-            <RowDefinition Height="257*"/>
-            <RowDefinition Height="104*"/>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="250*"/>
+            <RowDefinition Height="100*"/>
         </Grid.RowDefinitions>
-        <TextBox x:Name="txtUsername" Text ="Username or email" Foreground="Gray" Margin="487,86,0,0" TextWrapping="Wrap" FontSize="24" Height="40" VerticalAlignment="Top" HorizontalAlignment="Left" Width="300" Grid.Row="1" GotFocus="txtUsername_GotFocus" LostFocus="txtUsername_LostFocus"/>
-            
-        <PasswordBox x:Name="pabPassword" Margin="487,204,0,0" FontSize="24" Height="40" VerticalAlignment="Top" HorizontalAlignment="Left" Width="300" Grid.Row="1" LostFocus="pabPassword_LostFocus"/>
-        <Label Content="LOGIN" HorizontalAlignment="Left" Margin="487,73,0,0" FontWeight="Bold" FontSize="26" Height="45" VerticalAlignment="Top" Grid.RowSpan="2"/>
-        <Button x:Name="btnLogin" Content="Login" FontSize ="24" HorizontalAlignment="Left" Margin="687,41,0,0" Grid.Row="2" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Height="50" Width="100" BorderBrush="#FF809093" Background="{x:Null}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="400*"/>
+            <ColumnDefinition Width="400*"/>
+        </Grid.ColumnDefinitions>
+        <Grid ShowGridLines="False" Grid.Row="1" Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="125*"/>
+                <RowDefinition Height="125*"/>
+            </Grid.RowDefinitions>
+            <TextBox x:Name="txtUsername" Text ="Username or email" Foreground="Gray" Margin="0,0,0,0" TextWrapping="Wrap" FontSize="24" Height="35" VerticalAlignment="Top" HorizontalAlignment="Left" Width="300" Grid.Row ="0" GotFocus="txtUsername_GotFocus" LostFocus="txtUsername_LostFocus"/>
+            <PasswordBox x:Name="pabPassword" Margin="0,0,0,0" FontSize="24" Height="40" VerticalAlignment="Top" HorizontalAlignment="Left" Width="300" Grid.Row="1" LostFocus="pabPassword_LostFocus"/>
+            <TextBox x:Name="txtPassword" Text ="Password" Foreground="Gray" Margin="0, 0,0,0" TextWrapping="Wrap" FontSize="24" Height="40" VerticalAlignment="Top" HorizontalAlignment="Left" Width="300" Grid.Row="1" GotFocus="txtPassword_GotFocus"/>
+        </Grid>
+
+        <Image Name="imgLogo" Source="HorizonTrailLogo.png" Grid.Row="1" Grid.Column="0" Width="200" Height="200"></Image>
+        <Label Grid.Row ="0" Grid.Column="1" Content="LOGIN" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontWeight="Bold" FontSize="26" Height="45"/>
+        <Button Grid.Row="2" Grid.Column="1" x:Name="btnLogin" Content="Login" FontSize ="24" HorizontalAlignment="Left"  VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Height="50" Width="100" BorderBrush="#FF809093" Background="{x:Null}">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -26,7 +38,5 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <local:UCLogin HorizontalAlignment="Left" VerticalAlignment="Top" Grid.RowSpan="3" Width="487"/>
-        <TextBox x:Name="txtPassword" Text ="Password" Foreground="Gray" Margin="487,204,0,0" TextWrapping="Wrap" FontSize="24" Height="40" VerticalAlignment="Top" HorizontalAlignment="Left" Width="300" Grid.Row="1" GotFocus="txtPassword_GotFocus"/>
     </Grid>
 </Window>
