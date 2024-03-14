@@ -196,7 +196,14 @@
         <ComboBox x:Name="cbbRoomType"
                   Style="{DynamicResource theComboBox}"
                   ItemContainerStyle="{DynamicResource theComboBoxItem}"
-                  Margin="100,191,99,0" VerticalAlignment="Top" Height="50"/>
+                  Margin="100,191,99,0" VerticalAlignment="Top" Height="50" ScrollViewer.VerticalScrollBarVisibility="Hidden">
+            <ComboBoxItem Content="1 single bed"/>
+            <ComboBoxItem Content="1 double bed"/>
+            <ComboBoxItem Content="2 single bed"/>
+            <ComboBoxItem Content="2 double bed"/>
+            <ComboBoxItem Content="1 single bed 1 double bed"/>
+        </ComboBox>
+
 
     </Grid>
 
