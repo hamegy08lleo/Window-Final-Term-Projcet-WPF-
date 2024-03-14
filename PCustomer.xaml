@@ -169,7 +169,7 @@
     </Page.Resources>
     <Grid>
 
-        <local:UCInformation HorizontalAlignment="Left" Margin="-6,-65,0,0" VerticalAlignment="Top"/>
+        <local:UCInformation HorizontalAlignment="Center" Margin="0,-72,0,0" VerticalAlignment="Top" Width="801"/>
 
 
         <Label Content="Check-in"
@@ -178,12 +178,12 @@
             VerticalContentAlignment="Center" Width="100"/>
 
         <Label Content="Duration"
-            Margin="312,174,388,0" VerticalAlignment="Top" Foreground="Black"
+            Margin="404,175,296,0" VerticalAlignment="Top" Foreground="Black"
             Height="40" FontFamily="JetBrainsMono Nerd Font" FontSize="18" 
             VerticalContentAlignment="Center" Width="100"/>
 
         <Label Content="Check-out"
-            Margin="500,174,200,0" VerticalAlignment="Top" Foreground="Black"
+            Margin="554,175,146,0" VerticalAlignment="Top" Foreground="Black"
             Height="40" FontFamily="JetBrainsMono Nerd Font" FontSize="18" 
             VerticalContentAlignment="Center" Width="100"/>
 
@@ -191,26 +191,21 @@
         <ComboBox x:Name="cbbRoomType"
           Style="{DynamicResource theComboBox}"
           ItemContainerStyle="{DynamicResource theComboBoxItem}"
-          Margin="279,205,351,0" VerticalAlignment="Top" Height="50" Width="170"/>
+          Margin="389,206,281,0" VerticalAlignment="Top" Height="50" FontSize="18" MinWidth="100" Padding="5,0,0,0">
+
+            <ComboBoxItem Content="1 night"/>
+            <ComboBoxItem Content="10 nights"/>
+
+        </ComboBox>
 
 
 
-        <Label x:Name="lblCheckout" Margin="485,205,145,0" Content=" "
+        <Label x:Name="lblCheckout" Margin="560,206,130,0" Content=""
                VerticalAlignment="Top" Height="50" VerticalContentAlignment="Center" 
-               FontSize="24" Padding="25,0,30,0" BorderBrush="Black" Background="White" OpacityMask="Black" Width="170">
-            <Label.Resources>
-                <Style TargetType="{x:Type Border}">
-                    <Setter Property="CornerRadius" Value="30" />
-
-                </Style>
-            </Label.Resources>
-        </Label>
-        <DatePicker HorizontalAlignment="Left" Margin="137,206,0,0" VerticalAlignment="Top" Width="147.7" Height="32" RenderTransformOrigin="0.9,0.778" >
-            <DatePicker.BlackoutDates>
-                <CalendarDateRange Start="3/1/2010" End="3/7/2010" />
-                <CalendarDateRange Start="3/8/2010" End="3/8/2010" />
-            </DatePicker.BlackoutDates>    
-        </DatePicker>
+               FontSize="18" Padding="0,0,0,0" BorderBrush="Black" Background="White" Width="110"/>
+        <DatePicker x:Name="dtpCheckin" Margin="140,175,430,86" BorderBrush="Black"
+            Style="{StaticResource DatePickerStyle}"
+                            />
 
 
     </Grid>
