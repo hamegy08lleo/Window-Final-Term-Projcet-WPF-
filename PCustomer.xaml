@@ -7,7 +7,7 @@
       xmlns:local="clr-namespace:Window_Final_Term_Projcet__WPF_"
       xmlns:sys="clr-namespace:System;assembly=mscorlib"
       mc:Ignorable="d" 
-      d:DesignHeight="370" d:DesignWidth="800"
+      d:DesignHeight="500" d:DesignWidth="800"
       Title="Pcustomer">
     <Page.Resources>
         <Style x:Key="ComboBoxToggleButton" TargetType="ToggleButton">
@@ -169,73 +169,86 @@
         </Style>
     </Page.Resources>
     <Grid>
-
-        <Label x:Name="lblCheckout" Margin="560,206,130,0"
-       VerticalAlignment="Top" Height="50" VerticalContentAlignment="Center" 
-       FontSize="18" Padding="0,0,0,0" BorderBrush="Black" Background="White" Width="110"/>
-        <local:UCInformation HorizontalAlignment="Center" Margin="0,-72,0,0" VerticalAlignment="Top" Width="801"/>
-
-
-        <Label Content="Check-in"
-            Margin="150,174,550,0" VerticalAlignment="Top" Foreground="Black"
-            Height="40" FontFamily="JetBrainsMono Nerd Font" FontSize="18" 
-            VerticalContentAlignment="Center" Width="100"/>
-
-        <Label Content="Duration"
-            Margin="404,175,296,0" VerticalAlignment="Top" Foreground="Black"
-            Height="40" FontFamily="JetBrainsMono Nerd Font" FontSize="18" 
-            VerticalContentAlignment="Center" Width="100"/>
-
-        <Label Content="Check-out"
-            Margin="554,175,146,0" VerticalAlignment="Top" Foreground="Black"
-            Height="40" FontFamily="JetBrainsMono Nerd Font" FontSize="18" 
-            VerticalContentAlignment="Center" Width="100"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height ="250"/>
+            <RowDefinition Height ="150"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="100"/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Column ="3" x:Name="lblCheckout"
+            Margin="0, 35, 0, 0"
+           VerticalAlignment="Top" Height="50" VerticalContentAlignment="Center" 
+           FontSize="18" Padding="0,0,0,0" BorderBrush="Black" Background="White" Width="110"/>
 
 
-        <ComboBox x:Name="cbbDuration"
-          SelectedIndex="0"
-          Style="{DynamicResource theComboBox}"
-          ItemContainerStyle="{DynamicResource theComboBoxItem}"
-          Margin="389,206,281,0" VerticalAlignment="Top" Height="50" FontSize="18" MinWidth="100" Padding="5,0,0,0"
-            MaxDropDownHeight="100" ScrollViewer.VerticalScrollBarVisibility="Hidden" >
-            <ComboBoxItem Content="1 night"/>
-            <ComboBoxItem Content="2 nights"/>
-            <ComboBoxItem Content="3 nights"/>
-            <ComboBoxItem Content="4 nights"/>
-            <ComboBoxItem Content="5 nights"/>
-            <ComboBoxItem Content="6 nights"/>
-            <ComboBoxItem Content="7 nights"/>
-            <ComboBoxItem Content="8 nights"/>
-            <ComboBoxItem Content="9 nights"/>
-            <ComboBoxItem Content="10 nights"/>
-            <ComboBoxItem Content="11 nights"/>
-            <ComboBoxItem Content="12 nights"/>
-            <ComboBoxItem Content="13 nights"/>
-            <ComboBoxItem Content="14 nights"/>
-            <ComboBoxItem Content="15 nights"/>
-            <ComboBoxItem Content="16 nights"/>
-            <ComboBoxItem Content="17 nights"/>
-            <ComboBoxItem Content="18 nights"/>
-            <ComboBoxItem Content="19 nights"/>
-            <ComboBoxItem Content="20 nights"/>
-            <ComboBoxItem Content="21 nights"/>
-            <ComboBoxItem Content="22 nights"/>
-            <ComboBoxItem Content="23 nights"/>
-            <ComboBoxItem Content="24 nights"/>
-            <ComboBoxItem Content="25 nights"/>
-            <ComboBoxItem Content="26 nights"/>
-            <ComboBoxItem Content="27 nights"/>
-            <ComboBoxItem Content="28 nights"/>
-            <ComboBoxItem Content="29 nights"/>
-            <ComboBoxItem Content="30 nights"/>
-        </ComboBox>
+            <Label Grid.Column ="1" Content="Check-in"
+                 VerticalAlignment="Top" Foreground="Black"
+                Height="40" FontFamily="JetBrainsMono Nerd Font" FontSize="18" 
+                VerticalContentAlignment="Center" Width="100"/>
+
+            <Label Grid.Column ="2" Content="Duration"
+                VerticalAlignment="Top" Foreground="Black"
+                Height="40" FontFamily="JetBrainsMono Nerd Font" FontSize="18" 
+                VerticalContentAlignment="Center" Width="100"/>
+
+            <Label Grid.Column="3" Content="Check-out"
+                VerticalAlignment="Top" Foreground="Black"
+                Height="40" FontFamily="JetBrainsMono Nerd Font" FontSize="18" 
+                VerticalContentAlignment="Center" Width="100"/>
+
+
+            <ComboBox Grid.Column ="2" x:Name="cbbDuration"
+              SelectedIndex="0" Margin="0, 35, 0, 0"
+              Style="{DynamicResource theComboBox}"
+              ItemContainerStyle="{DynamicResource theComboBoxItem}"
+              VerticalAlignment="Top" Height="50" FontSize="18" MinWidth="100" Padding="5,0,0,0"
+                MaxDropDownHeight="100" ScrollViewer.VerticalScrollBarVisibility="Hidden" >
+                <ComboBoxItem Content="1 night"/>
+                <ComboBoxItem Content="2 nights"/>
+                <ComboBoxItem Content="3 nights"/>
+                <ComboBoxItem Content="4 nights"/>
+                <ComboBoxItem Content="5 nights"/>
+                <ComboBoxItem Content="6 nights"/>
+                <ComboBoxItem Content="7 nights"/>
+                <ComboBoxItem Content="8 nights"/>
+                <ComboBoxItem Content="9 nights"/>
+                <ComboBoxItem Content="10 nights"/>
+                <ComboBoxItem Content="11 nights"/>
+                <ComboBoxItem Content="12 nights"/>
+                <ComboBoxItem Content="13 nights"/>
+                <ComboBoxItem Content="14 nights"/>
+                <ComboBoxItem Content="15 nights"/>
+                <ComboBoxItem Content="16 nights"/>
+                <ComboBoxItem Content="17 nights"/>
+                <ComboBoxItem Content="18 nights"/>
+                <ComboBoxItem Content="19 nights"/>
+                <ComboBoxItem Content="20 nights"/>
+                <ComboBoxItem Content="21 nights"/>
+                <ComboBoxItem Content="22 nights"/>
+                <ComboBoxItem Content="23 nights"/>
+                <ComboBoxItem Content="24 nights"/>
+                <ComboBoxItem Content="25 nights"/>
+                <ComboBoxItem Content="26 nights"/>
+                <ComboBoxItem Content="27 nights"/>
+                <ComboBoxItem Content="28 nights"/>
+                <ComboBoxItem Content="29 nights"/>
+                <ComboBoxItem Content="30 nights"/>
+            </ComboBox>
 
 
 
-        
-        <DatePicker x:Name="dtpCheckin" Margin="142,175,428,86" BorderBrush="Black"
-            Style="{StaticResource DatePickerStyle}"
-                            />
+
+            <DatePicker Grid.Column ="1" x:Name="dtpCheckin" Margin="0,30,0,55" BorderBrush="Black"
+                Style="{StaticResource DatePickerStyle}"
+                                />
+        </Grid>
+
         <Button x:Name="btnSearch" Content=" Search Hotel "
                 HorizontalAlignment="Center" Margin="0,281,0,0" VerticalAlignment="Top" Height="53" Width="300" Background="#FFFF5E1F" Foreground="White" FontSize="24" FontWeight="Bold">
             <Button.BorderBrush>
@@ -247,6 +260,7 @@
                 </Style>
             </Button.Resources>
         </Button>
+        <local:UCInformation HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Row="0" Margin="0, 0,0,0" Grid.RowSpan="2"/>
 
 
     </Grid>

@@ -164,19 +164,14 @@
             </Setter>
         </Style>
     </UserControl.Resources>
-    <Grid HorizontalAlignment="Center" Width="719">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="243*"/>
-            <RowDefinition Height="0*"/>
-            <RowDefinition Height="127*"/>
-        </Grid.RowDefinitions>
+    <Grid HorizontalAlignment="Center" Width="523" Margin="0,0,0,170">
         <Grid.Background>
             <SolidColorBrush Color="Black" Opacity="0"/>
         </Grid.Background>
         <Label Content="Place, City or Hotel"
-               Margin="119,80,372,0" VerticalAlignment="Top" Foreground="Black" Height="40" FontFamily="JetBrainsMono Nerd Font" FontSize="18" VerticalContentAlignment="Center"/>
+               Margin="0,0,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" Foreground="Black" Height="40" FontFamily="JetBrainsMono Nerd Font" FontSize="18" VerticalContentAlignment="Center"/>
 
-        <TextBox x:Name="txbPlace" Margin="100,112,99,0" Text="" VerticalAlignment="Top" Height="50" HorizontalScrollBarVisibility="Disabled" VerticalContentAlignment="Center" FontSize="24" Padding="25,0,30,0" BorderBrush="Black" SelectionBrush="Black">
+        <TextBox x:Name="txbPlace" Margin="0,35,0,0" Text="" VerticalAlignment="Top" HorizontalAlignment="Center" Height="50" HorizontalScrollBarVisibility="Disabled" VerticalContentAlignment="Center" FontSize="24" Padding="25,0,30,0" BorderBrush="Black" SelectionBrush="Black" Width="500">
             <TextBox.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="30" />
@@ -187,7 +182,7 @@
 
 
         <Label Content="Room Type"
-               Margin="119,160,441,0" VerticalAlignment="Top" Foreground="Black" Height="40" FontFamily="JetBrainsMono Nerd Font" FontSize="18" VerticalContentAlignment="Center"/>
+               Margin="0,100,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="Black" Height="40" FontFamily="JetBrainsMono Nerd Font" FontSize="18" VerticalContentAlignment="Center"/>
 
 
 
@@ -196,7 +191,7 @@
         <ComboBox x:Name="cbbRoomType"
                   Style="{DynamicResource theComboBox}"
                   ItemContainerStyle="{DynamicResource theComboBoxItem}"
-                  Margin="100,191,99,0" VerticalAlignment="Top" Height="50" ScrollViewer.VerticalScrollBarVisibility="Hidden">
+                  Margin="0,135,0,0" VerticalAlignment="Top" Height="50" ScrollViewer.VerticalScrollBarVisibility="Hidden" Width="500">
             <ComboBoxItem Content="1 single bed"/>
             <ComboBoxItem Content="1 double bed"/>
             <ComboBoxItem Content="2 single bed"/>
