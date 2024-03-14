@@ -27,6 +27,8 @@
                         <SolidColorBrush Color="#FFDDDDDD" Opacity="0"/>
                     </Button.Background>
                 </Button>
+                
+                
                 <Button x:Name="btnBooking" 
     Content="Booking" DockPanel.Dock="Right" Width="100"  Height="50" FontSize="16" Margin="5,10,5,0" FontWeight="Bold">
                     <Button.Resources>
@@ -41,6 +43,10 @@
                         <SolidColorBrush Color="#FFDDDDDD" Opacity="0"/>
                     </Button.Background>
                 </Button>
+                
+                
+                
+                
                 <Button x:Name="btnLogin" BorderThickness="3,3,3,3"
         Content="Login" DockPanel.Dock="Right" Width="100" Height="50" FontSize="16" Margin="5,10,5,0" Padding="1,1,1,1" FontWeight="Bold" BorderBrush="#FF36ADF9" Foreground="#FF090000" Click="btnLogin_Click">
                     <Button.Resources>

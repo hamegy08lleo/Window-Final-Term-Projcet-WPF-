@@ -25,7 +25,6 @@ namespace Window_Final_Term_Projcet__WPF_
             InitializeComponent();
             mainContent.Content = new Pcustomer();
 
-
         }
 
         private void lblLogo_MouseDown(object sender, MouseButtonEventArgs e)

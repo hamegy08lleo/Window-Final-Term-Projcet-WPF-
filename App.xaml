@@ -4,6 +4,15 @@
              xmlns:local="clr-namespace:Window_Final_Term_Projcet__WPF_"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary>
+
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles/DatePickerStyles.xaml"/>
+
+                <ResourceDictionary Source="Styles/TextBoxStyles.xaml"/>
+
+            </ResourceDictionary.MergedDictionaries>
+
+        </ResourceDictionary>
     </Application.Resources>
 </Application>
