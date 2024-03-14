@@ -5,6 +5,7 @@
       xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Window_Final_Term_Projcet__WPF_"
+      xmlns:sys="clr-namespace:System;assembly=mscorlib"
       mc:Ignorable="d" 
       d:DesignHeight="370" d:DesignWidth="800"
       Title="Pcustomer">
@@ -169,6 +170,9 @@
     </Page.Resources>
     <Grid>
 
+        <Label x:Name="lblCheckout" Margin="560,206,130,0"
+       VerticalAlignment="Top" Height="50" VerticalContentAlignment="Center" 
+       FontSize="18" Padding="0,0,0,0" BorderBrush="Black" Background="White" Width="110"/>
         <local:UCInformation HorizontalAlignment="Center" Margin="0,-72,0,0" VerticalAlignment="Top" Width="801"/>
 
 
@@ -188,24 +192,61 @@
             VerticalContentAlignment="Center" Width="100"/>
 
 
-        <ComboBox x:Name="cbbRoomType"
+        <ComboBox x:Name="cbbDuration"
+          SelectedIndex="0"
           Style="{DynamicResource theComboBox}"
           ItemContainerStyle="{DynamicResource theComboBoxItem}"
-          Margin="389,206,281,0" VerticalAlignment="Top" Height="50" FontSize="18" MinWidth="100" Padding="5,0,0,0">
-
+          Margin="389,206,281,0" VerticalAlignment="Top" Height="50" FontSize="18" MinWidth="100" Padding="5,0,0,0"
+            MaxDropDownHeight="100" ScrollViewer.VerticalScrollBarVisibility="Hidden" >
             <ComboBoxItem Content="1 night"/>
+            <ComboBoxItem Content="2 nights"/>
+            <ComboBoxItem Content="3 nights"/>
+            <ComboBoxItem Content="4 nights"/>
+            <ComboBoxItem Content="5 nights"/>
+            <ComboBoxItem Content="6 nights"/>
+            <ComboBoxItem Content="7 nights"/>
+            <ComboBoxItem Content="8 nights"/>
+            <ComboBoxItem Content="9 nights"/>
             <ComboBoxItem Content="10 nights"/>
-
+            <ComboBoxItem Content="11 nights"/>
+            <ComboBoxItem Content="12 nights"/>
+            <ComboBoxItem Content="13 nights"/>
+            <ComboBoxItem Content="14 nights"/>
+            <ComboBoxItem Content="15 nights"/>
+            <ComboBoxItem Content="16 nights"/>
+            <ComboBoxItem Content="17 nights"/>
+            <ComboBoxItem Content="18 nights"/>
+            <ComboBoxItem Content="19 nights"/>
+            <ComboBoxItem Content="20 nights"/>
+            <ComboBoxItem Content="21 nights"/>
+            <ComboBoxItem Content="22 nights"/>
+            <ComboBoxItem Content="23 nights"/>
+            <ComboBoxItem Content="24 nights"/>
+            <ComboBoxItem Content="25 nights"/>
+            <ComboBoxItem Content="26 nights"/>
+            <ComboBoxItem Content="27 nights"/>
+            <ComboBoxItem Content="28 nights"/>
+            <ComboBoxItem Content="29 nights"/>
+            <ComboBoxItem Content="30 nights"/>
         </ComboBox>
 
 
 
-        <Label x:Name="lblCheckout" Margin="560,206,130,0" Content=""
-               VerticalAlignment="Top" Height="50" VerticalContentAlignment="Center" 
-               FontSize="18" Padding="0,0,0,0" BorderBrush="Black" Background="White" Width="110"/>
-        <DatePicker x:Name="dtpCheckin" Margin="140,175,430,86" BorderBrush="Black"
+        
+        <DatePicker x:Name="dtpCheckin" Margin="142,175,428,86" BorderBrush="Black"
             Style="{StaticResource DatePickerStyle}"
                             />
+        <Button x:Name="btnSearch" Content=" Search Hotel "
+                HorizontalAlignment="Center" Margin="0,281,0,0" VerticalAlignment="Top" Height="53" Width="300" Background="#FFFF5E1F" Foreground="White" FontSize="24" FontWeight="Bold">
+            <Button.BorderBrush>
+                <SolidColorBrush Color="#FF040000" Opacity="0"/>
+            </Button.BorderBrush>
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="20"/>
+                </Style>
+            </Button.Resources>
+        </Button>
 
 
     </Grid>
