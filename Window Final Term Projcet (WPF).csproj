@@ -58,7 +58,6 @@
     <Compile Include="UCInformation.xaml.cs">
       <DependentUpon>UCInformation.xaml</DependentUpon>
     </Compile>
-    <Compile Include="WatermarkGenerator.cs" />
     <Compile Include="WindowLogin.xaml.cs">
       <DependentUpon>WindowLogin.xaml</DependentUpon>
     </Compile>
