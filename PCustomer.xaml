@@ -232,12 +232,10 @@
 
 
 
-        
-        <DatePicker x:Name="dtpCheckin" Margin="142,175,428,86" BorderBrush="Black"
-            Style="{StaticResource DatePickerStyle}"
-                            />
-        <Button x:Name="btnSearch" Content=" Search Hotel "
-                HorizontalAlignment="Center" Margin="0,281,0,0" VerticalAlignment="Top" Height="53" Width="300" Background="#FFFF5E1F" Foreground="White" FontSize="24" FontWeight="Bold">
+        </Grid>
+
+        <Button Grid.Row="3" x:Name="btnSearch" Content=" Search Hotel "
+                HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Height="53" Width="300" Background="#FFFF5E1F" Foreground="White" FontSize="24" FontWeight="Bold" Click="btnSearch_Click">
             <Button.BorderBrush>
                 <SolidColorBrush Color="#FF040000" Opacity="0"/>
             </Button.BorderBrush>
