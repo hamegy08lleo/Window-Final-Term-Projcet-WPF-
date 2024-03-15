@@ -49,10 +49,5 @@ namespace Window_Final_Term_Projcet__WPF_
         {
             load_checkout();
         }
-
-        private void btnSearch_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
     }
 }

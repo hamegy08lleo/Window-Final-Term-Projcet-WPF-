@@ -5,14 +5,28 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Window_Final_Term_Projcet__WPF_"
         mc:Ignorable="d"
-        Title="horizon Trail Travel" Height="520" Width="800" ResizeMode="NoResize">
+        Title="horizon Trail Travel" Height="600" Width="800" ResizeMode="NoResize">
     <Grid>
-        <DockPanel x:Name="panelMenu" Height="130" Width="800" HorizontalAlignment="Center" VerticalAlignment="Top" Background="#FFD4E5EF" Margin="0,-15,0,0"  >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="130"/>
+            <RowDefinition Height="400"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFB8CFE9"/>
+                    <GradientStop Color="#FFD8E6F0" Offset="0.992"/>
+                    <GradientStop Color="#FFD7E5EF" Offset="0.887"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="320"/>
+                <ColumnDefinition Width="480"/>
+            </Grid.ColumnDefinitions>
+            <Image Grid.Column ="0" x:Name="imgLogo"  Height="100" Width="100" Margin="10,0,0,0" Source="/HorizonTrailLogo.png" Stretch="UniformToFill" MouseLeftButtonDown="imgLogo_MouseDown" HorizontalAlignment="Left"/>
+            <Label Grid.Column ="0" x:Name="lblLogo" Content="Horizon Trail Travel" Width="222" Margin="0,0,-8,13.5" FontSize="24" FontFamily="Yu Gothic UI Semilight" HorizontalAlignment="Right" VerticalAlignment="Bottom" MouseLeftButtonDown="lblLogo_MouseDown"/>
 
-            <Image x:Name="imgLogo"  Height="100" Width="100" Margin="10,5,0,0" Source="/HorizonTrailLogo.png" Stretch="UniformToFill" MouseLeftButtonDown="imgLogo_MouseDown"/>
-            <Label x:Name="lblLogo" Content="Horizon Trail Travel" Width="222" Margin="0,6,0,15" FontSize="24" FontFamily="Yu Gothic UI Semilight" HorizontalAlignment="Left" VerticalAlignment="Bottom" MouseLeftButtonDown="lblLogo_MouseDown"/>
-
-            <StackPanel x:Name="pnlButton" Orientation="Horizontal" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,10,26">
+            <StackPanel Grid.Column ="1" x:Name="pnlButton" Orientation="Horizontal" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,10,26">
                 <Button x:Name="btnPartnership" 
     Content="Partnership" DockPanel.Dock="Right" Width="100" Height="50" FontSize="16" Margin="0,10,5,0" FontWeight="Bold">
                     <Button.Resources>
@@ -27,8 +41,8 @@
                         <SolidColorBrush Color="#FFDDDDDD" Opacity="0"/>
                     </Button.Background>
                 </Button>
-                
-                
+
+
                 <Button x:Name="btnBooking" 
     Content="Booking" DockPanel.Dock="Right" Width="100"  Height="50" FontSize="16" Margin="5,10,5,0" FontWeight="Bold">
                     <Button.Resources>
@@ -43,10 +57,10 @@
                         <SolidColorBrush Color="#FFDDDDDD" Opacity="0"/>
                     </Button.Background>
                 </Button>
-                
-                
-                
-                
+
+
+
+
                 <Button x:Name="btnLogin" BorderThickness="3,3,3,3"
         Content="Login" DockPanel.Dock="Right" Width="100" Height="50" FontSize="16" Margin="5,10,5,0" Padding="1,1,1,1" FontWeight="Bold" BorderBrush="#FF36ADF9" Foreground="#FF090000" Click="btnLogin_Click">
                     <Button.Resources>
@@ -75,19 +89,8 @@
                     </Button.Resources>
                 </Button>
             </StackPanel>
-
-
-        </DockPanel>
-
-
-
-        <DockPanel x:Name="panelContent" Height="370" Width="800" HorizontalAlignment="Center" VerticalAlignment="Bottom">
-            <Frame x:Name="mainContent">
-                <Frame.Background>
-                    <SolidColorBrush Color="#FFC18383" Opacity="0"/>
-                </Frame.Background>
-
-            </Frame>
-        </DockPanel>
+        </Grid>
+        <Frame x:Name="mainContent" Grid.Row="1" Height="400">
+        </Frame>
     </Grid>
 </Window>

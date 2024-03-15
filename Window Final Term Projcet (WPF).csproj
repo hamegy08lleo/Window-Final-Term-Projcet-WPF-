@@ -58,17 +58,14 @@
     <Compile Include="PCustomer.xaml.cs">
       <DependentUpon>PCustomer.xaml</DependentUpon>
     </Compile>
-    <Compile Include="PRoomDetail.xaml.cs">
-      <DependentUpon>PRoomDetail.xaml</DependentUpon>
-    </Compile>
     <Compile Include="UCInformation.xaml.cs">
       <DependentUpon>UCInformation.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UCLogin.xaml.cs">
-      <DependentUpon>UCLogin.xaml</DependentUpon>
-    </Compile>
     <Compile Include="WindowLogin.xaml.cs">
       <DependentUpon>WindowLogin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WindowRegister.xaml.cs">
+      <DependentUpon>WindowRegister.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -86,10 +83,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="PRoomDetail.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Styles\DatePickerStyles.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -102,11 +95,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="UCLogin.xaml">
+    <Page Include="WindowLogin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="WindowLogin.xaml">
+    <Page Include="WindowRegister.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -148,6 +141,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Image1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

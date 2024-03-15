@@ -10,17 +10,16 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Window_Final_Term_Projcet__WPF_
 {
     /// <summary>
-    /// Interaction logic for UCLogin.xaml
+    /// Interaction logic for WindowRegister.xaml
     /// </summary>
-    public partial class UCLogin : UserControl
+    public partial class WindowRegister : Window
     {
-        public UCLogin()
+        public WindowRegister()
         {
             InitializeComponent();
         }
