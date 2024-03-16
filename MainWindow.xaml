@@ -24,7 +24,7 @@
                 <ColumnDefinition Width="480"/>
             </Grid.ColumnDefinitions>
             <Image Grid.Column ="0" x:Name="imgLogo"  Height="100" Width="100" Margin="10,0,0,0" Source="/HorizonTrailLogo.png" Stretch="UniformToFill" MouseLeftButtonDown="imgLogo_MouseDown" HorizontalAlignment="Left"/>
-            <Label Grid.Column ="0" x:Name="lblLogo" Content="Horizon Trail Travel" Width="222" Margin="0,0,-8,13.5" FontSize="24" FontFamily="Yu Gothic UI Semilight" HorizontalAlignment="Right" VerticalAlignment="Bottom" MouseLeftButtonDown="lblLogo_MouseDown"/>
+            <Label Grid.Column ="0" x:Name="lblLogo" Content="Horizon Trail Travel" Width="222" Margin="0,0,-8,13.5" FontSize="22" FontFamily="9Slide03 ALLROUND GOTHIC DEMI.ttf##9Slide03 AllRoundGothic" HorizontalAlignment="Right" VerticalAlignment="Bottom" MouseLeftButtonDown="lblLogo_MouseDown"/>
 
             <StackPanel Grid.Column ="1" x:Name="pnlButton" Orientation="Horizontal" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,10,26">
                 <Button x:Name="btnPartnership" 
