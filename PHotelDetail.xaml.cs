@@ -34,5 +34,10 @@ namespace Window_Final_Term_Projcet__WPF_
         {
             detailContent.Content = new PHotelDetailChild.PHotelDetailRooms();
         }
+
+        private void Review_Click(object sender, RoutedEventArgs e)
+        {
+            detailContent.Content = new PHotelDetailChild.PHotelDetailReview();
+        }
     }
 }

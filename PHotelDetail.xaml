@@ -8,7 +8,7 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="PHotelDetail">
 
-    <Grid Background="#FFBD8E8E">
+    <Grid Background="White">
         <Grid.RowDefinitions>
             <RowDefinition Height="10"/>
             <RowDefinition Height="30"/>
@@ -34,7 +34,7 @@
             </Button>
 
             <Button Grid.Column="4" x:Name="Review"
-                    Content="Review" Width="100" BorderBrush="#FF36ADF9" HorizontalAlignment="Right" FontSize="18" Background="White">
+                    Content="Review" Width="100" BorderBrush="#FF36ADF9" HorizontalAlignment="Right" FontSize="18" Background="White" Click="Review_Click">
             </Button>
 
         </Grid>
