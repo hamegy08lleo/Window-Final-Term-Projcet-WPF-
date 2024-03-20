@@ -41,7 +41,7 @@
                     <RowDefinition Height="25"/>
                     <RowDefinition Height="25"/>
                 </Grid.RowDefinitions>
-                    <Label x:Name="lblRating" Grid.Row="0" Content="Để cái đánh giá ở đây cho người ta biết khách sạn nó sịn" Background="#FF6D985A"/>
+                <Label x:Name="lblRating" Grid.Row="0" Content="Để cái đánh giá ở đây cho người ta biết khách sạn nó sịn" Background="#FF6D985A"/>
                 <Label x:Name="lblAddress" Grid.Row="1" Content="Để cái địa chỉ dô cho người ta biết nó ở đâu nữa chứ" Background="#FF39C1F6"/>
             </Grid>
             <Button Grid.Column="1" Name="btnSelectRoom" Content="Select Room" Background="#FFE1B2B2"/>

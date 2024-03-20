@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Window_Final_Term_Projcet__WPF_
+namespace Window_Final_Term_Projcet__WPF_.PHotelDetailChild
 {
     /// <summary>
-    /// Interaction logic for PHotelDetailOverView.xaml
+    /// Interaction logic for PHotelDetailOverview.xaml
     /// </summary>
-    public partial class PHotelDetailOverView : Page
+    public partial class PHotelDetailOverview : Page
     {
-        public PHotelDetailOverView()
+        public PHotelDetailOverview()
         {
             InitializeComponent();
         }

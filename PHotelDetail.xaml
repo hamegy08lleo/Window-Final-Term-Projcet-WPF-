@@ -29,12 +29,12 @@
                     Content="OverView" Width="100" BorderBrush="#FF36ADF9" HorizontalAlignment="Left" FontSize="18" Background="White" Click="btnOverView_Click" >
             </Button>
 
-            <Button Grid.Column="2" x:Name="Romms"
-                    Content="Rooms" Width="100" BorderBrush="#FF36ADF9" HorizontalAlignment="Center" FontSize="18" Background="White" Click="Romms_Click" Height="30" VerticalAlignment="Top" >
+            <Button Grid.Column="2" x:Name="btnRooms"
+                    Content="Rooms" Width="100" BorderBrush="#FF36ADF9" HorizontalAlignment="Center" FontSize="18" Background="White" Click="btnRooms_Click" Height="30" VerticalAlignment="Top" >
             </Button>
 
-            <Button Grid.Column="4" x:Name="Review"
-                    Content="Review" Width="100" BorderBrush="#FF36ADF9" HorizontalAlignment="Right" FontSize="18" Background="White" Click="Review_Click">
+            <Button Grid.Column="4" x:Name="btnReview"
+                    Content="Review" Width="100" BorderBrush="#FF36ADF9" HorizontalAlignment="Right" FontSize="18" Background="White" Click="btnReview_Click">
             </Button>
 
         </Grid>

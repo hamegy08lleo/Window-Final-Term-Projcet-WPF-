@@ -25,19 +25,20 @@ namespace Window_Final_Term_Projcet__WPF_
             InitializeComponent();
         }
 
+
         private void btnOverView_Click(object sender, RoutedEventArgs e)
         {
-            detailContent.Content = new PHotelDetailOverView();
+            detailContent.Content = new PHotelDetailChild.PHotelDetailOverview();
         }
-
-        private void Romms_Click(object sender, RoutedEventArgs e)
+        private void btnRooms_Click(object sender, RoutedEventArgs e)
         {
             detailContent.Content = new PHotelDetailChild.PHotelDetailRooms();
         }
 
-        private void Review_Click(object sender, RoutedEventArgs e)
+        private void btnReview_Click(object sender, RoutedEventArgs e)
         {
             detailContent.Content = new PHotelDetailChild.PHotelDetailReview();
         }
+
     }
 }
