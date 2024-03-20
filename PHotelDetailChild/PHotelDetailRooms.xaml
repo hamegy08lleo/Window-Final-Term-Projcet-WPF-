@@ -5,13 +5,16 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Window_Final_Term_Projcet__WPF_.PHotelDetailChild"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="450" d:DesignWidth="750"
       Title="PHotelDetailRooms">
 
-    <Grid Background="Black">
+    <Grid>
+        <Grid.Background>
+            <SolidColorBrush Color="White" Opacity="0.265"/>
+        </Grid.Background>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20"/>
-            <ColumnDefinition Width="580"/>
+            <ColumnDefinition Width="530"/>
             <ColumnDefinition Width="200"/>
         </Grid.ColumnDefinitions>
         <ScrollViewer Grid.Column="1" CanContentScroll="True" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden">
@@ -34,10 +37,10 @@
                 <Border BorderThickness="5" CornerRadius="30"/>
                 <Label Grid.Row="1" Content="Your current room selection" HorizontalAlignment="Center" Height="48" VerticalAlignment="Top"/>
                 <Label Grid.Row="1" Name="lblRoomType" Content="để cái loại phòng ở đây" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,50,0,0"/>
-                
+
             </Grid>
             <Grid Grid.Row="2">
-                <Button Name="btnChoose" Content="Choose" Width="70" HorizontalAlignment="Right" Height="32" Background="#FFFF5E1F" BorderBrush="{x:Null}" Foreground="White" FontWeight="Bold">
+                <Button Name="btnChoose" Content="Choose" Width="70" HorizontalAlignment="Center" Height="32" Background="#FFFF5E1F" BorderBrush="{x:Null}" Foreground="White" FontWeight="Bold">
                     <Button.Resources>
                         <Style TargetType="Border">
                             <Setter Property="CornerRadius" Value="10"/>
