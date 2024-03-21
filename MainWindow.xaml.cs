@@ -23,8 +23,8 @@ namespace Window_Final_Term_Projcet__WPF_
         public MainWindow()
         {
             InitializeComponent();
-            mainContent.Content = new PHotelDetail();
-            //mainContent.Content = new Pcustomer();
+            //mainContent.Content = new PHotelDetail();
+            mainContent.Content = new Pcustomer();
 
         }
 
@@ -48,14 +48,15 @@ namespace Window_Final_Term_Projcet__WPF_
             WindowLogin windowLogin = new WindowLogin();
             windowLogin.ShowDialog();
         }
-        private void search_button_click()
-        {
-            
-        }
 
         private void btnPartnership_Click(object sender, RoutedEventArgs e)
         {
             mainContent.Content = new PPartnership();
+        }
+
+        private void btnSearch_Click()
+        {
+
         }
     }
 }
