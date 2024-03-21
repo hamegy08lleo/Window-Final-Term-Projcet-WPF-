@@ -52,7 +52,7 @@
         VerticalContentAlignment="Center" Width="76" Margin="16,0,0,0"/>
             
             
-            <TextBox Grid.Column="2" Name="txbNumRoom" Margin="0,35,0,0"
+            <TextBox Grid.Column="2" Name="txbAmount" Margin="0,35,0,0"
                  Height="50" VerticalContentAlignment="Center" FontSize="24"
                  Width="100" VerticalAlignment="Bottom" BorderBrush="Black" Padding="15,0,0,0" HorizontalAlignment="Right">
 
@@ -94,7 +94,7 @@
 
             <Button Grid.Column="1" x:Name="btnPost" Content="Post"
                     HorizontalAlignment="Right" Margin="0,0,0,0" VerticalAlignment="Bottom"
-                    Height="60" Width="200" Background="#FFFF5E1F" Foreground="White" FontSize="24" FontWeight="Bold" BorderBrush="{x:Null}">
+                    Height="60" Width="200" Background="#FFFF5E1F" Foreground="White" FontSize="24" FontWeight="Bold" BorderBrush="{x:Null}" Click="btnPost_Click">
                         <Button.Resources>
                             <Style TargetType="{x:Type Border}">
                                 <Setter Property="CornerRadius" Value="30"/>
@@ -106,7 +106,7 @@
         
         
         
-        <local:UCInformation HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="1"/>
+        <local:UCInformation x:Name="UCInformation" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="1"/>
         
     </Grid>
 </Page>

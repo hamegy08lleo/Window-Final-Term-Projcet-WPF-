@@ -21,17 +21,20 @@ namespace Window_Final_Term_Projcet__WPF_
     /// </summary>
     public partial class MainWindow : Window
     {
-        RoomDAO roomDAO = new RoomDAO("Room");
+        private RoomDAO roomDAO = new RoomDAO("Room");
         public MainWindow()
         {
             InitializeComponent();
             mainContent.Content = new Pcustomer();
             // mainContent.Content = new Presult();
-            CustomerSearch search = new CustomerSearch("2 Single Bed", "Da Nang"); 
-            roomDAO.Search(search);
-            DebugWindow debugWindow = new DebugWindow(); 
-            debugWindow.debug(roomDAO.Search(search));
-            debugWindow.Show(); 
+            //CustomerSearch search = new CustomerSearch("2 Single Bed", "Da Nang");
+            //roomDAO.Search(search);
+            //DebugWindow debugWindow = new DebugWindow();
+            //debugWindow.debug(roomDAO.Search(search));
+            //debugWindow.Show();
+
+            //OwnerPost post = new OwnerPost("1 Single Bed", "Horizon Travel", "Ho Chi Minh city", 100, 10);
+            //roomDAO.Add(post); 
         }
 
         private void lblLogo_MouseDown(object sender, MouseButtonEventArgs e)
@@ -60,9 +63,8 @@ namespace Window_Final_Term_Projcet__WPF_
             mainContent.Content = new PPartnership();
         }
 
-        private void btnSearch_Click()
-        {
+        public Frame MainContent { get { return mainContent; } set { mainContent = value; } }
 
-        }
+        internal RoomDAO RoomDAO { get => roomDAO; set => roomDAO = value; }
     }
 }

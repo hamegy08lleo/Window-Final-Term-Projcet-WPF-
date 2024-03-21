@@ -18,7 +18,7 @@ namespace Window_Final_Term_Projcet__WPF_
             this.tableName = tableName;
             this.dbConnection = new DBConnection(Properties.Settings.Default.connStr);
         }
-        public void add(OwnerPost post)
+        public void Add(OwnerPost post)
         {
             Room room = new Room(post.RoomType, post.Hotel, post.City, post.Price, 5);
             string sqlStr = ""; 

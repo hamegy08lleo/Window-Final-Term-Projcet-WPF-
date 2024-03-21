@@ -12,7 +12,7 @@
             <ColumnDefinition Width="150"/>
         </Grid.ColumnDefinitions>
         
-        <Label Name="Price" Content="Price" Grid.Column="1" VerticalAlignment="Center" Padding="30,5,5,5"/>
+        <Label Name="lblPrice" Content="Price" Grid.Column="1" VerticalAlignment="Center" Padding="30,5,5,5"/>
         <Button x:Name="btnSelectRoom" Content="Select Room" Grid.Column="1" Width="100" Background="#FFFF5E1F" Height="30" BorderBrush="{x:Null}" FontWeight="Bold" Foreground="White" VerticalAlignment="Bottom" Margin="0,0,0,40">
             <Button.Resources>
                 <Style TargetType="Border">

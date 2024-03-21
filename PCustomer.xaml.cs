@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices;
+using System.Runtime.Remoting;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -48,6 +49,14 @@ namespace Window_Final_Term_Projcet__WPF_
         private void cbbDuration_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             load_checkout();
+        }
+
+        private void btnSearch_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = Window.GetWindow(this) as MainWindow;
+            CustomerSearch search = new CustomerSearch(UCInformation.cbbRoomType.Text, UCInformation.cbbCity.Text);
+            RoomDAO roomDAO = mainWindow.RoomDAO; 
+            mainWindow.MainContent.Navigate(new Presult(roomDAO.Search(search))); 
         }
     }
 }

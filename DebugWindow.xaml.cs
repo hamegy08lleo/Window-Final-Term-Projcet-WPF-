@@ -28,10 +28,10 @@ namespace Window_Final_Term_Projcet__WPF_
         public void debug(DataTable table)
         {
             dt.ItemsSource = table.AsDataView(); 
-            foreach (DataRow row in table.Rows)
-            {
-                MessageBox.Show(row[0].ToString()); 
-            }
+            //foreach (DataRow row in table.Rows)
+            //{
+            //    MessageBox.Show(row[0].ToString()); 
+            //}
             //dt.ItemsSource = table.AsDataView(); 
             //foreach (DataRow row in table.Rows)
             //{

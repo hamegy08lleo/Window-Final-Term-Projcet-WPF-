@@ -253,7 +253,7 @@
 
         <Button Grid.Row="3" x:Name="btnSearch" Content=" Search Hotel "
                 HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center"
-                Height="53" Width="300" Background="#FFFF5E1F" Foreground="White" FontSize="24" FontWeight="Bold" >
+                Height="53" Width="300" Background="#FFFF5E1F" Foreground="White" FontSize="24" FontWeight="Bold" Click="btnSearch_Click" >
 
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
@@ -262,7 +262,7 @@
             </Button.Resources>
         </Button>
         
-        <local:UCInformation HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="1"/>
+        <local:UCInformation x:Name="UCInformation" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="1"/>
 
 
 

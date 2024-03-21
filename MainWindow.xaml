@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Window_Final_Term_Projcet__WPF_"
         mc:Ignorable="d"
         Title="horizon Trail Travel" Height="620" Width="800" ResizeMode="NoResize">
-    <Grid ScrollViewer.VerticalScrollBarVisibility="Disabled">
+    <Grid Name="gMainWindow"  ScrollViewer.VerticalScrollBarVisibility="Disabled">
         <Grid.RowDefinitions>
             <RowDefinition Height="130"/>
             <RowDefinition Height="450"/>

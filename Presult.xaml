@@ -11,68 +11,12 @@
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="50"/>
-            <ColumnDefinition Width="750"/>
+            <ColumnDefinition Width="700"/>
+            <ColumnDefinition Width="50"/>
         </Grid.ColumnDefinitions>
-        <ScrollViewer CanContentScroll="True" Grid.Column="1" Width="700">
+        <ScrollViewer VerticalScrollBarVisibility="Hidden" CanContentScroll="True" Grid.Column="1" Width="700">
             <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="150"/>
-                    <ColumnDefinition Width="600"/>
-                </Grid.ColumnDefinitions>
-                <StackPanel Grid.Column="0">
-                    <Border BorderThickness="1" Margin="10, 10, 10, 10" BorderBrush="Black">
-                        <StackPanel Margin="10, 10, 10, 10">
-                            <Viewbox Height="30" HorizontalAlignment="Left" Width="130">
-                                <CheckBox Content="Hy"></CheckBox>
-                            </Viewbox>
-                            <Viewbox Height="30" HorizontalAlignment="Left" Width="130">
-                                <CheckBox Content="Hy1"></CheckBox>
-                            </Viewbox>
-                            <Viewbox Height="30" HorizontalAlignment="Left" Width="130">
-                                <CheckBox Content="Hy1"></CheckBox>
-                            </Viewbox>
-                            <Viewbox Height="30" HorizontalAlignment="Left" Width="130">
-                                <CheckBox Content="Hy1"></CheckBox>
-                            </Viewbox>
-                            <Viewbox Height="30" HorizontalAlignment="Left" Width="130">
-                                <CheckBox Content="Hy1"></CheckBox>
-                            </Viewbox>
-                        </StackPanel>
-                    </Border>
-                    <Border BorderThickness="1" Margin="10, 10, 10, 10" BorderBrush="Black">
-                        <StackPanel Margin="10, 10, 10, 10">
-                            <Viewbox Height="30" HorizontalAlignment="Left" Width="130">
-                                <CheckBox Content="Hy"></CheckBox>
-                            </Viewbox>
-                            <Viewbox Height="30" HorizontalAlignment="Left" Width="130">
-                                <CheckBox Content="Hy1"></CheckBox>
-                            </Viewbox>
-                            <Viewbox Height="30" HorizontalAlignment="Left" Width="130">
-                                <CheckBox Content="Hy1"></CheckBox>
-                            </Viewbox>
-                            <Viewbox Height="30" HorizontalAlignment="Left" Width="130">
-                                <CheckBox Content="Hy1"></CheckBox>
-                            </Viewbox>
-                            <Viewbox Height="30" HorizontalAlignment="Left" Width="130">
-                                <CheckBox Content="Hy1"></CheckBox>
-                            </Viewbox>
-                            <Viewbox Height="30" HorizontalAlignment="Left" Width="130">
-                                <CheckBox Content="Hy1"></CheckBox>
-                            </Viewbox>
-                            <Viewbox Height="30" HorizontalAlignment="Left" Width="130">
-                                <CheckBox Content="Hy1"></CheckBox>
-                            </Viewbox>
-                        </StackPanel>
-                    </Border>
-
-                </StackPanel>
-                <StackPanel Margin ="10, 10, 10, 10" Grid.Column="1">
-                    <Label Content="Tuong1" FontSize="50"> </Label>
-                    <Label Content="Tuong2" FontSize="50"> </Label>
-                    <Label Content="Tuong3" FontSize="50"> </Label>
-                    <Label Content="Tuong4" FontSize="50"> </Label>
-                    <Label Content="Tuong5" FontSize="50"> </Label>
-                    <Label Content="Tuong6" FontSize="50"> </Label>
+                <StackPanel  x:Name ="spResult" Margin ="10, 10, 10, 10" ScrollViewer.HorizontalScrollBarVisibility="Hidden" ScrollViewer.VerticalScrollBarVisibility="Hidden">
                 </StackPanel>
             </Grid>
         </ScrollViewer>
