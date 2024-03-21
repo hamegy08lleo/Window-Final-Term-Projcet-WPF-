@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Xaml;
 
 namespace Window_Final_Term_Projcet__WPF_
 {
@@ -20,16 +21,22 @@ namespace Window_Final_Term_Projcet__WPF_
     /// </summary>
     public partial class MainWindow : Window
     {
+        RoomDAO roomDAO = new RoomDAO("Room");
         public MainWindow()
         {
             InitializeComponent();
-            // mainContent.Content = new Pcustomer();
-            mainContent.Content = new Presult();
+            mainContent.Content = new Pcustomer();
+            // mainContent.Content = new Presult();
+            CustomerSearch search = new CustomerSearch("2 Single Bed", "Da Nang"); 
+            roomDAO.Search(search);
+            DebugWindow debugWindow = new DebugWindow(); 
+            debugWindow.debug(roomDAO.Search(search));
+            debugWindow.Show(); 
         }
 
         private void lblLogo_MouseDown(object sender, MouseButtonEventArgs e)
         {
-           mainContent.Content = null;
+            mainContent.Content = null;
             mainContent.Content = new Pcustomer();
             MessageBox.Show("hello");
         }
