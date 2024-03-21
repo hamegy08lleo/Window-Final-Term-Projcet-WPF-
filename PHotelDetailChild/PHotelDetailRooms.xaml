@@ -18,8 +18,7 @@
             <ColumnDefinition Width="200"/>
         </Grid.ColumnDefinitions>
         <ScrollViewer Grid.Column="1" CanContentScroll="True" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden">
-            <StackPanel Grid.Column ="1">
-
+            <StackPanel>
 
 
             </StackPanel>

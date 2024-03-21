@@ -16,15 +16,13 @@ using System.Windows.Shapes;
 namespace Window_Final_Term_Projcet__WPF_.PHotelDetailChild
 {
     /// <summary>
-    /// Interaction logic for PHotelDetailRooms.xaml
+    /// Interaction logic for UCHotelResult.xaml
     /// </summary>
-    public partial class PHotelDetailRooms : Page
+    public partial class UCHotelResult : UserControl
     {
-        public PHotelDetailRooms()
+        public UCHotelResult()
         {
             InitializeComponent();
         }
-
-
     }
 }

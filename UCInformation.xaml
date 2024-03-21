@@ -168,17 +168,31 @@
         <Grid.Background>
             <SolidColorBrush Color="Black" Opacity="0"/>
         </Grid.Background>
-        <Label Content="Place, City or Hotel"
+        <Label Content="City, Province"
                Margin="0,0,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" Foreground="Black" Height="40" FontFamily="JetBrainsMono Nerd Font" FontSize="18" VerticalContentAlignment="Center"/>
 
-        <TextBox x:Name="txbPlace" Margin="0,35,0,0" Text="" VerticalAlignment="Top" HorizontalAlignment="Center" Height="50" HorizontalScrollBarVisibility="Disabled" VerticalContentAlignment="Center" FontSize="24" Padding="15,0,30,0" BorderBrush="Black" SelectionBrush="Black" Width="500">
+        <!--<TextBox x:Name="txbPlace" Margin="0,35,0,0" Text="" VerticalAlignment="Top" HorizontalAlignment="Center" Height="50" HorizontalScrollBarVisibility="Disabled" VerticalContentAlignment="Center" FontSize="24" Padding="15,0,30,0" BorderBrush="Black" SelectionBrush="Black" Width="500">
             <TextBox.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="30" />
 
                 </Style>
             </TextBox.Resources>
-        </TextBox>
+        </TextBox>-->
+        <ComboBox x:Name="cbbCity"
+          Style="{DynamicResource theComboBox}"
+          ItemContainerStyle="{DynamicResource theComboBoxItem}"
+          Margin="0,34,0,0" VerticalAlignment="Top" Height="50" 
+          ScrollViewer.VerticalScrollBarVisibility="Hidden" Width="500" Padding="15,0,0,0">
+            <ComboBoxItem Content="Ho Chi Minh city"/>
+            <ComboBoxItem Content="Ho Noi city"/>
+            <ComboBoxItem Content="Da Nang city"/>
+            <ComboBoxItem Content="Can Tho city"/>
+            <ComboBoxItem Content="Long An province"/>
+            <ComboBoxItem Content="Soc Trang province"/>
+
+        </ComboBox>
+
 
 
         <Label Content="Room Type"

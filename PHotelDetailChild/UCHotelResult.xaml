@@ -1,0 +1,38 @@
+﻿<UserControl x:Class="Window_Final_Term_Projcet__WPF_.PHotelDetailChild.UCHotelResult"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Window_Final_Term_Projcet__WPF_.PHotelDetailChild"
+             mc:Ignorable="d" 
+             d:DesignHeight="200" d:DesignWidth="500">
+    <Grid Background="#FFFAA3A3">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="350"/>
+            <ColumnDefinition Width="150"/>
+        </Grid.ColumnDefinitions>
+        
+        <Label Name="Price" Content="Price" Grid.Column="1" VerticalAlignment="Center" Padding="30,5,5,5"/>
+        <Button x:Name="btnSelectRoom" Content="Select Room" Grid.Column="1" Width="100" Background="#FFFF5E1F" Height="30" BorderBrush="{x:Null}" FontWeight="Bold" Foreground="White" VerticalAlignment="Bottom" Margin="0,0,0,40">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Grid Grid.Column="0">
+                <Grid.RowDefinitions>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="10"/>
+        </Grid.RowDefinitions>
+            <Label Name="lblHotelName" Content="Tên của khách sạn" Grid.Row="1" VerticalContentAlignment="Center" FontSize="24" Padding="15,5,5,5"/>
+            <Label Name="lblRating" Content="10 sao" Grid.Row="2"/>
+            <Label Name="lblAddress" Content="Sóc Trăng city" Grid.Row="3"/>
+        </Grid>
+
+
+    </Grid>
+</UserControl>
