@@ -28,7 +28,7 @@
 
             <StackPanel Grid.Column ="1" x:Name="pnlButton" Orientation="Horizontal" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,10,26">
                 <Button x:Name="btnPartnership" 
-    Content="Partnership" DockPanel.Dock="Right" Width="100" Height="50" FontSize="16" Margin="0,10,5,0" FontWeight="Bold">
+    Content="Partnership" DockPanel.Dock="Right" Width="100" Height="50" FontSize="16" Margin="0,10,5,0" FontWeight="Bold" Click="btnPartnership_Click">
                     <Button.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" Value="10"/>
