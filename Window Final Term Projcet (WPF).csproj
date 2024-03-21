@@ -70,7 +70,7 @@
     <Compile Include="PHotelDetailChild\PHotelDetailRooms.xaml.cs">
       <DependentUpon>PHotelDetailRooms.xaml</DependentUpon>
     </Compile>
-    <Compile Include="PHotelDetailChild\UCHotelResult.xaml.cs">
+    <Compile Include="UCHotelResult.xaml.cs">
       <DependentUpon>UCHotelResult.xaml</DependentUpon>
     </Compile>
     <Compile Include="PHotelDetailChild\UClibary.xaml.cs">
@@ -120,7 +120,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="PHotelDetailChild\UCHotelResult.xaml">
+    <Page Include="UCHotelResult.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

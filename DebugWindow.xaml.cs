@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,19 +11,28 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Window_Final_Term_Projcet__WPF_.PHotelDetailChild
+namespace Window_Final_Term_Projcet__WPF_
 {
     /// <summary>
-    /// Interaction logic for UCHotelResult.xaml
+    /// Interaction logic for DebugWindow.xaml
     /// </summary>
-    public partial class UCHotelResult : UserControl
+    public partial class DebugWindow : Window
     {
-        public UCHotelResult()
+        public DebugWindow()
         {
             InitializeComponent();
         }
+       
+        public void debug(DataTable table)
+        {
+            //dt.ItemsSource = table.AsDataView(); 
+            //foreach (DataRow row in table.Rows)
+            //{
+            //    MessageBox.Show(row[0].ToString()); 
+            //}
+        }
+        
     }
 }

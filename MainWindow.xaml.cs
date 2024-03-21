@@ -23,8 +23,8 @@ namespace Window_Final_Term_Projcet__WPF_
         public MainWindow()
         {
             InitializeComponent();
-            //mainContent.Content = new PHotelDetail();
-            mainContent.Content = new Pcustomer();
+            mainContent.Content = new PHotelDetail();
+            // mainContent.Content = new Pcustomer();
 
         }
 
