@@ -1,0 +1,47 @@
+﻿<Page x:Class="Window_Final_Term_Projcet__WPF_.PHotelDetail"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Window_Final_Term_Projcet__WPF_"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PHotelDetail">
+
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="400"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="01">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="5"/>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="5"/>
+                <ColumnDefinition Width="100"/>
+            </Grid.ColumnDefinitions>
+            
+            <Button Grid.Column="0" x:Name="btnOverView"
+                    Content="OverView" Width="100" BorderBrush="#FF36ADF9" HorizontalAlignment="Left" FontSize="18" Background="White" Click="btnOverView_Click" >
+            </Button>
+
+            <Button Grid.Column="2" x:Name="btnRooms"
+                    Content="Rooms" Width="100" BorderBrush="#FF36ADF9" HorizontalAlignment="Center" FontSize="18" Background="White" Click="btnRooms_Click" Height="30" VerticalAlignment="Top" >
+            </Button>
+
+            <Button Grid.Column="4" x:Name="btnReview"
+                    Content="Review" Width="100" BorderBrush="#FF36ADF9" HorizontalAlignment="Right" FontSize="18" Background="White" Click="btnReview_Click">
+            </Button>
+
+        </Grid>
+        <Grid Grid.Row ="3">
+            <Frame Name="detailContent">
+                
+            </Frame>
+        </Grid>
+    </Grid>
+</Page>

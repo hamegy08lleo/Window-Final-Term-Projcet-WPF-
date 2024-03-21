@@ -32,6 +32,11 @@ namespace Window_Final_Term_Projcet__WPF_
             {
                 MessageBox.Show(row[0].ToString()); 
             }
+            //dt.ItemsSource = table.AsDataView(); 
+            //foreach (DataRow row in table.Rows)
+            //{
+            //    MessageBox.Show(row[0].ToString()); 
+            //}
         }
         
     }

@@ -168,6 +168,8 @@
             </Setter>
         </Style>
     </Page.Resources>
+    
+    
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="30"/>
@@ -184,8 +186,7 @@
                 <ColumnDefinition Width="150"/>
                 <ColumnDefinition Width="100"/>
             </Grid.ColumnDefinitions>
-
-
+            
             <Label Grid.Column ="1" Content="Check-in"
                  VerticalAlignment="Top" Foreground="Black"
                 Height="40" FontFamily="JetBrainsMono Nerd Font" FontSize="18" 
@@ -248,15 +249,12 @@
            FontSize="18" Padding="0,0,0,0" BorderBrush="Black" Background="White" Width="110" 
                    HorizontalAlignment="Left"/>
 
-
-
         </Grid>
 
         <Button Grid.Row="3" x:Name="btnSearch" Content=" Search Hotel "
-                HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Height="53" Width="300" Background="#FFFF5E1F" Foreground="White" FontSize="24" FontWeight="Bold">
-            <Button.BorderBrush>
-                <SolidColorBrush Color="#FF040000" Opacity="0"/>
-            </Button.BorderBrush>
+                HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center"
+                Height="53" Width="300" Background="#FFFF5E1F" Foreground="White" FontSize="24" FontWeight="Bold" >
+
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="20"/>
@@ -268,5 +266,8 @@
 
 
 
-    </Grid>
+        </Grid>
+
+
+
 </Page>

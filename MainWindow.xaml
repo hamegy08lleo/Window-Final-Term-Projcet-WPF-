@@ -5,11 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Window_Final_Term_Projcet__WPF_"
         mc:Ignorable="d"
-        Title="horizon Trail Travel" Height="600" Width="800" ResizeMode="NoResize">
-    <Grid>
+        Title="horizon Trail Travel" Height="620" Width="800" ResizeMode="NoResize">
+    <Grid ScrollViewer.VerticalScrollBarVisibility="Disabled">
         <Grid.RowDefinitions>
             <RowDefinition Height="130"/>
-            <RowDefinition Height="400"/>
+            <RowDefinition Height="450"/>
         </Grid.RowDefinitions>
         <Grid Grid.Row="0">
             <Grid.Background>
@@ -24,11 +24,11 @@
                 <ColumnDefinition Width="480"/>
             </Grid.ColumnDefinitions>
             <Image Grid.Column ="0" x:Name="imgLogo"  Height="100" Width="100" Margin="10,0,0,0" Source="/HorizonTrailLogo.png" Stretch="UniformToFill" MouseLeftButtonDown="imgLogo_MouseDown" HorizontalAlignment="Left"/>
-            <Label Grid.Column ="0" x:Name="lblLogo" Content="Horizon Trail Travel" Width="222" Margin="0,0,-8,13.5" FontSize="24" FontFamily="Yu Gothic UI Semilight" HorizontalAlignment="Right" VerticalAlignment="Bottom" MouseLeftButtonDown="lblLogo_MouseDown"/>
+            <Label Grid.Column ="0" x:Name="lblLogo" Content="Horizon Trail Travel" Width="222" Margin="0,0,-8,13.5" FontSize="22" FontFamily="9Slide03 ALLROUND GOTHIC DEMI.ttf##9Slide03 AllRoundGothic" HorizontalAlignment="Right" VerticalAlignment="Bottom" MouseLeftButtonDown="lblLogo_MouseDown"/>
 
             <StackPanel Grid.Column ="1" x:Name="pnlButton" Orientation="Horizontal" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,10,26">
                 <Button x:Name="btnPartnership" 
-    Content="Partnership" DockPanel.Dock="Right" Width="100" Height="50" FontSize="16" Margin="0,10,5,0" FontWeight="Bold">
+    Content="Partnership" DockPanel.Dock="Right" Width="100" Height="50" FontSize="16" Margin="0,10,5,0" FontWeight="Bold" Click="btnPartnership_Click">
                     <Button.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" Value="10"/>
@@ -90,7 +90,8 @@
                 </Button>
             </StackPanel>
         </Grid>
-        <Frame x:Name="mainContent" Grid.Row="1" Height="400">
+        <Frame x:Name="mainContent" Grid.Row="1" VerticalAlignment="Top"
+               NavigationUIVisibility="Hidden">
         </Frame>
     </Grid>
 </Window>

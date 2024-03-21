@@ -38,7 +38,6 @@ namespace Window_Final_Term_Projcet__WPF_
         {
             mainContent.Content = null;
             mainContent.Content = new Pcustomer();
-            MessageBox.Show("hello");
         }
         private void imgLogo_MouseDown(object sender, MouseButtonEventArgs e)
         {
@@ -54,6 +53,16 @@ namespace Window_Final_Term_Projcet__WPF_
         {
             WindowLogin windowLogin = new WindowLogin();
             windowLogin.ShowDialog();
+        }
+
+        private void btnPartnership_Click(object sender, RoutedEventArgs e)
+        {
+            mainContent.Content = new PPartnership();
+        }
+
+        private void btnSearch_Click()
+        {
+
         }
     }
 }

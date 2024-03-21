@@ -67,6 +67,27 @@
     <Compile Include="PCustomer.xaml.cs">
       <DependentUpon>PCustomer.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PHotelDetail.xaml.cs">
+      <DependentUpon>PHotelDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PHotelDetailChild\PHotelDetailOverview.xaml.cs">
+      <DependentUpon>PHotelDetailOverview.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PHotelDetailChild\PHotelDetailReview.xaml.cs">
+      <DependentUpon>PHotelDetailReview.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PHotelDetailChild\PHotelDetailRooms.xaml.cs">
+      <DependentUpon>PHotelDetailRooms.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCHotelResult.xaml.cs">
+      <DependentUpon>UCHotelResult.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PHotelDetailChild\UClibary.xaml.cs">
+      <DependentUpon>UClibary.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PPartnership.xaml.cs">
+      <DependentUpon>PPartnership.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Presult.xaml.cs">
       <DependentUpon>Presult.xaml</DependentUpon>
     </Compile>
@@ -98,6 +119,34 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="PCustomer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PHotelDetail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PHotelDetailChild\PHotelDetailOverview.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PHotelDetailChild\PHotelDetailReview.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PHotelDetailChild\PHotelDetailRooms.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCHotelResult.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PHotelDetailChild\UClibary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PPartnership.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -144,6 +193,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <Resource Include="Fonts\#9Slide03 ALLROUND GOTHIC DEMI.ttf" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -162,11 +212,9 @@
   <ItemGroup>
     <Resource Include="Icon\calendarLogo.png" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Resource Include="Image1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Image2.png" />
+    <Content Include="DataBase\CreateDataBase.sql" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="CreateDataBase.sql" />
