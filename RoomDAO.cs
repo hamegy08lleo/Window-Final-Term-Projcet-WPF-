@@ -20,16 +20,6 @@ namespace Window_Final_Term_Projcet__WPF_
         }
         public void Add(OwnerPost post)
         {
-            Room room = new Room(post.RoomType, post.Hotel, post.City, post.Price, 5);
-            string sqlStr = ""; 
-            while (post.Amount > 0)
-            {
-                post.Amount -= 1; 
-                sqlStr += $"INSERT INTO "
-                     + $"{tableName}(roomType, hotel, city, price, rating) "
-                     + $"VALUES ('{room.RoomType}', '{room.Hotel}', '{room.City}', '{room.Price}', '{room.Rating}')";
-            }
-            dbConnection.CommandExecute(sqlStr); 
         }
 
         public DataTable Search(CustomerSearch input)
