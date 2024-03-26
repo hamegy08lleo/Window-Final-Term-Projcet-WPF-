@@ -5,18 +5,26 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Window_Final_Term_Projcet__WPF_"
       mc:Ignorable="d" 
-      d:DesignHeight="400" d:DesignWidth="800"
+      d:DesignHeight="850" d:DesignWidth="1600"
       Title="Presult">
 
-    <Grid Background="#FFFFABAB">
+    <Grid>
+        <Grid.Background>
+            <SolidColorBrush Color="White" Opacity="0.8"/>
+        </Grid.Background>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="50*"/>
-            <ColumnDefinition Width="700*"/>
-            <ColumnDefinition Width="50*"/>
+            <ColumnDefinition Width="50"/>
+            <ColumnDefinition Width="1500"/>
+            <ColumnDefinition Width="50"/>
         </Grid.ColumnDefinitions>
-        <ScrollViewer VerticalScrollBarVisibility="Hidden" CanContentScroll="True" Grid.Column="1" Width="700">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="800"/>
+            <RowDefinition Height="25"/>
+        </Grid.RowDefinitions>
+        <ScrollViewer VerticalScrollBarVisibility="Hidden" CanContentScroll="True" Grid.Column="1" Grid.Row="1" Width="1000">
             <Grid>
-                <StackPanel  x:Name ="spResult" Margin ="10, 10, 10, 10" ScrollViewer.HorizontalScrollBarVisibility="Hidden" ScrollViewer.VerticalScrollBarVisibility="Hidden">
+                <StackPanel  x:Name ="spResult" ScrollViewer.HorizontalScrollBarVisibility="Hidden" ScrollViewer.VerticalScrollBarVisibility="Hidden">
 
                 </StackPanel>
             </Grid>
