@@ -8,15 +8,16 @@
       d:DesignHeight="400" d:DesignWidth="800"
       Title="Presult">
 
-    <Grid>
+    <Grid Background="#FFFFABAB">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="50"/>
-            <ColumnDefinition Width="700"/>
-            <ColumnDefinition Width="50"/>
+            <ColumnDefinition Width="50*"/>
+            <ColumnDefinition Width="700*"/>
+            <ColumnDefinition Width="50*"/>
         </Grid.ColumnDefinitions>
         <ScrollViewer VerticalScrollBarVisibility="Hidden" CanContentScroll="True" Grid.Column="1" Width="700">
             <Grid>
                 <StackPanel  x:Name ="spResult" Margin ="10, 10, 10, 10" ScrollViewer.HorizontalScrollBarVisibility="Hidden" ScrollViewer.VerticalScrollBarVisibility="Hidden">
+
                 </StackPanel>
             </Grid>
         </ScrollViewer>
