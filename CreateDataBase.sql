@@ -2,8 +2,8 @@
 
 CREATE TABLE Room( 
 	roomID int identity, 	
-	roomType varchar(100), 
 	hotelID int, 
+	roomType varchar(100), 
 	price int, 
 	primary key(roomID)
 )
@@ -11,12 +11,17 @@ CREATE TABLE Room(
 CREATE TABLE Hotel( 
 	hotelID int identity,
 	hotelName varchar(100),
-	rating float not null, 
 	city varchar(100) not null, 
 	address varchar(100) not null, 
-	phoneNumber varchar(10), 
 	email varchar(100), 
+	phoneNumber varchar(10), 
+	rating float not null, 
 	primary key(hotelID)
+)
+
+CREATE TABLE Booking( 
+	bookingID int IDENTITY, 
+	roomID int
 )
 
 ALTER TABLE Room WITH CHECK ADD FOREIGN KEY(hotelID) REFERENCES Hotel(hotelID)
@@ -62,7 +67,10 @@ VALUES('1 Couple Bed', '5', '200')
 
 
 SELECT * FROM Room
-SELECT * FROM Hotel
+SELECT * FROM Hotel 
+SELECT * FROM Booking
 
+USE ManageRoom
 DROP TABLE Room
 DROP TABLE Hotel 
+DROP TABLE Booking

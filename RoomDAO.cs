@@ -8,17 +8,10 @@ using System.Windows;
 
 namespace Window_Final_Term_Projcet__WPF_
 {
-    internal class RoomDAO
+    internal class RoomDAO : DAO
     {
-        private string tableName;
-        private DBConnection dbConnection; 
-
-        public RoomDAO(string tableName)
-        {
-            this.tableName = tableName;
-            this.dbConnection = new DBConnection(Properties.Settings.Default.connStr);
-        }
-        public void Add(OwnerPost post)
+        public RoomDAO() : base("Room") { }
+        public void Add(OwnerPostRoom post)
         {
         }
 
@@ -27,7 +20,7 @@ namespace Window_Final_Term_Projcet__WPF_
             String sqlStr = $"SELECT * FROM {tableName} " +
                 $"WHERE {tableName}.city = '{input.City}' " +
                 $"AND {tableName}.roomType = '{input.RoomType}'";
-            DataTable dt = dbConnection.AdapterExecute(sqlStr);
+            DataTable dt = dBConnection.AdapterExecute(sqlStr);
             return dt;
         }
     }

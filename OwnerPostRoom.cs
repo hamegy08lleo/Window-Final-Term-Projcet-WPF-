@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace Window_Final_Term_Projcet__WPF_
 {
-    internal class OwnerPost
+    internal class OwnerPostRoom
     {
         private string roomType;
         private string hotel;
         private int price;
         private int amount;
 
-        public OwnerPost(string roomType, string hotel, int price, int amount)
+        public OwnerPostRoom(string roomType, string hotel, int price, int amount)
         {
             this.roomType = roomType;
             this.hotel = hotel;
