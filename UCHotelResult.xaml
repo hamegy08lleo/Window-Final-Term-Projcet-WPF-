@@ -21,7 +21,7 @@
         
         
         
-        <Button x:Name="btnSelectRoom" Content="Select Room" Grid.Column="1" Width="230" Background="#FFFF5E1F" Height="70" BorderBrush="{x:Null}" FontWeight="Bold" Foreground="White" VerticalAlignment="Bottom" Margin="0,0,0,40" FontSize="30">
+        <Button x:Name="btnSelectRoom" Content="Select Room" Grid.Column="1" Width="230" Background="#FFFF5E1F" Height="70" BorderBrush="{x:Null}" FontWeight="Bold" Foreground="White" VerticalAlignment="Bottom" Margin="0,0,0,40" FontSize="30" Click="btnSelectRoom_Click">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="10"/>

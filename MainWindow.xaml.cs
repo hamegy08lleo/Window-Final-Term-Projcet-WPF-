@@ -40,7 +40,7 @@ namespace Window_Final_Term_Projcet__WPF_
         {
             mainContent.Content = null;
             mainContent.Content = new Pcustomer();
-            if (this.btnPartnership.Content == "Customer")
+            if (this.btnPartnership.Content.ToString() == "Customer")
             {
                 this.btnPartnership.Content = "Partnership";
             }
@@ -63,7 +63,7 @@ namespace Window_Final_Term_Projcet__WPF_
 
         private void btnPartnership_Click(object sender, RoutedEventArgs e)
         {
-            if (this.btnPartnership.Content == "Partnership")
+            if (this.btnPartnership.Content.ToString() == "Partnership")
             {
                     mainContent.Content = new PPartnership();
                     this.btnPartnership.Content = "Customer";

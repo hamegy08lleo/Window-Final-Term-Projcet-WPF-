@@ -24,5 +24,14 @@ namespace Window_Final_Term_Projcet__WPF_.PHotelDetailChild
         {
             InitializeComponent();
         }
+
+
+        private void btnSelectRoom_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow window = Window.GetWindow(this) as MainWindow;
+            PHotelDetail pHotelDetail = window.MainContent.Content as PHotelDetail;
+            pHotelDetail.detailContent.Navigate(new PHotelDetailChild.PHotelDetailRooms());
+           
+        }
     }
 }

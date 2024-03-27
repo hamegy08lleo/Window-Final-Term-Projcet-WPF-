@@ -10,7 +10,7 @@
 
     <Grid>
         <Grid.Background>
-            <SolidColorBrush Color="White" Opacity="0.8"/>
+            <SolidColorBrush Color="White" Opacity="0.5"/>
         </Grid.Background>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="50"/>
@@ -22,12 +22,22 @@
             <RowDefinition Height="800"/>
             <RowDefinition Height="25"/>
         </Grid.RowDefinitions>
-        <ScrollViewer VerticalScrollBarVisibility="Hidden" CanContentScroll="True" Grid.Column="1" Grid.Row="1" Width="1000">
-            <Grid>
-                <StackPanel  x:Name ="spResult" ScrollViewer.HorizontalScrollBarVisibility="Hidden" ScrollViewer.VerticalScrollBarVisibility="Hidden">
+                <Border Grid.Column="1" Grid.Row="1" BorderThickness="20" Padding="10" CornerRadius="20" Width="1500" Height="800" HorizontalAlignment="Left">
+                        <Border.BorderBrush>
+                                <SolidColorBrush Color="#FF7FC6E6" Opacity="0.9"/>
+                        </Border.BorderBrush>
+                        <Border.Background>
+                                <SolidColorBrush Color="White" Opacity="0.8"/>
+                        </Border.Background>
 
-                </StackPanel>
-            </Grid>
-        </ScrollViewer>
+                        <ScrollViewer VerticalScrollBarVisibility="Hidden" CanContentScroll="True" Grid.Column="1" Grid.Row="1" Width="1000">
+                                <Grid>
+                                        <StackPanel  x:Name ="spResult" ScrollViewer.HorizontalScrollBarVisibility="Hidden"
+                                        ScrollViewer.VerticalScrollBarVisibility="Hidden">
+
+                                        </StackPanel>
+                                </Grid>
+                        </ScrollViewer>
+                </Border>
     </Grid>
 </Page>

@@ -42,6 +42,7 @@ namespace Window_Final_Term_Projcet__WPF_
                     rating += "⭐";
                 }
                 ucResult.lblRating.Content = rating;
+                ucResult.btnSelectRoom.Click += ucResult.btnSelectRoom_Click;
             }
         }
 

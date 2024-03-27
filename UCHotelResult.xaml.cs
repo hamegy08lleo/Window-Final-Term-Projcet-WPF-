@@ -23,5 +23,11 @@ namespace Window_Final_Term_Projcet__WPF_{
         {
             InitializeComponent();
         }
+
+        public void btnSelectRoom_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = Window.GetWindow(this) as MainWindow;
+            mainWindow.MainContent.Navigate(new PHotelDetail());
+        }
     }
 }
