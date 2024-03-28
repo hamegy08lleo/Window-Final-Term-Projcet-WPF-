@@ -181,7 +181,7 @@
                   VerticalAlignment="Top" Height="50" 
                   ScrollViewer.VerticalScrollBarVisibility="Hidden" Width="500" Padding="15,0,0,0" HorizontalAlignment="Center">
                     <ComboBoxItem Content="Ho Chi Minh city"/>
-                    <ComboBoxItem Content="Ho Noi city"/>
+                    <ComboBoxItem Content="Ha Noi city"/>
                     <ComboBoxItem Content="Da Nang city"/>
                     <ComboBoxItem Content="Can Tho city"/>
                     <ComboBoxItem Content="Long An province"/>

@@ -7,17 +7,28 @@
       mc:Ignorable="d" 
       d:DesignHeight="850" d:DesignWidth="1600"
       Title="PShowHotel">
+        <Grid>
+                <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="200"/>
+                        <ColumnDefinition Width="1200"/>
+                        <ColumnDefinition Width="200"/>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="1">
+                        <Border BorderThickness="10" CornerRadius="20,20,0,0" Width="1200" Height="850">
+                                <Border.Background>
+                                        <SolidColorBrush Color="White" Opacity="0.5"/>
+                                </Border.Background>
+                                <ScrollViewer VerticalScrollBarVisibility="Hidden" CanContentScroll="True" Grid.Column="1" Grid.Row="1" Width="1000">
+                                        <Grid>
+                                                <StackPanel  x:Name ="spHotel" ScrollViewer.HorizontalScrollBarVisibility="Hidden"
+                                                        ScrollViewer.VerticalScrollBarVisibility="Hidden" Margin="0,20,0,0">
 
-        <Border BorderThickness="10" Padding="5" CornerRadius="20">
-                <Border.BorderBrush>
-                        <SolidColorBrush Color="White" Opacity="0.8"/>
-                </Border.BorderBrush>
-                <Border.Background>
-                        <SolidColorBrush Color="White" Opacity="0.8"/>
-                </Border.Background>
-                <Grid >
-                        <Label Content="Show khách sạn" FontSize="50"/>
+                                                </StackPanel>
+                                        </Grid>
+                                </ScrollViewer>
+
+                        </Border>
                 </Grid>
+        </Grid>
 
-        </Border>
 </Page>

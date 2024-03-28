@@ -8,8 +8,8 @@
              d:DesignHeight="400" d:DesignWidth="1000">
     <Border BorderThickness="2" Width="1000" Height="400"  >
         <Border CornerRadius="25" BorderBrush="Black" BorderThickness="5" Padding="0" Background="White">
-    <Grid>
-        <Grid.ColumnDefinitions>
+                <Grid>
+                <Grid.ColumnDefinitions>
             <ColumnDefinition Width="700"/>
             <ColumnDefinition Width="300"/>
         </Grid.ColumnDefinitions>

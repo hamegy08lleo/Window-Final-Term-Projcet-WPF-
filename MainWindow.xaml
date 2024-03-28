@@ -94,7 +94,7 @@
                 </Button>
             </StackPanel>
         </Grid>
-        <Grid Grid.Row="1">
+        <Grid Grid.Row="1" x:Name="gBackGround">
             <Grid.Effect>
                 <BlurEffect/>
             </Grid.Effect>
@@ -105,7 +105,7 @@
 
 
         <Frame x:Name="mainContent" Grid.Row="1" VerticalAlignment="Center"
-                       NavigationUIVisibility="Hidden" HorizontalContentAlignment="Center" 
+                       NavigationUIVisibility="Hidden" 
                        ScrollViewer.VerticalScrollBarVisibility="Disabled" HorizontalAlignment="Center" Grid.IsSharedSizeScope="True"/>
 
     </Grid>
