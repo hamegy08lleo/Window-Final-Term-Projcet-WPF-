@@ -33,9 +33,16 @@ namespace Window_Final_Term_Projcet__WPF_
                 UCHotelResult ucResult = new UCHotelResult();
                 ucResult.lblHotelName.Content = row[3].ToString();
                 ucResult.lblAddress.Content = row[1].ToString();
-                ucResult.lblRating.Content = row[5].ToString() + " Sao";
-                ucResult.lblPrice.Content = row[4].ToString();
+                ucResult.lblPrice.Content = row[4].ToString() + "$";
                 this.spResult.Children.Add(ucResult);
+
+                string rating = "";
+                for (int i = 0; i < int.Parse(row[5].ToString()) ; i++)
+                {
+                    rating += "⭐";
+                }
+                ucResult.lblRating.Content = rating;
+                ucResult.btnSelectRoom.Click += ucResult.btnSelectRoom_Click;
             }
         }
 

@@ -4,7 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Window_Final_Term_Projcet__WPF_"
-             mc:Ignorable="d" Height="370" Width="800">
+             mc:Ignorable="d" Height="200" Width="500">
     <UserControl.Resources>
         <Style x:Key="ComboBoxToggleButton" TargetType="ToggleButton">
             <Setter Property="Template">
@@ -136,17 +136,17 @@
             <Setter Property="SnapsToDevicePixels" Value="true" />
             <Setter Property="HorizontalAlignment" Value="Stretch" />
             <Setter Property="VerticalAlignment" Value="Stretch" />
-            <Setter Property="FontSize" Value="13" />
+            <Setter Property="FontSize" Value="20" />
             <Setter Property="OverridesDefaultStyle" Value="true"/>
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="ComboBoxItem">
                         <Border
                         Name="Border"
-                        Padding="5"
+                        Padding="10,0,0,0"
                         Margin="2"
-                        BorderThickness="2,0,0,0"
-                        CornerRadius="0"
+                        BorderThickness="0,0,0,0"
+                        CornerRadius="10"
                         Background="Transparent"
                         BorderBrush="Transparent">
                             <TextBlock TextAlignment="Left">
@@ -164,54 +164,51 @@
             </Setter>
         </Style>
     </UserControl.Resources>
-    <Grid HorizontalAlignment="Center" Width="523" Margin="0,0,0,170">
-        <Grid.Background>
-            <SolidColorBrush Color="Black" Opacity="0"/>
-        </Grid.Background>
-        <Label Content="City, Province"
-               Margin="0,0,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" Foreground="Black" Height="40" FontFamily="JetBrainsMono Nerd Font" FontSize="18" VerticalContentAlignment="Center"/>
 
-        <!--<TextBox x:Name="txbPlace" Margin="0,35,0,0" Text="" VerticalAlignment="Top" HorizontalAlignment="Center" Height="50" HorizontalScrollBarVisibility="Disabled" VerticalContentAlignment="Center" FontSize="24" Padding="15,0,30,0" BorderBrush="Black" SelectionBrush="Black" Width="500">
-            <TextBox.Resources>
-                <Style TargetType="{x:Type Border}">
-                    <Setter Property="CornerRadius" Value="30" />
+    <Grid HorizontalAlignment="Center" Width="500" VerticalAlignment="Center" Height="200">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="100"/>
 
-                </Style>
-            </TextBox.Resources>
-        </TextBox>-->
-        <ComboBox x:Name="cbbCity"
-          Style="{DynamicResource theComboBox}"
-          ItemContainerStyle="{DynamicResource theComboBoxItem}"
-          Margin="0,34,0,0" VerticalAlignment="Top" Height="50" 
-          ScrollViewer.VerticalScrollBarVisibility="Hidden" Width="500" Padding="15,0,0,0">
-            <ComboBoxItem Content="Ho Chi Minh city"/>
-            <ComboBoxItem Content="Ho Noi city"/>
-            <ComboBoxItem Content="Da Nang city"/>
-            <ComboBoxItem Content="Can Tho city"/>
-            <ComboBoxItem Content="Long An province"/>
-            <ComboBoxItem Content="Soc Trang province"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" VerticalAlignment="Top" Panel.ZIndex="3" Height="125" HorizontalAlignment="Center">
+                <Label Content="City, Province" 
+                       VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="Black" Height="40" FontFamily="JetBrainsMono Nerd Font" FontSize="24" VerticalContentAlignment="Center"/>
 
-        </ComboBox>
-
-
-
-        <Label Content="Room Type"
-               Margin="0,100,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="Black" Height="40" FontFamily="JetBrainsMono Nerd Font" FontSize="18" VerticalContentAlignment="Center"/>
-
-
-
-
-
-        <ComboBox x:Name="cbbRoomType"
+                <ComboBox x:Name="cbbCity" 
                   Style="{DynamicResource theComboBox}"
                   ItemContainerStyle="{DynamicResource theComboBoxItem}"
-                  Margin="0,135,0,0" VerticalAlignment="Top" Height="50" ScrollViewer.VerticalScrollBarVisibility="Hidden" Width="500" Padding="15,0,0,0">
-            <ComboBoxItem Content="1 single bed"/>
-            <ComboBoxItem Content="1 double bed"/>
-            <ComboBoxItem Content="2 single bed"/>
-            <ComboBoxItem Content="2 double bed"/>
-            <ComboBoxItem Content="1 single bed 1 double bed"/>
-        </ComboBox>
+                  VerticalAlignment="Top" Height="50" 
+                  ScrollViewer.VerticalScrollBarVisibility="Hidden" Width="500" Padding="15,0,0,0" HorizontalAlignment="Center">
+                    <ComboBoxItem Content="Ho Chi Minh city"/>
+                    <ComboBoxItem Content="Ho Noi city"/>
+                    <ComboBoxItem Content="Da Nang city"/>
+                    <ComboBoxItem Content="Can Tho city"/>
+                    <ComboBoxItem Content="Long An province"/>
+                    <ComboBoxItem Content="Soc Trang province"/>
+
+                </ComboBox>
+            
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" HorizontalAlignment="Center" >
+            
+                <Label Content="Room Type"
+                       VerticalAlignment="Top" HorizontalAlignment="Left"  Foreground="Black" Height="40" FontFamily="JetBrainsMono Nerd Font" FontSize="24" VerticalContentAlignment="Center"/>
+
+
+                <ComboBox x:Name="cbbRoomType"
+                  Style="{DynamicResource theComboBox}"
+                  ItemContainerStyle="{DynamicResource theComboBoxItem}"
+                          VerticalAlignment="Top" Height="50" ScrollViewer.VerticalScrollBarVisibility="Hidden" Width="500" Padding="15,0,0,0" HorizontalAlignment="Center">
+                    <ComboBoxItem Content="1 single bed"/>
+                    <ComboBoxItem Content="1 double bed"/>
+                    <ComboBoxItem Content="2 single bed"/>
+                    <ComboBoxItem Content="2 double bed"/>
+                    <ComboBoxItem Content="1 single bed 1 double bed"/>
+                </ComboBox>
+        </StackPanel>
+
 
 
     </Grid>

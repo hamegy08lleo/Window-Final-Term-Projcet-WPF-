@@ -36,11 +36,14 @@ namespace Window_Final_Term_Projcet__WPF_
             //OwnerPost post = new OwnerPost("1 Single Bed", "Horizon Travel", "Ho Chi Minh city", 100, 10);
             //roomDAO.Add(post); 
         }
-
         private void lblLogo_MouseDown(object sender, MouseButtonEventArgs e)
         {
             mainContent.Content = null;
             mainContent.Content = new Pcustomer();
+            if (this.btnPartnership.Content.ToString() == "Customer")
+            {
+                this.btnPartnership.Content = "Partnership";
+            }
         }
         private void imgLogo_MouseDown(object sender, MouseButtonEventArgs e)
         {
@@ -60,11 +63,22 @@ namespace Window_Final_Term_Projcet__WPF_
 
         private void btnPartnership_Click(object sender, RoutedEventArgs e)
         {
-            mainContent.Content = new PPartnership();
+            if (this.btnPartnership.Content.ToString() == "Partnership")
+            {
+                    mainContent.Content = new PPartnership();
+                    this.btnPartnership.Content = "Customer";
+
+            }
+            else
+            {
+                    mainContent.Content = new Pcustomer();
+                    this.btnPartnership.Content = "Partnership";
+            }
         }
 
         public Frame MainContent { get { return mainContent; } set { mainContent = value; } }
 
         internal RoomDAO RoomDAO { get => roomDAO; set => roomDAO = value; }
+
     }
 }

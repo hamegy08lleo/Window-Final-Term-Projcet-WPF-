@@ -21,14 +21,14 @@
                 <RowDefinition Height="150"/>
                 <RowDefinition Height="150"/>
             </Grid.RowDefinitions>
-            <Image x:Name="Img2" Grid.Row="0"/>
-            <Image x:Name="Img3" Grid.Row="0"/>
-            <Image x:Name="Img4" Grid.Row="0"/>
-            <Image x:Name="Img5" Grid.Row="1"/>
-            <Image x:Name="Img6" Grid.Row="1"/>
-            <Image x:Name="Img7" Grid.Row="1"/>
+            <Image x:Name="Img2" Grid.Row="0" Grid.Column="0" Source="/BackgroundIMG/tom-barrett-M0AWNxnLaMw-unsplash.jpg"/>
+            <Image x:Name="Img3" Grid.Row="0" Grid.Column="1" Source="/BackgroundIMG/tom-barrett-M0AWNxnLaMw-unsplash.jpg"/>
+            <Image x:Name="Img4" Grid.Row="1" Grid.Column="0" Source="/BackgroundIMG/tom-barrett-M0AWNxnLaMw-unsplash.jpg"/>
+            <Image x:Name="Img5" Grid.Row="1" Grid.Column="1" Source="/BackgroundIMG/tom-barrett-M0AWNxnLaMw-unsplash.jpg"/>
+            <Image x:Name="Img6" Grid.Row="2" Grid.Column="0" Source="/BackgroundIMG/tom-barrett-M0AWNxnLaMw-unsplash.jpg"/>
+            <Image x:Name="Img7" Grid.Row="2" Grid.Column="1" Source="/BackgroundIMG/tom-barrett-M0AWNxnLaMw-unsplash.jpg"/>
         </Grid>
-        <Image x:Name="Img1" Grid.Column="0"/>
+        <Image x:Name="Img1" Grid.Column="0" Source="/BackgroundIMG/luca-bravo-O453M2Liufs-unsplash.jpg"/>
 
     </Grid>
 </UserControl>

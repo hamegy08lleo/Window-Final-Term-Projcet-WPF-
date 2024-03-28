@@ -23,6 +23,7 @@ namespace Window_Final_Term_Projcet__WPF_
         public PHotelDetail()
         {
             InitializeComponent();
+            this.detailContent.Content = new PHotelDetailChild.PHotelDetailOverview();
         }
 
         private void btnRooms_Click(object sender, RoutedEventArgs e)
@@ -38,6 +39,11 @@ namespace Window_Final_Term_Projcet__WPF_
         private void btnOverView_Click(object sender, RoutedEventArgs e)
         {
             detailContent.Content = new PHotelDetailChild.PHotelDetailOverview();
+        }
+
+        public PHotelDetail(Frame detailContent)
+        {
+            this.detailContent = detailContent;
         }
     }
 }

@@ -5,48 +5,54 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Window_Final_Term_Projcet__WPF_.PHotelDetailChild"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="750"
+      d:DesignHeight="700" d:DesignWidth="1600"
       Title="PHotelDetailRooms">
+    <Border BorderThickness="20" Padding="10" CornerRadius="20" Width="1200" Height="700">
+        <Border.BorderBrush>
+            <SolidColorBrush Color="#FF7FC6E6" Opacity="0.9"/>
+        </Border.BorderBrush>
+        <Border.Background>
+            <SolidColorBrush Color="White" Opacity="0.8"/>
+        </Border.Background>
 
-    <Grid>
-        <Grid.Background>
-            <SolidColorBrush Color="White" Opacity="0.265"/>
-        </Grid.Background>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="20"/>
-            <ColumnDefinition Width="530"/>
-            <ColumnDefinition Width="200"/>
-        </Grid.ColumnDefinitions>
-        <ScrollViewer Grid.Column="1" CanContentScroll="True" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden">
-            <StackPanel>
+                <Grid>
+                        <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="800"/>
+                <ColumnDefinition Width="300"/>
+            </Grid.ColumnDefinitions>
 
 
-            </StackPanel>
+            <ScrollViewer Grid.Column="0" CanContentScroll="True" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden">
+                <StackPanel x:Name="splRooms">
 
-        </ScrollViewer>
 
-        <Grid Grid.Column="2" Height="450" VerticalAlignment="Top">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="30"/>
-                <RowDefinition Height="300"/>
-                <RowDefinition Height="50"/>
-                <RowDefinition Height="20"/>
-            </Grid.RowDefinitions>
-            <Grid Grid.Row="1">
-                <Border BorderThickness="5" CornerRadius="30"/>
-                <Label Grid.Row="1" Content="Your current room selection" HorizontalAlignment="Center" Height="48" VerticalAlignment="Top"/>
-                <Label Grid.Row="1" Name="lblRoomType" Content="để cái loại phòng ở đây" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,50,0,0"/>
+                </StackPanel>
 
+            </ScrollViewer>
+
+            <Grid Grid.Column="1" Height="400" VerticalAlignment="Top">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="300"/>
+                    <RowDefinition Height="50"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="1">
+                    <Border BorderThickness="5" CornerRadius="30" HorizontalAlignment="Left" Width="360"/>
+                    <Label Grid.Row="1" Content="Your current room selection" HorizontalAlignment="Center" Height="48" VerticalAlignment="Top" FontSize="20"/>
+                    <Label Grid.Row="1" Name="lblRoomType" Content="để cái loại phòng ở đây" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,50,0,0"/>
+
+                </Grid>
+                <Grid Grid.Row="2">
+                    <Button Name="btnChoose" Content="Choose" Width="200" HorizontalAlignment="Center" Height="50" Background="#FFFF5E1F" BorderBrush="{x:Null}" Foreground="White" FontWeight="Bold" FontSize="24">
+                        <Button.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="10"/>
+                            </Style>
+                        </Button.Resources>
+                    </Button>
+                </Grid>
             </Grid>
-            <Grid Grid.Row="2">
-                <Button Name="btnChoose" Content="Choose" Width="70" HorizontalAlignment="Center" Height="32" Background="#FFFF5E1F" BorderBrush="{x:Null}" Foreground="White" FontWeight="Bold">
-                    <Button.Resources>
-                        <Style TargetType="Border">
-                            <Setter Property="CornerRadius" Value="10"/>
-                        </Style>
-                    </Button.Resources>
-                </Button>
-            </Grid>
+
         </Grid>
-    </Grid>
+    </Border>
 </Page>

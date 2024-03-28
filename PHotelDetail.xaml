@@ -5,43 +5,62 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Window_Final_Term_Projcet__WPF_"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="850" d:DesignWidth="1600"
       Title="PHotelDetail">
 
-    <Grid Background="White">
+    <Grid>
+        <Grid.Background>
+            <SolidColorBrush Color="#FF4FFFC9" Opacity="0.3"/>
+        </Grid.Background>
         <Grid.RowDefinitions>
-            <RowDefinition Height="10"/>
-            <RowDefinition Height="30"/>
-            <RowDefinition Height="10"/>
-            <RowDefinition Height="400"/>
+            <RowDefinition Height="5"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="5"/>
+            <RowDefinition Height="740"/>
+            <RowDefinition Height="20"/>
         </Grid.RowDefinitions>
 
         <Grid Grid.Row="01">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="100"/>
-                <ColumnDefinition Width="5"/>
-                <ColumnDefinition Width="100"/>
-                <ColumnDefinition Width="5"/>
-                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="20"/>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="20"/>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="20"/>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="940"/>
             </Grid.ColumnDefinitions>
-            
-            <Button Grid.Column="0" x:Name="btnOverView"
-                    Content="OverView" Width="100" BorderBrush="#FF36ADF9" HorizontalAlignment="Left" FontSize="18" Background="White" Click="btnOverView_Click" >
+
+            <Button Grid.Column="1" x:Name="btnOverView"
+                    Content="OverView" Click="btnOverView_Click" Width="200" BorderBrush="{x:Null}" FontSize="24" Background="#026aad"  Foreground="White" FontWeight="SemiBold" FontStretch="Expanded" Height="80" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="25"/>
+                    </Style>
+                </Button.Resources>
             </Button>
 
-            <Button Grid.Column="2" x:Name="btnRooms"
-                    Content="Rooms" Width="100" BorderBrush="#FF36ADF9" HorizontalAlignment="Center" FontSize="18" Background="White" Click="btnRooms_Click" Height="30" VerticalAlignment="Top" >
+            <Button Grid.Column="3" x:Name="btnRooms"
+                    Content="Rooms"  Click="btnRooms_Click" Width="200" BorderBrush="{x:Null}" FontSize="24" Background="#026aad"  Foreground="White" FontWeight="SemiBold" FontStretch="Expanded" Height="80" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="25"/>
+                    </Style>
+                </Button.Resources>
             </Button>
 
-            <Button Grid.Column="4" x:Name="btnReview"
-                    Content="Review" Width="100" BorderBrush="#FF36ADF9" HorizontalAlignment="Right" FontSize="18" Background="White" Click="btnReview_Click">
+            <Button Grid.Column="5" x:Name="btnReview"
+                    Content="Review" Click="btnReview_Click" Width="200" BorderBrush="{x:Null}" FontSize="24" Background="#026aad"  Foreground="White" FontWeight="SemiBold" FontStretch="Expanded" Height="80">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="25"/>
+                    </Style>
+                </Button.Resources>
             </Button>
 
         </Grid>
-        <Grid Grid.Row ="3">
-            <Frame Name="detailContent">
-                
-            </Frame>
+                <Grid Grid.Row ="3">
+                        <Frame x:Name="detailContent" HorizontalContentAlignment="Stretch" Height="740" VerticalContentAlignment="Center" ScrollViewer.VerticalScrollBarVisibility="Disabled" VerticalAlignment="Top"/>
+                </Grid>
         </Grid>
-    </Grid>
 </Page>

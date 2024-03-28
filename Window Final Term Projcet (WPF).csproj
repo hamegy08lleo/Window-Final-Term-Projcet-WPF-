@@ -218,6 +218,8 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Resource Include="BackgroundIMG\tom-barrett-M0AWNxnLaMw-unsplash.jpg" />
+    <Resource Include="BackgroundIMG\luca-bravo-O453M2Liufs-unsplash.jpg" />
     <Content Include="DataBase\CreateDataBase.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

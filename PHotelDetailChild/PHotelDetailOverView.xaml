@@ -5,79 +5,83 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Window_Final_Term_Projcet__WPF_.PHotelDetailChild"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="700" d:DesignWidth="1600"
       Title="PHotelDetailOverview">
 
-    <Grid>
-        <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="50"/>
-                <RowDefinition Height="50"/>
-                <RowDefinition Height="300"/>
-            </Grid.RowDefinitions>
-            <Grid x:Name="GridHotelName" Grid.Row="0">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="500"/>
-                    <ColumnDefinition Width="300"/>
-                </Grid.ColumnDefinitions>
+        <Border BorderThickness="20" Padding="10" CornerRadius="20" Width="1200" Height="700">
+                <Border.BorderBrush>
+                        <SolidColorBrush Color="#FF7FC6E6" Opacity="0.9"/>
+                </Border.BorderBrush>
+                <Border.Background>
+                        <SolidColorBrush Color="White" Opacity="0.8"/>
+                </Border.Background>
+                
+                <Grid>
+                        <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="100"/>
+                                <ColumnDefinition Width="1000"/>
+                                <ColumnDefinition Width="100"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                                <RowDefinition Height="10"/>
+                                <RowDefinition Height="100"/>
+                                <RowDefinition Height="10"/>
+                                <RowDefinition Height="100"/>
+                                <RowDefinition Height="10"/>
+                                <RowDefinition Height="450"/>
+                                <RowDefinition Height="20"/>
+                        </Grid.RowDefinitions>
 
-                <Label Grid.Column ="0" Name="lblHotelName" Background="#FFE55757" Content="Tên cái khách sạn ở đây nè"/>
+                        <Grid x:Name="GridHotelName"   Grid.Row="1" Grid.Column="1">
+                                <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="800*"/>
+                                        <ColumnDefinition Width="600*"/>
+                                </Grid.ColumnDefinitions>
 
-                <Grid Grid.Column ="1">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="25"/>
-                        <RowDefinition Height="25"/>
-                    </Grid.RowDefinitions>
-                    <Label Grid.Row="0" Content="Price/Rooms/night starts form" Background="#FFEFE6E6"/>
-                    <Label x:Name="lblPricOfRoom" Grid.Row="1" Background="#FFBC8181" Content="để cái giá phòng ở chỗ này nè"/>
+                                <Label Grid.Column ="0" Name="lblHotelName" 
+                   Content="Tên cái khách sạn ở đây nè" FontSize="36" FontWeight="Bold"/>
+
+                                <Grid Grid.Column ="1">
+                                        <Grid.RowDefinitions>
+                                                <RowDefinition Height="50"/>
+                                                <RowDefinition Height="50"/>
+                                        </Grid.RowDefinitions>
+                                        <Label Grid.Row="0" Content="Price/Rooms/night starts form" Background="{x:Null}" HorizontalAlignment="Right" FontSize="24" FontWeight="DemiBold"/>
+                                        <StackPanel Grid.Row ="1" Orientation="Horizontal" HorizontalAlignment="Right">
+                                                <Label Content="USD" Foreground="#FFFF5E1F" FontSize="24" FontWeight="ExtraBold"/>
+                                                <Label x:Name="lblPricOfRoom" Grid.Row="1" Background="{x:Null}" Content="cho xin cái giá" HorizontalAlignment="Right" FontSize="24" Foreground="#FFFF5E1F" FontWeight="ExtraBold"/>
+                                        </StackPanel>
+                                </Grid>
+                        </Grid>
+
+                        <Grid x:Name="GridShortDetail" Grid.Row="3" Grid.Column="1">
+                                <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="900*"/>
+                                        <ColumnDefinition Width="500*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid Grid.Column="0">
+                                        <Grid.RowDefinitions>
+                                                <RowDefinition Height="50"/>
+                                                <RowDefinition Height="50"/>
+                                        </Grid.RowDefinitions>
+                                        <Label x:Name="lblRating" Grid.Row="0" Content="Để cái đánh giá ở đây cho người ta biết khách sạn nó sịn" Background="{x:Null}" FontSize="20"/>
+                                        <Label x:Name="lblAddress" Grid.Row="1" Content="Để cái địa chỉ dô cho người ta biết nó ở đâu nữa chứ" Background="{x:Null}" FontSize="20"/>
+                                </Grid>
+                                <Button Grid.Column="1" Name="btnSelectRoom"
+                                        Content="Select Room" Background="#FFFF5E1F" Foreground="White" FontSize="32" BorderBrush="{x:Null}" FontWeight="ExtraBold" FontStretch="Expanded" Click="btnSelectRoom_Click" Height="70">
+                                        <Button.Resources>
+                                                <Style TargetType="Border">
+                                                        <Setter Property="CornerRadius" Value="30"/>
+                                                </Style>
+                                        </Button.Resources>
+                                </Button>
+                        </Grid>
+
+                        <Grid x:Name="GridAlbum"       Grid.Row="5" Grid.Column="1">
+                                <local:UClibary Grid.Column="1" HorizontalAlignment="Left" Margin="0,0,0,0" Grid.Row="5" VerticalAlignment="Top" Width="1400"/>
+
+                        </Grid>
                 </Grid>
-            </Grid>
-            <Grid x:Name="GridShortDetail" Grid.Row="1">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="500"/>
-                    <ColumnDefinition Width="300"/>
-                </Grid.ColumnDefinitions>
-                <Grid Grid.Column="0">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="25"/>
-                        <RowDefinition Height="25"/>
-                    </Grid.RowDefinitions>
-                    <Label x:Name="lblRating" Grid.Row="0" Content="Để cái đánh giá ở đây cho người ta biết khách sạn nó sịn" Background="#FF6D985A"/>
-                    <Label x:Name="lblAddress" Grid.Row="1" Content="Để cái địa chỉ dô cho người ta biết nó ở đâu nữa chứ" Background="#FF39C1F6"/>
-                </Grid>
-                <Button Grid.Column="1" Name="btnSelectRoom" Content="Select Room" Background="#FFE1B2B2"/>
-            </Grid>
-
-            <Grid x:Name="GridAlbum" Grid.Row="2">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="500"/>
-                    <ColumnDefinition Width="150"/>
-                    <ColumnDefinition Width="150"/>
-                </Grid.ColumnDefinitions>
-                <Image x:Name="ImageMain"  Grid.Column="0" Source="/HorizonTrailLogo.png"/>
-
-                <Grid Grid.Column="1">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="100"/>
-                        <RowDefinition Height="100"/>
-                        <RowDefinition Height="100"/>
-                    </Grid.RowDefinitions>
-                    <Image x:Name="Image1"  Grid.Row="0" Source="/HorizonTrailLogo.png"/>
-                    <Image x:Name="Image2"  Grid.Row="1" Source="/HorizonTrailLogo.png"/>
-                    <Image x:Name="Image3"  Grid.Row="2" Source="/HorizonTrailLogo.png"/>
-                </Grid>
-                <Grid Grid.Column="2">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="100"/>
-                        <RowDefinition Height="100"/>
-                        <RowDefinition Height="100"/>
-                    </Grid.RowDefinitions>
-
-                    <Image x:Name="Image4"  Grid.Row="0" Source="/HorizonTrailLogo.png"/>
-                    <Image x:Name="Image5"  Grid.Row="1" Source="/HorizonTrailLogo.png"/>
-                    <Image x:Name="Image6"  Grid.Row="2" Source="/HorizonTrailLogo.png"/>
-                </Grid>
-            </Grid>
-        </Grid>
-    </Grid>
+                
+        </Border>
 </Page>
