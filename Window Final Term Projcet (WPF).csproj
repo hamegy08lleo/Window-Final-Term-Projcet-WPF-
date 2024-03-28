@@ -24,6 +24,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\Window Final Term Projcet %28WPF%29.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -94,6 +95,9 @@
     <Compile Include="PShowHotel.xaml.cs">
       <DependentUpon>PShowHotel.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UCHotel.xaml.cs">
+      <DependentUpon>UCHotel.xaml</DependentUpon>
+    </Compile>
     <Compile Include="RoomSelection.cs" />
     <Compile Include="UCHotelResult.xaml.cs">
       <DependentUpon>UCHotelResult.xaml</DependentUpon>
@@ -111,6 +115,9 @@
     <Compile Include="RoomDAO.cs" />
     <Compile Include="UCInformation.xaml.cs">
       <DependentUpon>UCInformation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCRoom.xaml.cs">
+      <DependentUpon>UCRoom.xaml</DependentUpon>
     </Compile>
     <Compile Include="WindowLogin.xaml.cs">
       <DependentUpon>WindowLogin.xaml</DependentUpon>
@@ -166,6 +173,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="UCHotel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UCHotelResult.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -191,6 +202,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UCInformation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCRoom.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -245,6 +260,7 @@
     <Resource Include="BackgroundIMG\tom-barrett-M0AWNxnLaMw-unsplash.jpg" />
     <Resource Include="BackgroundIMG\luca-bravo-O453M2Liufs-unsplash.jpg" />
     <Resource Include="BackgroundIMG\noHotel.png" />
+    <Resource Include="BackgroundIMG\BackgroudHotel.jpg" />
     <Content Include="DataBase\CreateDataBase.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

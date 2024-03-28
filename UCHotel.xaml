@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="Window_Final_Term_Projcet__WPF_.UCHotel"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Window_Final_Term_Projcet__WPF_"
+             mc:Ignorable="d" 
+             d:DesignHeight="200" d:DesignWidth="1000">
+        <Border BorderThickness="2" Width="1000" Height="200">
+                <Border CornerRadius="25" BorderThickness="5" BorderBrush="Black" Padding="0" Background="White">
+        <Grid>
+                <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="600"/>
+                        <ColumnDefinition Width="400"/>
+                </Grid.ColumnDefinitions>
+                <Rectangle Height="200" Width="5" Grid.Column="1" HorizontalAlignment="left" Fill="Black"/>
+                <Label x:Name="lblHotelName" Grid.Column="0" Content="Tên của khách sạn" FontSize="50" 
+                               VerticalContentAlignment="Center" Padding="30,5,5,5" FontWeight="SemiBold"/>
+                <Button x:Name="btnMoreDetail" Grid.Column="1" Content="Show more" BorderBrush="Black" Background="#FFE69595" Height="100" Width="300" FontSize="20">
+                        <Button.Resources>
+                                <Style TargetType="Border">
+                                        <Setter Property="CornerRadius" Value="25"/>
+                                </Style>
+                        </Button.Resources>
+                </Button>
+        </Grid>
+                </Border>
+        </Border>
+</UserControl>

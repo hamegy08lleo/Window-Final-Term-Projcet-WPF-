@@ -7,113 +7,291 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="540"
       Title="PPartnership">
+        <Page.Resources>
+                <Style x:Key="ComboBoxToggleButton" TargetType="ToggleButton">
+                        <Setter Property="Template">
+                                <Setter.Value>
+                                        <ControlTemplate TargetType="ToggleButton">
+                                                <Grid>
+                                                        <Grid.ColumnDefinitions>
+                                                                <ColumnDefinition />
+                                                                <ColumnDefinition Width="32" />
+                                                        </Grid.ColumnDefinitions>
+                                                        <Border
+                          x:Name="Border"
+                          Grid.ColumnSpan="2"
+                          CornerRadius="30"
+                          Background="{TemplateBinding Background}"
+                          BorderBrush="Black"
+                          BorderThickness="1" 
+                        />
 
-    <Border BorderThickness="10" Padding="5" CornerRadius="20">
-        <Border.BorderBrush>
-            <SolidColorBrush Color="White" Opacity="0.8"/>
-        </Border.BorderBrush>
-        <Border.Background>
-            <SolidColorBrush Color="White" Opacity="0.8"/>
-        </Border.Background>
-        <Grid >
-            <Grid.RowDefinitions>
-                <RowDefinition Height="30"/>
-                <RowDefinition Height ="200"/>
-                <RowDefinition Height ="85"/>
-                <RowDefinition Height="85"/>
-                <RowDefinition Height="50"/>
-            </Grid.RowDefinitions>
+                                                        <Path
+                            x:Name="Arrow"
+                            Grid.Column="1"    
+                            Fill="{TemplateBinding Foreground}"
+                            Stroke="{TemplateBinding Foreground}"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            Data="M 0 0 L 4 4 L 8 0 Z"/>
+                                                </Grid>
+                                        </ControlTemplate>
+                                </Setter.Value>
+                        </Setter>
+                </Style>
+                <ControlTemplate x:Key="ComboBoxTextBox" TargetType="TextBox">
+                        <Border x:Name="PART_ContentHost" Focusable="True" />
+                </ControlTemplate>
 
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="10"/>
-                <ColumnDefinition Width="520"/>
-                <ColumnDefinition Width="10"/>
-            </Grid.ColumnDefinitions>
-            
-            <Grid Grid.Row="2" Grid.Column="1" >
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="0"/>
-                    <ColumnDefinition Width="380"/>
-                    <ColumnDefinition Width="120"/>
-                    <ColumnDefinition Width="0"/>
-                </Grid.ColumnDefinitions>
+                <Style x:Key="theComboBox" TargetType="{x:Type ComboBox}">
+                        <Setter Property="Foreground" Value="#333" />
+                        <Setter Property="BorderBrush" Value="Black" />
+                        <Setter Property="Background" Value="White" />
+                        <Setter Property="SnapsToDevicePixels" Value="true"/>
+                        <Setter Property="OverridesDefaultStyle" Value="true"/>
+                        <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Auto"/>
+                        <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Auto"/>
+                        <Setter Property="ScrollViewer.CanContentScroll" Value="true"/>
+                        <Setter Property="FontSize" Value="24" />
+                        <Setter Property="MinWidth" Value="100"/>
+                        <Setter Property="MinHeight" Value="35"/>
+                        <Setter Property="Template">
+                                <Setter.Value>
+                                        <ControlTemplate TargetType="ComboBox">
+                                                <Grid>
+                                                        <ToggleButton
+                            Cursor="Hand"
+                            Name="ToggleButton"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            Background="{TemplateBinding Background}"
+                            Foreground="{TemplateBinding Foreground}"
+                            Style="{StaticResource ComboBoxToggleButton}"
+                            Grid.Column="2"
+                            Focusable="false"
+                            IsChecked="{Binding Path=IsDropDownOpen,Mode=TwoWay,RelativeSource={RelativeSource TemplatedParent}}"
+                            ClickMode="Press"/>
 
-                <Label Grid.Column="1" Content="Hotel Name"
-             VerticalAlignment="Top" Foreground="Black"
-            Height="40" FontFamily="JetBrainsMono Nerd Font" FontSize="18" 
-            VerticalContentAlignment="Center" Width="111" HorizontalAlignment="Left" Margin="24,0,0,0"/>
-                <TextBox Grid.Column="1" Name="txbHotelName" Margin="0,35,0,0"
-             Height="50" VerticalContentAlignment="Center" FontSize="24"
-             Width="370" HorizontalAlignment="Left" VerticalAlignment="Bottom" BorderBrush="Black" Padding="15,0,0,0">
-                    <TextBox.Resources>
-                        <Style TargetType="Border">
-                            <Setter Property="CornerRadius" Value="30"/>
-                        </Style>
-                    </TextBox.Resources>
-                </TextBox>
+                                                        <ContentPresenter
+                            Name="ContentSite"
+                            IsHitTestVisible="False"
+                            Content="{TemplateBinding SelectionBoxItem}"
+                            ContentTemplate="{TemplateBinding SelectionBoxItemTemplate}"
+                            ContentTemplateSelector="{TemplateBinding ItemTemplateSelector}"
+                            Margin="10,3,30,3"
+                            VerticalAlignment="Center"
+                            HorizontalAlignment="Left" />
+                                                        <TextBox x:Name="PART_EditableTextBox"
+                            Style="{x:Null}"
+                            Template="{StaticResource ComboBoxTextBox}"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Center"
+                            Margin="3,3,23,3"
+                            Focusable="True"                               
+                            Visibility="Hidden"
+                            IsReadOnly="{TemplateBinding IsReadOnly}"/>
+                                                        <Popup
+                            Name="Popup"
+                            Placement="Bottom"
+                            IsOpen="{TemplateBinding IsDropDownOpen}"
+                            AllowsTransparency="True"
+                            Focusable="False"
+                            PopupAnimation="Slide">
+                                                                <Grid
+                              Name="DropDown"
+                              SnapsToDevicePixels="True"               
+                              MinWidth="{TemplateBinding ActualWidth}"
+                              MaxHeight="{TemplateBinding MaxDropDownHeight}">
+                                                                        <Border
+                                    CornerRadius="8"
+                                    x:Name="DropDownBorder"
+                                    Background="White"
+                                    BorderThickness="1"
+                                    BorderBrush="#F6F6F6"
+                                    />
+                                                                        <ScrollViewer Margin="4,6,4,6" SnapsToDevicePixels="True">
+                                                                                <StackPanel IsItemsHost="True" KeyboardNavigation.DirectionalNavigation="Contained" />
+                                                                        </ScrollViewer>
+                                                                </Grid>
+                                                        </Popup>
+
+                                                </Grid>
+                                                <ControlTemplate.Triggers>
+                                                        <Trigger Property="HasItems" Value="false">
+                                                                <Setter TargetName="DropDownBorder" Property="MinHeight" Value="95"/>
+                                                        </Trigger>
+                                                        <Trigger Property="IsGrouping" Value="true">
+                                                                <Setter Property="ScrollViewer.CanContentScroll" Value="false"/>
+                                                        </Trigger>
+                                                        <Trigger Property="IsEditable" Value="true">
+                                                                <Setter Property="IsTabStop" Value="false"/>
+                                                                <Setter TargetName="PART_EditableTextBox" Property="Visibility" Value="Visible"/>
+                                                                <Setter TargetName="ContentSite" Property="Visibility" Value="Hidden"/>
+                                                        </Trigger>
+                                                </ControlTemplate.Triggers>
+                                        </ControlTemplate>
+                                </Setter.Value>
+                        </Setter>
+                        <Style.Triggers>
+                        </Style.Triggers>
+                </Style>
+                <Style x:Key="theComboBoxItem" TargetType="{x:Type ComboBoxItem}">
+                        <Setter Property="SnapsToDevicePixels" Value="true" />
+                        <Setter Property="HorizontalAlignment" Value="Stretch" />
+                        <Setter Property="VerticalAlignment" Value="Stretch" />
+                        <Setter Property="FontSize" Value="13" />
+                        <Setter Property="OverridesDefaultStyle" Value="true"/>
+                        <Setter Property="Template">
+                                <Setter.Value>
+                                        <ControlTemplate TargetType="ComboBoxItem">
+                                                <Border
+                        Name="Border"
+                        Padding="5"
+                        Margin="2"
+                        BorderThickness="2,0,0,0"
+                        CornerRadius="0"
+                        Background="Transparent"
+                        BorderBrush="Transparent">
+                                                        <TextBlock TextAlignment="Left">
+                            <ContentPresenter />
+                                                        </TextBlock>
+                                                </Border>
+                                                <ControlTemplate.Triggers>
+                                                        <Trigger Property="IsHighlighted" Value="true">
+                                                                <Setter TargetName="Border" Property="BorderBrush" Value="#B3CB37"/>
+                                                                <Setter TargetName="Border" Property="Background" Value="#F8FAEB"/>
+                                                        </Trigger>
+                                                </ControlTemplate.Triggers>
+                                        </ControlTemplate>
+                                </Setter.Value>
+                        </Setter>
+                </Style>
+        </Page.Resources>
+        <Border BorderThickness="10" Padding="5" CornerRadius="20">
+                <Border.BorderBrush>
+                        <SolidColorBrush Color="White" Opacity="0.8"/>
+                </Border.BorderBrush>
+                <Border.Background>
+                        <SolidColorBrush Color="White" Opacity="0.8"/>
+                </Border.Background>
+
+                <Grid >
+                        <Grid.RowDefinitions>
+                                <RowDefinition Height="10"/>
+                                <RowDefinition Height ="90"/>
+                                <RowDefinition Height ="90"/>
+                                <RowDefinition Height ="90"/>
+                                <RowDefinition Height ="90"/>
+                                <RowDefinition Height ="20"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="10"/>
+                                <ColumnDefinition Width="520"/>
+                                <ColumnDefinition Width="10"/>
+                        </Grid.ColumnDefinitions>
+
+
+                        <Grid Grid.Row="1" Grid.Column="1">
+                                <StackPanel HorizontalAlignment="Left">
+                                        <Label Content="Hotel Name" 
+                                                VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="Black" Height="40" FontFamily="JetBrainsMono Nerd Font" FontSize="24" VerticalContentAlignment="Center"/>
+                                        <ComboBox x:Name="cbbHotel" 
+                                                Style="{DynamicResource theComboBox}"
+                                                ItemContainerStyle="{DynamicResource theComboBoxItem}"
+                                                VerticalAlignment="Top" Height="50" 
+                                                ScrollViewer.VerticalScrollBarVisibility="Hidden" Width="500" Padding="15,0,0,0" HorizontalAlignment="Center">
+
+
+                                        </ComboBox>
+
+                                </StackPanel>
+                        </Grid>
+
+                        <Grid Grid.Row="2" Grid.Column="1">
+
+                                <StackPanel HorizontalAlignment="Left" >
+
+                                        <Label Content="Room Type"
+                                                VerticalAlignment="Top" HorizontalAlignment="Left"  Foreground="Black" Height="40" FontFamily="JetBrainsMono Nerd Font" FontSize="24" VerticalContentAlignment="Center"/>
+
+
+                                        <ComboBox x:Name="cbbRoomType"
+                                                Style="{DynamicResource theComboBox}"
+                                                ItemContainerStyle="{DynamicResource theComboBoxItem}"
+                                                VerticalAlignment="Top" Height="50" ScrollViewer.VerticalScrollBarVisibility="Hidden" Width="500" Padding="15,0,0,0" HorizontalAlignment="Center">
+                                                <ComboBoxItem Content="1 single bed"/>
+                                                <ComboBoxItem Content="1 double bed"/>
+                                                <ComboBoxItem Content="2 single bed"/>
+                                                <ComboBoxItem Content="2 double bed"/>
+                                                <ComboBoxItem Content="1 single bed 1 double bed"/>
+                                        </ComboBox>
+                                </StackPanel>
+                        </Grid>
+
+                        <Grid Grid.Row="3" Grid.Column="1" >
+                                <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="0"/>
+                                        <ColumnDefinition Width="320"/>
+                                        <ColumnDefinition Width="180"/>
+                                        <ColumnDefinition Width="0"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Label Grid.Column="1" Content="Price"
+                                        VerticalAlignment="Top" Foreground="Black"
+                                        Height="40" FontFamily="JetBrainsMono Nerd Font" FontSize="24" 
+                                        VerticalContentAlignment="Center" Width="100" HorizontalAlignment="Left" Margin="24,0,0,0"/>
+                                <TextBox Grid.Column="1" Name="txbPrice" Margin="0,35,0,0"
+                                        Height="50" VerticalContentAlignment="Center" FontSize="24"
+                                        Width="300" HorizontalAlignment="Left" VerticalAlignment="Bottom" BorderBrush="Black" Padding="15,0,0,0">
+                                        <TextBox.Resources>
+                                                <Style TargetType="Border">
+                                                        <Setter Property="CornerRadius" Value="30"/>
+                                                </Style>
+                                        </TextBox.Resources>
+                                </TextBox>
 
 
 
-
-                <Label Grid.Column ="2" Content="Amount"
-         VerticalAlignment="Top" Foreground="Black"
-        Height="40" FontFamily="JetBrainsMono Nerd Font" FontSize="18" 
-        VerticalContentAlignment="Center" Width="76" Margin="16,0,0,0"/>
-
-
-                <TextBox Grid.Column="2" Name="txbAmount" Margin="0,35,0,0"
-                 Height="50" VerticalContentAlignment="Center" FontSize="24"
-                 Width="100" VerticalAlignment="Bottom" BorderBrush="Black" Padding="15,0,0,0" HorizontalAlignment="Right">
-
-                    <TextBox.Resources>
-                        <Style TargetType="Border">
-                            <Setter Property="CornerRadius" Value="30"/>
-                        </Style>
-                    </TextBox.Resources>
-                </TextBox>
+                                <Label Grid.Column ="2" Content="Amount"
+                                        VerticalAlignment="Top" Foreground="Black"
+                                        Height="40" FontFamily="JetBrainsMono Nerd Font" FontSize="24" 
+                                        VerticalContentAlignment="Center" Width="135" Margin="16,0,0,0" HorizontalAlignment="Right"/>
 
 
+                                <TextBox Grid.Column="2" Name="txbAmount" Margin="0,35,0,0"
+                                 Height="50" VerticalContentAlignment="Center" FontSize="24"
+                                 Width="150" VerticalAlignment="Bottom" BorderBrush="Black" Padding="15,0,0,0" HorizontalAlignment="Right">
 
-            </Grid>
-
-            <Grid Grid.Row="3" Grid.Column="1">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="0"/>
-                    <ColumnDefinition Width="500"/>
-                    <ColumnDefinition Width="0"/>
-                </Grid.ColumnDefinitions>
-
-                <Label Grid.Column="1" Content="Price"
-                     VerticalAlignment="Top" Foreground="Black"
-                    Height="40" FontFamily="JetBrainsMono Nerd Font" FontSize="18" 
-                    VerticalContentAlignment="Center" Width="100" HorizontalAlignment="Left" Margin="24,0,0,0"/>
-                <TextBox Grid.Column="1" Name="txbPrice" Margin="0,35,0,0"
-                         Height="50" VerticalContentAlignment="Center" FontSize="24"
-                         Width="270" HorizontalAlignment="Left" VerticalAlignment="Bottom" BorderBrush="Black" Padding="15,0,0,0">
-                    <TextBox.Resources>
-                        <Style TargetType="Border">
-                            <Setter Property="CornerRadius" Value="30"/>
-                        </Style>
-                    </TextBox.Resources>
-                </TextBox>
-
-                <Button Grid.Column="1" x:Name="btnPost" Content="Post"
-                    HorizontalAlignment="Right" Margin="0,0,0,0" VerticalAlignment="Bottom"
-                    Height="60" Width="200" Background="#FFFF5E1F" Foreground="White" FontSize="24" FontWeight="Bold" BorderBrush="{x:Null}" Click="btnPost_Click">
-                    <Button.Resources>
-                        <Style TargetType="{x:Type Border}">
-                            <Setter Property="CornerRadius" Value="30"/>
-                        </Style>
-                    </Button.Resources>
-                </Button>
-
-            </Grid>
+                                        <TextBox.Resources>
+                                                <Style TargetType="Border">
+                                                        <Setter Property="CornerRadius" Value="30"/>
+                                                </Style>
+                                        </TextBox.Resources>
+                                </TextBox>
 
 
 
-            <local:UCInformation x:Name="UCInformation" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="1" Grid.Column="1"/>
+                        </Grid>
 
-        </Grid>
+                        <Grid Grid.Row="4" Grid.Column="1">
+                                <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="0"/>
+                                        <ColumnDefinition Width="500"/>
+                                        <ColumnDefinition Width="0"/>
+                                </Grid.ColumnDefinitions>
 
-    </Border>
+                                <Button Grid.Column="1" x:Name="btnPost" Content="Post"
+                                        HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Bottom"
+                                        Height="70" Width="250" Background="#FFFF5E1F" Foreground="White" FontSize="30" FontWeight="Bold" BorderBrush="{x:Null}" Click="btnPost_Click">
+                                        <Button.Resources>
+                                                <Style TargetType="{x:Type Border}">
+                                                        <Setter Property="CornerRadius" Value="30"/>
+                                                </Style>
+                                        </Button.Resources>
+                                </Button>
+
+                        </Grid>
+
+                </Grid>
+
+        </Border>
 </Page>

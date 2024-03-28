@@ -23,6 +23,7 @@ namespace Window_Final_Term_Projcet__WPF_
                 public PManager()
                 {
                         InitializeComponent();
+                        this.mainContent.Content = new PShowHotel();
                 }
 
                 private void btnMoreRooms_Click(object sender, RoutedEventArgs e)

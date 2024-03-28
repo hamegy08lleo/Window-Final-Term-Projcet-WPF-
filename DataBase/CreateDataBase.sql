@@ -92,7 +92,7 @@ WHERE roomType = '2 Single Bed' AND city = 'Ho Chi Minh City'
 
 
 USE ManageRoom
-
 DROP TABLE Room
 DROP TABLE Hotel 
 DROP TABLE Booking
+

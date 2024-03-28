@@ -9,10 +9,10 @@
       Title="PHotelDetailReview">
 
         <Border BorderThickness="20" Padding="10" CornerRadius="20" Width="1200" Height="700">
-        <Border.BorderBrush>
-            <SolidColorBrush Color="#FF7FC6E6" Opacity="0.9"/>
-        </Border.BorderBrush>
-        <Border.Background>
+                <Border.BorderBrush>
+                        <SolidColorBrush Color="#FF7FC6E6" Opacity="0.9"/>
+                </Border.BorderBrush>
+                <Border.Background>
                         <SolidColorBrush Color="White" Opacity="0.8"/>
                 </Border.Background>
                 <Grid>

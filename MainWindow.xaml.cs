@@ -66,12 +66,12 @@ namespace Window_Final_Term_Projcet__WPF_
             {
                     mainContent.Content = new PManager();
                     this.btnPartnership.Content = "Customer";
-
             }
             else
             {
                     mainContent.Content = new Pcustomer();
                     this.btnPartnership.Content = "Partnership";
+                    
             }
         }
 
