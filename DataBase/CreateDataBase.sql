@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿USE ManageRoom
 
 CREATE TABLE Room( 
@@ -74,3 +75,14 @@ USE ManageRoom
 DROP TABLE Room
 DROP TABLE Hotel 
 DROP TABLE Booking
+=======
+﻿CREATE TABLE [dbo].[Room] (
+    [roomID]   INT           IDENTITY (1, 1) NOT NULL,
+    [city]     VARCHAR (100) NULL,
+    [roomType] VARCHAR (100) NULL,
+    [hotel]    VARCHAR (100) NULL,
+    [price]    INT           NULL,
+    [rating]   FLOAT (53)    NULL,
+    PRIMARY KEY CLUSTERED ([roomID] ASC)
+);
+>>>>>>> master
