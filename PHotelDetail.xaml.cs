@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Window_Final_Term_Projcet__WPF_.PHotelDetailChild;
 
 namespace Window_Final_Term_Projcet__WPF_
 {
@@ -27,13 +28,21 @@ namespace Window_Final_Term_Projcet__WPF_
         public PHotelDetail(RoomSelection selection)
         {
             InitializeComponent();
-            this.detailContent.Content = new PHotelDetailChild.PHotelDetailOverview();
+            PHotelDetailChild.PHotelDetailOverview pHotelDetailOverview = new PHotelDetailChild.PHotelDetailOverview();
+            HotelDAO hotelDAO = new HotelDAO();
+            Hotel hotel = hotelDAO.getHotel(selection.HotelID);
+            pHotelDetailOverview.lblHotelName.Content = hotel.HotelName;
+            pHotelDetailOverview.lblAddress.Content = hotel.Address;
+            pHotelDetailOverview.lblRating.Content = hotel.Rating;
+            //pHotelDetailOverview.lblPricOfRoom.Content = hotel.P
+            detailContent.Content = pHotelDetailOverview;  
             this.selection = selection;
         }
 
         private void btnRooms_Click(object sender, RoutedEventArgs e)
         {
             detailContent.Content = new PHotelDetailChild.PHotelDetailRooms();
+            
         }
 
         private void btnReview_Click(object sender, RoutedEventArgs e)
@@ -43,7 +52,14 @@ namespace Window_Final_Term_Projcet__WPF_
 
         private void btnOverView_Click(object sender, RoutedEventArgs e)
         {
-            detailContent.Content = new PHotelDetailChild.PHotelDetailOverview();
+            PHotelDetailChild.PHotelDetailOverview pHotelDetailOverview = new PHotelDetailChild.PHotelDetailOverview();
+            HotelDAO hotelDAO = new HotelDAO();
+            Hotel hotel = hotelDAO.getHotel(selection.HotelID);
+            pHotelDetailOverview.lblHotelName.Content = hotel.HotelName;
+            pHotelDetailOverview.lblAddress.Content = hotel.Address;
+            pHotelDetailOverview.lblRating.Content = hotel.Rating;
+            //pHotelDetailOverview.lblPricOfRoom.Content = hotel.P
+            detailContent.Content = pHotelDetailOverview;
         }
 
         public PHotelDetail(Frame detailContent)

@@ -247,7 +247,7 @@
                                                         </StackPanel>
                                                 </StackPanel>
                                                 <Rectangle Height="20"/>
-                                                <Button Content="Post" FontSize="35" Height="80" Background="#FFFF5E1F" Foreground="White" BorderBrush="{x:Null}" Width="500" FontWeight="Bold">
+                                                <Button x:Name="btnPost" Content="Post" FontSize="35" Height="80" Background="#FFFF5E1F" Foreground="White" BorderBrush="{x:Null}" Width="500" FontWeight="Bold" Click="btnPost_Click">
                                                         <Button.Resources>
                                                                 <Style TargetType="Border">
                                                                         <Setter Property="CornerRadius" Value="30"/>

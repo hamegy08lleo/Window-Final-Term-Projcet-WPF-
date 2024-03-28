@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,6 +24,13 @@ namespace Window_Final_Term_Projcet__WPF_
         public PPartnership()
         {
             InitializeComponent();
+            HotelDAO hotelDAO = new HotelDAO();
+            DataTable dt = hotelDAO.listHotelName(); 
+            foreach(DataRow row in dt.Rows)
+            {
+                cbbHotel.Items.Add(row[0].ToString());
+            }
+            
         }
 
         private void btnPost_Click(object sender, RoutedEventArgs e)
@@ -33,8 +41,8 @@ namespace Window_Final_Term_Projcet__WPF_
             int amount = int.Parse(txbAmount.Text);
             OwnerPostRoom post = new OwnerPostRoom(roomType, hotel, price, amount);
 
-            //MainWindow mainWindow = Window.GetWindow(this) as MainWindow;
-            //mainWindow.RoomDAO.Add(post);
+            MainWindow mainWindow = Window.GetWindow(this) as MainWindow;
+            mainWindow.RoomDAO.Add(post);
         }
     }
 }

@@ -24,5 +24,17 @@ namespace Window_Final_Term_Projcet__WPF_
                 {
                         InitializeComponent();
                 }
+
+        private void btnPost_Click(object sender, RoutedEventArgs e)
+        {
+            string hotelName = txtHotelName.Text;
+            string city = cbbCity.Text;
+            string address = txtAddress.Text;  
+            string email = txtEmail.Text;
+            string phoneNumber = txtPhoneNumber.Text;
+            OwnerAddHotel add = new OwnerAddHotel(hotelName, address, city, email, phoneNumber); 
+            HotelDAO hotelDAO = new HotelDAO();
+            hotelDAO.addHotel(add); 
         }
+    }
 }

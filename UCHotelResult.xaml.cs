@@ -20,10 +20,10 @@ namespace Window_Final_Term_Projcet__WPF_{
     public partial class UCHotelResult : UserControl
     {
         private RoomSelection selection;
-        public UCHotelResult(string roomType)
+        public UCHotelResult(string hotelID, string roomType)
         {
             InitializeComponent();
-            this.selection = new RoomSelection(this.lblHotelName.Content.ToString(), roomType);
+            this.selection = new RoomSelection(hotelID, roomType);
         }
 
         public RoomSelection Selection { get => selection; set => selection = value; }
@@ -31,7 +31,6 @@ namespace Window_Final_Term_Projcet__WPF_{
         public void btnSelectRoom_Click(object sender, RoutedEventArgs e)
         {
             MainWindow mainWindow = Window.GetWindow(this) as MainWindow;
-            string hotelName = lblHotelName.Content.ToString();
             PHotelDetail pHotelDetail = new PHotelDetail(selection);
             pHotelDetail.Name = "pHotelDetail"; 
             mainWindow.MainContent.Navigate(pHotelDetail);

@@ -13,6 +13,32 @@ namespace Window_Final_Term_Projcet__WPF_
         public HotelDAO() : base("Hotel") { }
         public void addHotel(OwnerAddHotel add)
         {
+            string sqlStr = $"INSERT INTO Hotel(hotelName, city, address, email, phoneNumber, rating)" +
+                $"VALUES('{add.HotelName}', '{add.City}', '{add.Address}', '{add.Email}', '{add.PhoneNumber}', '5.0')";
+            dBConnection.CommandExecute(sqlStr); 
+        }
+        public Hotel getHotel(string id)
+        {
+            string sqlStr = $"SELECT hotelName, address, city, rating, email, phoneNumber FROM " +
+                $"Hotel " +
+                $"WHERE hotelID = '{id}'";
+            DataTable dataTable = dBConnection.AdapterExecute(sqlStr);
+            string hotelName = dataTable.Rows[0][0].ToString();
+            string address = dataTable.Rows[0][1].ToString();   
+            string city = dataTable.Rows[0][2].ToString();
+            float rating = float.Parse(dataTable.Rows[0][3].ToString());
+            string email = dataTable.Rows[0][4].ToString();
+            string phoneNumber = dataTable.Rows[0][5].ToString();
+            Hotel hotel = new Hotel(hotelName, address, city, rating, email, phoneNumber);
+            return hotel; 
+        }
+
+        public DataTable listHotelName()
+        {
+            string sqlStr = "SELECT hotelName FROM " +
+                "Hotel";
+            DataTable dt = dBConnection.AdapterExecute(sqlStr);
+            return dt; 
         }
         public int getHotelID(string hotelName)
         {

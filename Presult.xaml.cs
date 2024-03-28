@@ -25,20 +25,18 @@ namespace Window_Final_Term_Projcet__WPF_
         {
             InitializeComponent();
         }
-        public Presult(DataTable result, string roomType) 
+        public Presult(DataTable result, string roomType)
         {
             InitializeComponent();
             foreach (DataRow row in result.Rows)
             {
-                UCHotelResult ucResult = new UCHotelResult(roomType);
+                UCHotelResult ucResult = new UCHotelResult(row[0].ToString(), roomType);
                 ucResult.lblHotelName.Content = row[1].ToString();
                 ucResult.lblAddress.Content = row[2].ToString();
                 ucResult.lblPrice.Content = row[3].ToString() + "$";
 
-                ucResult.Selection = new RoomSelection(row[1].ToString(), roomType);
-
                 string rating = "";
-                for (int i = 0; i < float.Parse(row[4].ToString()) ; i++)
+                for (int i = 0; i < float.Parse(row[4].ToString()); i++)
                 {
                     rating += "⭐";
                 }
@@ -46,30 +44,30 @@ namespace Window_Final_Term_Projcet__WPF_
                 ucResult.btnSelectRoom.Click += ucResult.btnSelectRoom_Click;
                 this.spResult.Children.Add(ucResult);
             }
-                        StackPanel nullHotel = new StackPanel();
-                        Image noHotelImage = new Image();
-                        noHotelImage.Source = new BitmapImage(new Uri("/BackgroundIMG/noHotel.png", UriKind.Relative));
-                        noHotelImage.Width = 141;
-                        noHotelImage.HorizontalAlignment = HorizontalAlignment.Center;
-                        nullHotel.Children.Add(noHotelImage);
+            StackPanel nullHotel = new StackPanel();
+            Image noHotelImage = new Image();
+            noHotelImage.Source = new BitmapImage(new Uri("/BackgroundIMG/noHotel.png", UriKind.Relative));
+            noHotelImage.Width = 141;
+            noHotelImage.HorizontalAlignment = HorizontalAlignment.Center;
+            nullHotel.Children.Add(noHotelImage);
 
-                        Label errorLabel1 = new Label();
-                        errorLabel1.Content = "Hotel Not Available";
-                        errorLabel1.FontSize = 24;
-                        errorLabel1.HorizontalAlignment = HorizontalAlignment.Center;
-                        nullHotel.Children.Add(errorLabel1);
+            Label errorLabel1 = new Label();
+            errorLabel1.Content = "Hotel Not Available";
+            errorLabel1.FontSize = 24;
+            errorLabel1.HorizontalAlignment = HorizontalAlignment.Center;
+            nullHotel.Children.Add(errorLabel1);
 
-                        Label errorLabel2 = new Label();
-                        errorLabel2.Content = "Sorry, no hotel matches your preference. Please change your search.";
-                        errorLabel2.FontSize = 24;
-                        errorLabel2.HorizontalAlignment = HorizontalAlignment.Center;
-                        nullHotel.Children.Add(errorLabel2);
+            Label errorLabel2 = new Label();
+            errorLabel2.Content = "Sorry, no hotel matches your preference. Please change your search.";
+            errorLabel2.FontSize = 24;
+            errorLabel2.HorizontalAlignment = HorizontalAlignment.Center;
+            nullHotel.Children.Add(errorLabel2);
 
-                        int count = this.spResult.Children.Count;
-                if(count == 0)
-                {
-                                this.spResult.Children.Add(nullHotel);
-                }
+            int count = this.spResult.Children.Count;
+            if (count == 0)
+            {
+                this.spResult.Children.Add(nullHotel);
+            }
         }
 
         private void spResult_Scroll(object sender, System.Windows.Controls.Primitives.ScrollEventArgs e)

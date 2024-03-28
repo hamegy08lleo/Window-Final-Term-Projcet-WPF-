@@ -33,14 +33,6 @@ namespace Window_Final_Term_Projcet__WPF_
             string roomType = search.RoomType;
             string city = search.City;
 
-            //string sqlStr = $"SELECT hotelID, hotelName, address, price, rating, ammount " +
-            //    $"FROM " +
-            //    $"(SELECT Hotel.hotelID, Hotel.hotelName, room.roomType, city, address, price, rating, count(roomID) as 'ammount' " +
-            //    $"FROM " +
-            //    $"Room inner join Hotel on Hotel.hotelID = Room.hotelID " +
-            //    $"group by Hotel.hotelName, Hotel.hotelID, room.roomType, city, address, price, rating) as tmp " +
-            //    $"WHERE roomType = '{roomType}' AND city = '{city}'";
-
             string sqlStr = $"SELECT hotelID, hotelName, address, price, rating, amount FROM " +
                             $"(SELECT Hotel.hotelID, Hotel.hotelName, roomType, city, address, price, rating, count(roomID) as 'amount' FROM " +
                             $"(SELECT * FROM " +
@@ -58,15 +50,13 @@ namespace Window_Final_Term_Projcet__WPF_
         public string firstAvailableRoomID(RoomSelection selection)
         {
             string sqlStr = $"SELECT * FROM " +
-                $"(SELECT roomID, hotelName, roomType FROM " +
+                $"(SELECT roomID, Hotel.hotelID, roomType FROM " +
                 $"Room inner join Hotel on Hotel.hotelID = Room.hotelID) as Q1 " +
-                $"WHERE hotelName = '{selection.HotelName}' AND roomType = '{selection.RoomType}'";
-            MessageBox.Show(sqlStr); 
+                $"WHERE hotelID = '{selection.HotelID}' AND roomType = '{selection.RoomType}'";
             DataTable dt = new DataTable(); 
             try
             {
                 dt = dBConnection.AdapterExecute(sqlStr);
-                MessageBox.Show(dt.Rows[0][0].ToString());
             }
             catch (Exception ex)
             {
