@@ -1,44 +1,54 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlTypes;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 
 namespace Window_Final_Term_Projcet__WPF_
 {
-    internal class RoomDAO
+    internal class RoomDAO : DAO
     {
-        private string tableName;
-        private DBConnection dbConnection; 
-
-        public RoomDAO(string tableName)
+        public RoomDAO() : base("Room") { }
+        public void Add(OwnerPostRoom post)
         {
-            this.tableName = tableName;
-            this.dbConnection = new DBConnection(Properties.Settings.Default.connStr);
-        }
-        public void Add(OwnerPost post)
-        {
-            Room room = new Room(post.RoomType, post.Hotel, post.City, post.Price, 5);
-            string sqlStr = ""; 
-            while (post.Amount > 0)
+            var (roomType, hotel, price, amount) = post;
+            int hotelID = (new HotelDAO()).getHotelID(hotel);
+            string tmp = $"INSERT INTO "
+                + $"Room(hotelID, roomType, price) " +
+                $"VALUES('{hotelID}', '{roomType}', '{price}') ";
+            String sqlStr = String.Empty; 
+            for (int i = 0; i < amount; i++)
             {
-                post.Amount -= 1; 
-                sqlStr += $"INSERT INTO "
-                     + $"{tableName}(roomType, hotel, city, price, rating) "
-                     + $"VALUES ('{room.RoomType}', '{room.Hotel}', '{room.City}', '{room.Price}', '{room.Rating}')";
+                sqlStr += tmp; 
             }
-            dbConnection.CommandExecute(sqlStr); 
+            dBConnection.CommandExecute(sqlStr);
         }
 
         public DataTable Search(CustomerSearch input)
         {
-            String sqlStr = $"SELECT * FROM {tableName} " +
-                $"WHERE {tableName}.city = '{input.City}' " +
-                $"AND {tableName}.roomType = '{input.RoomType}'";
-            DataTable dt = dbConnection.AdapterExecute(sqlStr);
+            string roomType = input.RoomType;
+            string city = input.City;
+
+            string sqlStr = $"SELECT hotelID, hotelName, address, price, rating, ammount " +
+                $"FROM " +
+                $"(SELECT Hotel.hotelID, Hotel.hotelName, room.roomType, city, address, price, rating, count(roomID) as 'ammount' " +
+                $"FROM " +
+                $"Room inner join Hotel on Hotel.hotelID = Room.hotelID " +
+                $"group by Hotel.hotelName, Hotel.hotelID, room.roomType, city, address, price, rating) as tmp " +
+                $"WHERE roomType = '{roomType}' AND city = '{city}'";
+
+            DataTable dt = dBConnection.AdapterExecute(sqlStr);
             return dt;
+
+            //String sqlStr = $"SELECT * FROM {tableName} " +
+            //    $"WHERE {tableName}.city = '{input.City}' " +
+            //    $"AND {tableName}.roomType = '{input.RoomType}'";
+            //DataTable dt = dBConnection.AdapterExecute(sqlStr);
+            //return dt;
         }
     }
 }

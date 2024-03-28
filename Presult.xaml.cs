@@ -31,18 +31,18 @@ namespace Window_Final_Term_Projcet__WPF_
             foreach (DataRow row in result.Rows)
             {
                 UCHotelResult ucResult = new UCHotelResult();
-                ucResult.lblHotelName.Content = row[3].ToString();
-                ucResult.lblAddress.Content = row[1].ToString();
-                ucResult.lblPrice.Content = row[4].ToString() + "$";
-                this.spResult.Children.Add(ucResult);
+                ucResult.lblHotelName.Content = row[1].ToString();
+                ucResult.lblAddress.Content = row[2].ToString();
+                ucResult.lblPrice.Content = row[3].ToString() + "$";
 
                 string rating = "";
-                for (int i = 0; i < int.Parse(row[5].ToString()) ; i++)
+                for (int i = 0; i < float.Parse(row[4].ToString()) ; i++)
                 {
                     rating += "⭐";
                 }
                 ucResult.lblRating.Content = rating;
                 ucResult.btnSelectRoom.Click += ucResult.btnSelectRoom_Click;
+                this.spResult.Children.Add(ucResult);
             }
                         StackPanel nullHotel = new StackPanel();
                         Image noHotelImage = new Image();

@@ -10,24 +10,24 @@ namespace Window_Final_Term_Projcet__WPF_
     internal class Room
     {
         private string roomType;
-        private string hotel;
-        private string city; 
+        private string hotelID; 
         private int price;
         private float rating;
+        private int amount;
 
-        public Room(string roomType, string hotel,string city, int price, float rating)
+        public Room(string roomType, string hotelID, int price, float rating, int amount)
         {
             this.roomType = roomType;
-            this.hotel = hotel;
-            this.city = city; 
+            this.hotelID = hotelID;
             this.price = price;
             this.rating = rating;
+            this.amount = amount;
         }
 
         public string RoomType { get => roomType; set => roomType = value; }
-        public string Hotel { get => hotel; set => hotel = value; }
+        public string HotelID { get => hotelID; set => hotelID = value; }
         public int Price { get => price; set => price = value; }
         public float Rating { get => rating; set => rating = value; }
-        public string City { get => city; set => city = value; }
+        public int Amount { get => amount; set => amount = value; }
     }
 }

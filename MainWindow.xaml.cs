@@ -21,7 +21,7 @@ namespace Window_Final_Term_Projcet__WPF_
     /// </summary>
     public partial class MainWindow : Window
     {
-        private RoomDAO roomDAO = new RoomDAO("Room");
+        private RoomDAO roomDAO = new RoomDAO();
         public MainWindow()
         {
             InitializeComponent();

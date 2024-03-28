@@ -59,11 +59,15 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="CustomerSearch.cs" />
+    <Compile Include="DAO.cs" />
     <Compile Include="DBConnection.cs" />
     <Compile Include="DebugWindow.xaml.cs">
       <DependentUpon>DebugWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="OwnerPost.cs" />
+    <Compile Include="Hotel.cs" />
+    <Compile Include="HotelDAO.cs" />
+    <Compile Include="OwnerAddHotel.cs" />
+    <Compile Include="OwnerPostRoom.cs" />
     <Compile Include="PCustomer.xaml.cs">
       <DependentUpon>PCustomer.xaml</DependentUpon>
     </Compile>
@@ -232,9 +236,6 @@
     <Resource Include="BackgroundIMG\luca-bravo-O453M2Liufs-unsplash.jpg" />
     <Resource Include="BackgroundIMG\noHotel.png" />
     <Content Include="DataBase\CreateDataBase.sql" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="CreateDataBase.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
