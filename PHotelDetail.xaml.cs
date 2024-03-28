@@ -34,8 +34,14 @@ namespace Window_Final_Term_Projcet__WPF_
             pHotelDetailOverview.lblHotelName.Content = hotel.HotelName;
             pHotelDetailOverview.lblAddress.Content = hotel.Address;
             pHotelDetailOverview.lblRating.Content = hotel.Rating;
-            //pHotelDetailOverview.lblPricOfRoom.Content = hotel.P
-            detailContent.Content = pHotelDetailOverview;  
+                        string ratingstar = "";
+                        for (int i = 0; i < float.Parse(hotel.Rating.ToString()); i++)
+                        {
+                                ratingstar += "⭐";
+                        }
+                        pHotelDetailOverview.lblRating.Content = ratingstar;
+                        //pHotelDetailOverview.lblPricOfRoom.Content = hotel.P
+                        detailContent.Content = pHotelDetailOverview;  
             this.selection = selection;
         }
 
@@ -59,7 +65,16 @@ namespace Window_Final_Term_Projcet__WPF_
             pHotelDetailOverview.lblAddress.Content = hotel.Address;
             pHotelDetailOverview.lblRating.Content = hotel.Rating;
             //pHotelDetailOverview.lblPricOfRoom.Content = hotel.P
+                        string ratingstar = "";
+                        for (int i=0; i < float.Parse(hotel.Rating.ToString()) ; i++) 
+                        {
+                                ratingstar += "⭐";
+                        }
+                        pHotelDetailOverview.lblRating.Content= ratingstar;
+
             detailContent.Content = pHotelDetailOverview;
+
+
         }
 
         public PHotelDetail(Frame detailContent)
