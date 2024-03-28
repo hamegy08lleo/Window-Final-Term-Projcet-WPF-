@@ -25,15 +25,17 @@ namespace Window_Final_Term_Projcet__WPF_
         {
             InitializeComponent();
         }
-        public Presult(DataTable result) 
+        public Presult(DataTable result, string roomType) 
         {
             InitializeComponent();
             foreach (DataRow row in result.Rows)
             {
-                UCHotelResult ucResult = new UCHotelResult();
+                UCHotelResult ucResult = new UCHotelResult(roomType);
                 ucResult.lblHotelName.Content = row[1].ToString();
                 ucResult.lblAddress.Content = row[2].ToString();
                 ucResult.lblPrice.Content = row[3].ToString() + "$";
+
+                ucResult.Selection = new RoomSelection(row[1].ToString(), roomType);
 
                 string rating = "";
                 for (int i = 0; i < float.Parse(row[4].ToString()) ; i++)

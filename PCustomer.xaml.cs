@@ -56,7 +56,7 @@ namespace Window_Final_Term_Projcet__WPF_
             MainWindow mainWindow = Window.GetWindow(this) as MainWindow;
             CustomerSearch search = new CustomerSearch(UCInformation.cbbRoomType.Text, UCInformation.cbbCity.Text);
             RoomDAO roomDAO = mainWindow.RoomDAO; 
-            mainWindow.MainContent.Navigate(new Presult(roomDAO.Search(search))); 
+            mainWindow.MainContent.Navigate(new Presult(roomDAO.Search(search), search.RoomType)); 
         }
     }
 }

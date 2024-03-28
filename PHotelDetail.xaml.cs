@@ -20,10 +20,15 @@ namespace Window_Final_Term_Projcet__WPF_
     /// </summary>
     public partial class PHotelDetail : Page
     {
-        public PHotelDetail()
+        private RoomSelection selection;
+
+        public RoomSelection Selection { get => selection; set => selection = value; }
+
+        public PHotelDetail(RoomSelection selection)
         {
             InitializeComponent();
             this.detailContent.Content = new PHotelDetailChild.PHotelDetailOverview();
+            this.selection = selection;
         }
 
         private void btnRooms_Click(object sender, RoutedEventArgs e)

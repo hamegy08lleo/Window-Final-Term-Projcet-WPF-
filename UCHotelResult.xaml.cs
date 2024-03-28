@@ -19,15 +19,22 @@ namespace Window_Final_Term_Projcet__WPF_{
     /// </summary>
     public partial class UCHotelResult : UserControl
     {
-        public UCHotelResult()
+        private RoomSelection selection;
+        public UCHotelResult(string roomType)
         {
             InitializeComponent();
+            this.selection = new RoomSelection(this.lblHotelName.Content.ToString(), roomType);
         }
+
+        public RoomSelection Selection { get => selection; set => selection = value; }
 
         public void btnSelectRoom_Click(object sender, RoutedEventArgs e)
         {
             MainWindow mainWindow = Window.GetWindow(this) as MainWindow;
-            mainWindow.MainContent.Navigate(new PHotelDetail());
+            string hotelName = lblHotelName.Content.ToString();
+            PHotelDetail pHotelDetail = new PHotelDetail(selection);
+            pHotelDetail.Name = "pHotelDetail"; 
+            mainWindow.MainContent.Navigate(pHotelDetail);
         }
     }
 }

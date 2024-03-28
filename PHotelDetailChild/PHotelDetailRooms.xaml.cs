@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Window_Final_Term_Projcet__WPF_.DataBase;
 
 namespace Window_Final_Term_Projcet__WPF_.PHotelDetailChild
 {
@@ -25,6 +26,24 @@ namespace Window_Final_Term_Projcet__WPF_.PHotelDetailChild
             InitializeComponent();
         }
 
+        PHotelDetail pHotelDetail()
+        {
+            FrameworkElement frameworkElement = this;
+            while (frameworkElement.Name != "pHotelDetail")
+            {
+                frameworkElement = VisualTreeHelper.GetParent(frameworkElement) as FrameworkElement;
+            }
+            return frameworkElement as PHotelDetail;
+        }
 
+        private void btnChoose_Click(object sender, RoutedEventArgs e)
+        {
+            BookingDAO bookingDAO = new BookingDAO();
+            bookingDAO.addBooking(pHotelDetail().Selection); 
+
+
+
+            //bookingDAO.addBooking(pHotelDetail.Selection);
+        }
     }
 }

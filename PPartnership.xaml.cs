@@ -29,7 +29,7 @@ namespace Window_Final_Term_Projcet__WPF_
         {
             string roomType = UCInformation.cbbRoomType.Text;
             string hotel = txbHotelName.Text;
-            int price = int.Parse(txbPrice.Text); 
+            int price = int.Parse(txbPrice.Text);
             int amount = int.Parse(txbAmount.Text);
             OwnerPostRoom post = new OwnerPostRoom(roomType, hotel, price, amount);
 

@@ -28,27 +28,51 @@ namespace Window_Final_Term_Projcet__WPF_
             dBConnection.CommandExecute(sqlStr);
         }
 
-        public DataTable Search(CustomerSearch input)
+        public DataTable Search(CustomerSearch search)
         {
-            string roomType = input.RoomType;
-            string city = input.City;
+            string roomType = search.RoomType;
+            string city = search.City;
 
-            string sqlStr = $"SELECT hotelID, hotelName, address, price, rating, ammount " +
-                $"FROM " +
-                $"(SELECT Hotel.hotelID, Hotel.hotelName, room.roomType, city, address, price, rating, count(roomID) as 'ammount' " +
-                $"FROM " +
-                $"Room inner join Hotel on Hotel.hotelID = Room.hotelID " +
-                $"group by Hotel.hotelName, Hotel.hotelID, room.roomType, city, address, price, rating) as tmp " +
-                $"WHERE roomType = '{roomType}' AND city = '{city}'";
+            //string sqlStr = $"SELECT hotelID, hotelName, address, price, rating, ammount " +
+            //    $"FROM " +
+            //    $"(SELECT Hotel.hotelID, Hotel.hotelName, room.roomType, city, address, price, rating, count(roomID) as 'ammount' " +
+            //    $"FROM " +
+            //    $"Room inner join Hotel on Hotel.hotelID = Room.hotelID " +
+            //    $"group by Hotel.hotelName, Hotel.hotelID, room.roomType, city, address, price, rating) as tmp " +
+            //    $"WHERE roomType = '{roomType}' AND city = '{city}'";
+
+            string sqlStr = $"SELECT hotelID, hotelName, address, price, rating, amount FROM " +
+                            $"(SELECT Hotel.hotelID, Hotel.hotelName, roomType, city, address, price, rating, count(roomID) as 'amount' FROM " +
+                            $"(SELECT * FROM " +
+                            $"(SELECT Room.roomID, hotelID, roomType, price, bookingID FROM " +
+                            $"Room left join Booking on Room.roomID = Booking.roomID) as Q1 " +
+                            $"WHERE bookingID is null) as Q2 inner join Hotel on Hotel.hotelID = Q2.hotelID " +
+                            $"GROUP BY Hotel.hotelID, Hotel.hotelName, roomtype, city, address, price, rating) as Q3 " +
+                            $"WHERE roomType = '{roomType}' AND city = '{city}'";
+
 
             DataTable dt = dBConnection.AdapterExecute(sqlStr);
             return dt;
+        }
 
-            //String sqlStr = $"SELECT * FROM {tableName} " +
-            //    $"WHERE {tableName}.city = '{input.City}' " +
-            //    $"AND {tableName}.roomType = '{input.RoomType}'";
-            //DataTable dt = dBConnection.AdapterExecute(sqlStr);
-            //return dt;
+        public string firstAvailableRoomID(RoomSelection selection)
+        {
+            string sqlStr = $"SELECT * FROM " +
+                $"(SELECT roomID, hotelName, roomType FROM " +
+                $"Room inner join Hotel on Hotel.hotelID = Room.hotelID) as Q1 " +
+                $"WHERE hotelName = '{selection.HotelName}' AND roomType = '{selection.RoomType}'";
+            MessageBox.Show(sqlStr); 
+            DataTable dt = new DataTable(); 
+            try
+            {
+                dt = dBConnection.AdapterExecute(sqlStr);
+                MessageBox.Show(dt.Rows[0][0].ToString());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            return dt.Rows[0][0].ToString(); 
         }
     }
 }

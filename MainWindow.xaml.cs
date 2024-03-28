@@ -38,7 +38,6 @@ namespace Window_Final_Term_Projcet__WPF_
         }
         private void lblLogo_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            mainContent.Content = null;
             mainContent.Content = new Pcustomer();
             if (this.btnPartnership.Content.ToString() == "Customer")
             {

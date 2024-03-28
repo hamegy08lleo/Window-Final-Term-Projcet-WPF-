@@ -43,7 +43,7 @@
 
                 </Grid>
                 <Grid Grid.Row="2">
-                    <Button Name="btnChoose" Content="Choose" Width="200" HorizontalAlignment="Center" Height="50" Background="#FFFF5E1F" BorderBrush="{x:Null}" Foreground="White" FontWeight="Bold" FontSize="24">
+                    <Button Name="btnChoose" Content="Choose" Width="200" HorizontalAlignment="Center" Height="50" Background="#FFFF5E1F" BorderBrush="{x:Null}" Foreground="White" FontWeight="Bold" FontSize="24" Click="btnChoose_Click">
                         <Button.Resources>
                             <Style TargetType="Border">
                                 <Setter Property="CornerRadius" Value="10"/>

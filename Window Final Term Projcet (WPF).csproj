@@ -60,6 +60,8 @@
     </ApplicationDefinition>
     <Compile Include="CustomerSearch.cs" />
     <Compile Include="DAO.cs" />
+    <Compile Include="DataBase\Booking.cs" />
+    <Compile Include="DataBase\BookingDAO.cs" />
     <Compile Include="DBConnection.cs" />
     <Compile Include="DebugWindow.xaml.cs">
       <DependentUpon>DebugWindow.xaml</DependentUpon>
@@ -92,6 +94,7 @@
     <Compile Include="PShowHotel.xaml.cs">
       <DependentUpon>PShowHotel.xaml</DependentUpon>
     </Compile>
+    <Compile Include="RoomSelection.cs" />
     <Compile Include="UCHotelResult.xaml.cs">
       <DependentUpon>UCHotelResult.xaml</DependentUpon>
     </Compile>

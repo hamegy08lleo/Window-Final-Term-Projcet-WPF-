@@ -21,10 +21,11 @@ CREATE TABLE Hotel(
 
 CREATE TABLE Booking( 
 	bookingID int IDENTITY, 
-	roomID int
+	roomID int not null,
 )
 
 ALTER TABLE Room WITH CHECK ADD FOREIGN KEY(hotelID) REFERENCES Hotel(hotelID)
+ALTER TABLE Booking WITH CHECK ADD PRIMARY KEY(bookingID, roomID)
 
 INSERT INTO Hotel(hotelName, rating, city, address, phoneNumber, email)
 VALUES('Horizon Travel HCM', '5.0', 'Ho Chi Minh City', '188 Phan Van Tri', '0123456789', 'h@gmail.com')
@@ -79,6 +80,16 @@ FROM
 Room inner join Hotel on Hotel.hotelID = Room.hotelID
 group by Hotel.hotelName, Hotel.hotelID, room.roomType, city, address, price, rating) as tmp
 WHERE roomType = '2 Single Bed' AND city = 'Ho Chi Minh City'
+
+SELECT hotelID, hotelName, address, price, rating, amount FROM
+(SELECT Hotel.hotelID, Hotel.hotelName, roomType, city, address, price, rating, count(roomID) as 'amount' FROM
+(SELECT * FROM
+(SELECT Room.roomID, hotelID, roomType, price, bookingID FROM 
+Room left join Booking on Room.roomID = Booking.roomID) as Q1
+WHERE bookingID is null) as Q2 inner join Hotel on Hotel.hotelID = Q2.hotelID
+GROUP BY Hotel.hotelID, Hotel.hotelName, roomtype, city, address, price, rating) as Q3
+WHERE roomType = '2 Single Bed' AND city = 'Ho Chi Minh City'
+
 
 USE ManageRoom
 
