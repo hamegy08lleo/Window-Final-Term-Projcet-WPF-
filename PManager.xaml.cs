@@ -25,9 +25,19 @@ namespace Window_Final_Term_Projcet__WPF_
                         InitializeComponent();
                 }
 
-                private void btnMoreBudiness_Click(object sender, RoutedEventArgs e)
+                private void btnMoreRooms_Click(object sender, RoutedEventArgs e)
                 {
                         this.mainContent.Content = new PPartnership();
+                }
+
+                private void btnMyBusiness_Click(object sender, RoutedEventArgs e)
+                {
+                        this.mainContent.Content = new PShowHotel();
+                }
+
+                private void btnMoreBusiness_Click(object sender, RoutedEventArgs e)
+                {
+                        this.mainContent.Content = new PAddHotel();
                 }
         }
 }

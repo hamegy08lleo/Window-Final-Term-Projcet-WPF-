@@ -68,6 +68,9 @@
     <Compile Include="HotelDAO.cs" />
     <Compile Include="OwnerAddHotel.cs" />
     <Compile Include="OwnerPostRoom.cs" />
+    <Compile Include="PAddHotel.xaml.cs">
+      <DependentUpon>PAddHotel.xaml</DependentUpon>
+    </Compile>
     <Compile Include="PCustomer.xaml.cs">
       <DependentUpon>PCustomer.xaml</DependentUpon>
     </Compile>
@@ -128,6 +131,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="PAddHotel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="PCustomer.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

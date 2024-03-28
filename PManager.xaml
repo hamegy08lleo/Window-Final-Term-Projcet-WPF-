@@ -25,9 +25,11 @@
                                 <ColumnDefinition Width="200"/>
                                 <ColumnDefinition Width="10"/>
                                 <ColumnDefinition Width="200"/>
+                                <ColumnDefinition Width="10"/>
+                                <ColumnDefinition Width="200"/>
 
                         </Grid.ColumnDefinitions>
-                        <Button Content="My Business" x:Name="btnMyBusiness" Grid.Column="1" Background="#FF185ABC" BorderBrush="{x:Null}" Foreground="White" FontSize="24" FontWeight="SemiBold">
+                        <Button Content="My Business" x:Name="btnMyBusiness" Grid.Column="1" Background="#FF185ABC" BorderBrush="{x:Null}" Foreground="White" FontSize="24" FontWeight="SemiBold" Click="btnMyBusiness_Click">
                                 <Button.Resources>
                                         <Style TargetType="Border">
                                                 <Setter Property="CornerRadius" Value="25"/>
@@ -35,13 +37,22 @@
                                 </Button.Resources>
                         </Button>
 
-                        <Button Content="More Business" x:Name="btnMoreBudiness" Grid.Column="3" Background="#FF185ABC" BorderBrush="{x:Null}" Foreground="White" FontSize="24" FontWeight="SemiBold" Click="btnMoreBudiness_Click">
+                        <Button Content="More Business" x:Name="btnMoreBusiness" Grid.Column="3" Background="#FF185ABC" BorderBrush="{x:Null}" Foreground="White" FontSize="24" FontWeight="SemiBold" Click="btnMoreBusiness_Click">
                                 <Button.Resources>
                                         <Style TargetType="Border">
                                                 <Setter Property="CornerRadius" Value="25"/>
                                         </Style>
                                 </Button.Resources>
                         </Button>
+
+                        <Button Content="More Rooms" x:Name="btnMoreRooms" Grid.Column="5" Background="#FF185ABC" BorderBrush="{x:Null}" Foreground="White" FontSize="24" FontWeight="SemiBold" Click="btnMoreRooms_Click">
+                                <Button.Resources>
+                                        <Style TargetType="Border">
+                                                <Setter Property="CornerRadius" Value="25"/>
+                                        </Style>
+                                </Button.Resources>
+                        </Button>
+
                 </Grid>
                 <Grid Grid.Row="3" Name="gContent">
                         <Frame x:Name="mainContent" HorizontalAlignment="Center" VerticalAlignment="Center">

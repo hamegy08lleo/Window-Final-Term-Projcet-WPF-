@@ -16,20 +16,7 @@
                         <SolidColorBrush Color="White" Opacity="0.8"/>
                 </Border.Background>
                 <Grid >
-                        <Grid.RowDefinitions>
-                                <RowDefinition Height="30"/>
-                                <RowDefinition Height ="200"/>
-                                <RowDefinition Height ="85"/>
-                                <RowDefinition Height="85"/>
-                                <RowDefinition Height="50"/>
-                        </Grid.RowDefinitions>
-
-                        <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="10"/>
-                                <ColumnDefinition Width="520"/>
-                                <ColumnDefinition Width="10"/>
-                        </Grid.ColumnDefinitions>
-
+                        <Label Content="Show khách sạn" FontSize="50"/>
                 </Grid>
 
         </Border>
