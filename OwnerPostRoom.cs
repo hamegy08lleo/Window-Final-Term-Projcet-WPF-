@@ -25,5 +25,13 @@ namespace Window_Final_Term_Projcet__WPF_
         public string Hotel { get => hotel; set => hotel = value; }
         public int Price { get => price; set => price = value; }
         public int Amount { get => amount; set => amount = value; }
+
+        internal void Deconstruct(out string roomType, out string hotel, out int price, out int amount)
+        {
+            roomType = this.roomType;
+            hotel = this.hotel; 
+            price = this.price; 
+            amount = this.amount;   
+        }
     }
 }
