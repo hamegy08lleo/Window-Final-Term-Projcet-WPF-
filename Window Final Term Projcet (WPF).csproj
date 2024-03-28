@@ -220,8 +220,5 @@
   <ItemGroup>
     <Content Include="DataBase\CreateDataBase.sql" />
   </ItemGroup>
-  <ItemGroup>
-    <Content Include="CreateDataBase.sql" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
