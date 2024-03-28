@@ -15,7 +15,7 @@
                 <Border.Background>
                         <SolidColorBrush Color="White" Opacity="0.8"/>
                 </Border.Background>
-                
+
                 <Grid>
                         <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="100"/>
@@ -82,6 +82,6 @@
 
                         </Grid>
                 </Grid>
-                
+
         </Border>
 </Page>
