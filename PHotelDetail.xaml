@@ -61,6 +61,16 @@
         </Grid>
                 <Grid Grid.Row ="3">
                         <Frame x:Name="detailContent" HorizontalContentAlignment="Stretch" Height="740" VerticalContentAlignment="Center" ScrollViewer.VerticalScrollBarVisibility="Disabled" VerticalAlignment="Top"/>
+
+
+                        <StackPanel>
+                                
+                        </StackPanel>
+                        
+                        
                 </Grid>
         </Grid>
+
+        
+        
 </Page>

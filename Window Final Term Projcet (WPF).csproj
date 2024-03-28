@@ -79,6 +79,12 @@
     <Compile Include="PHotelDetailChild\PHotelDetailRooms.xaml.cs">
       <DependentUpon>PHotelDetailRooms.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PManager.xaml.cs">
+      <DependentUpon>PManager.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PShowHotel.xaml.cs">
+      <DependentUpon>PShowHotel.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UCHotelResult.xaml.cs">
       <DependentUpon>UCHotelResult.xaml</DependentUpon>
     </Compile>
@@ -135,6 +141,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="PHotelDetailChild\PHotelDetailRooms.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PManager.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PShowHotel.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -216,6 +230,7 @@
   <ItemGroup>
     <Resource Include="BackgroundIMG\tom-barrett-M0AWNxnLaMw-unsplash.jpg" />
     <Resource Include="BackgroundIMG\luca-bravo-O453M2Liufs-unsplash.jpg" />
+    <Resource Include="BackgroundIMG\noHotel.png" />
     <Content Include="DataBase\CreateDataBase.sql" />
   </ItemGroup>
   <ItemGroup>

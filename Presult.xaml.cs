@@ -44,6 +44,30 @@ namespace Window_Final_Term_Projcet__WPF_
                 ucResult.lblRating.Content = rating;
                 ucResult.btnSelectRoom.Click += ucResult.btnSelectRoom_Click;
             }
+                        StackPanel nullHotel = new StackPanel();
+                        Image noHotelImage = new Image();
+                        noHotelImage.Source = new BitmapImage(new Uri("/BackgroundIMG/noHotel.png", UriKind.Relative));
+                        noHotelImage.Width = 141;
+                        noHotelImage.HorizontalAlignment = HorizontalAlignment.Center;
+                        nullHotel.Children.Add(noHotelImage);
+
+                        Label errorLabel1 = new Label();
+                        errorLabel1.Content = "Hotel Not Available";
+                        errorLabel1.FontSize = 24;
+                        errorLabel1.HorizontalAlignment = HorizontalAlignment.Center;
+                        nullHotel.Children.Add(errorLabel1);
+
+                        Label errorLabel2 = new Label();
+                        errorLabel2.Content = "Sorry, no hotel matches your preference. Please change your search.";
+                        errorLabel2.FontSize = 24;
+                        errorLabel2.HorizontalAlignment = HorizontalAlignment.Center;
+                        nullHotel.Children.Add(errorLabel2);
+
+                        int count = this.spResult.Children.Count;
+                if(count == 0)
+                {
+                                this.spResult.Children.Add(nullHotel);
+                }
         }
 
         private void spResult_Scroll(object sender, System.Windows.Controls.Primitives.ScrollEventArgs e)
