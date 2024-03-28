@@ -193,12 +193,12 @@
                         <Grid Grid.Row="1" Grid.Column="1">
                                 <StackPanel HorizontalAlignment="Left">
                                         <Label Content="Hotel Name" 
-                                                VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="Black" Height="40" FontFamily="JetBrainsMono Nerd Font" FontSize="24" VerticalContentAlignment="Center"/>
+                                                VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="Black" Height="40" FontFamily="JetBrainsMono Nerd Font" FontSize="24" VerticalContentAlignment="Center" Margin="25,0,0,0"/>
                                         <ComboBox x:Name="cbbHotel" 
                                                 Style="{DynamicResource theComboBox}"
                                                 ItemContainerStyle="{DynamicResource theComboBoxItem}"
                                                 VerticalAlignment="Top" Height="50" 
-                                                ScrollViewer.VerticalScrollBarVisibility="Hidden" Width="500" Padding="15,0,0,0" HorizontalAlignment="Center">
+                                                ScrollViewer.VerticalScrollBarVisibility="Hidden" Width="500" Padding="15,0,0,0" HorizontalAlignment="Center" SelectionChanged="cbbHotel_SelectionChanged">
 
 
                                         </ComboBox>
@@ -211,7 +211,7 @@
                                 <StackPanel HorizontalAlignment="Left" >
 
                                         <Label Content="Room Type"
-                                                VerticalAlignment="Top" HorizontalAlignment="Left"  Foreground="Black" Height="40" FontFamily="JetBrainsMono Nerd Font" FontSize="24" VerticalContentAlignment="Center"/>
+                                                VerticalAlignment="Top" HorizontalAlignment="Left"  Foreground="Black" Height="40" FontFamily="JetBrainsMono Nerd Font" FontSize="24" VerticalContentAlignment="Center" Margin="25,0,0,0"/>
 
 
                                         <ComboBox x:Name="cbbRoomType"
@@ -238,7 +238,7 @@
                                 <Label Grid.Column="1" Content="Price"
                                         VerticalAlignment="Top" Foreground="Black"
                                         Height="40" FontFamily="JetBrainsMono Nerd Font" FontSize="24" 
-                                        VerticalContentAlignment="Center" Width="100" HorizontalAlignment="Left" Margin="24,0,0,0"/>
+                                        VerticalContentAlignment="Center" Width="100" HorizontalAlignment="Left" Margin="25,0,0,0"/>
                                 <TextBox Grid.Column="1" Name="txbPrice" Margin="0,35,0,0"
                                         Height="50" VerticalContentAlignment="Center" FontSize="24"
                                         Width="300" HorizontalAlignment="Left" VerticalAlignment="Bottom" BorderBrush="Black" Padding="15,0,0,0">

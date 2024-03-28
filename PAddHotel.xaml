@@ -191,7 +191,7 @@
                                 <Grid Grid.Column="1" Grid.Row="1">
                                         <StackPanel>
                                                 <Rectangle Height="5"/>
-                                                <Label Content="Hotel Name" FontSize="24" Height="50" />
+                                                <Label Content="Hotel Name" FontSize="24" Height="50" Padding="5,5,5,5" Margin="25,0,0,0" />
                                                 <TextBox x:Name="txtHotelName" Height="50" BorderBrush="Black" VerticalContentAlignment="Center" Padding="30,0,0,0" FontSize="24">
                                                         <TextBox.Resources>
                                                                 <Style TargetType="Border">
@@ -200,7 +200,7 @@
                                                         </TextBox.Resources>
                                                 </TextBox>
                                                 <Rectangle Height="10"/>
-                                                <Label Content="City" FontSize="24" Height="50"/>
+                                                <Label Content="City" FontSize="24" Height="50" Margin="25,0,0,0"/>
                                                 <ComboBox x:Name="cbbCity" 
                                                         Style="{DynamicResource theComboBox}"
                                                         ItemContainerStyle="{DynamicResource theComboBoxItem}"
@@ -214,7 +214,7 @@
                                                         <ComboBoxItem Content="Soc Trang province"/>
                                                 </ComboBox>
                                                 <Rectangle Height="10"/>
-                                                <Label Content="Address" FontSize="24" Height="50"/>
+                                                <Label Content="Address" FontSize="24" Height="50" Margin="25,0,0,0"/>
                                                 <TextBox x:Name="txtAddress" Height="50" Padding="30,0,0,0" VerticalContentAlignment="Center" BorderBrush="Black" FontSize="24">
                                                         <TextBox.Resources>
                                                                 <Style TargetType="Border">
@@ -225,7 +225,7 @@
                                                 <Rectangle Height="10"/>
                                                 <StackPanel Orientation="Horizontal">
                                                         <StackPanel>
-                                                                <Label Content="Email" FontSize="24" Height="50" Width="300"/>
+                                                                <Label Content="Email" FontSize="24" Height="50" Margin="25,0,0,0"/>
                                                                 <TextBox x:Name="txtEmail" Height="50" Width="300" VerticalContentAlignment="Center" Padding="30,0,0,0" BorderBrush="Black" FontSize="24">
                                                                         <TextBox.Resources>
                                                                                 <Style TargetType="Border">
@@ -236,8 +236,8 @@
                                                         </StackPanel>
                                                         <Rectangle Width="50"/>
                                                         <StackPanel>
-                                                                <Label Content="Phone Number" FontSize="24" Height="50" Width="300"/>
-                                                                <TextBox x:Name="txtPhoneNumber" Height="50" Width="300" VerticalContentAlignment="Center" Padding="30,0,0,0" BorderBrush="Black" FontSize="24">
+                                                                <Label Content="Phone Number" FontSize="24" Height="50" Width="300" Margin="25,0,0,0" HorizontalAlignment="Left"/>
+                                                                <TextBox x:Name="txtPhoneNumber" Height="50" Width="300" VerticalContentAlignment="Center" Padding="30,0,0,0" BorderBrush="Black" FontSize="24" HorizontalAlignment="Left">
                                                                         <TextBox.Resources>
                                                                                 <Style TargetType="Border">
                                                                                         <Setter Property="CornerRadius" Value="25"/>
