@@ -27,8 +27,8 @@ namespace Window_Final_Term_Projcet__WPF_
 
         private void btnPost_Click(object sender, RoutedEventArgs e)
         {
-            string roomType = UCInformation.cbbRoomType.Text;
-            string hotel = txbHotelName.Text;
+            string roomType = cbbRoomType.Text;
+            string hotel = cbbHotel.Text;
             int price = int.Parse(txbPrice.Text);
             int amount = int.Parse(txbAmount.Text);
             OwnerPostRoom post = new OwnerPostRoom(roomType, hotel, price, amount);
