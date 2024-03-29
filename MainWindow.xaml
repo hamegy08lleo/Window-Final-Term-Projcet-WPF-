@@ -45,7 +45,7 @@
                 <Button x:Name="btnBooking" 
                     Content="Booking" DockPanel.Dock="Right" 
                         Width="180"  Height="80" FontSize="24" 
-                        Margin="5,10,5,0" FontWeight="Bold">
+                        Margin="5,10,5,0" FontWeight="Bold" Click="btnBooking_Click">
                     <Button.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" Value="10"/>

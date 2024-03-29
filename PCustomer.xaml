@@ -168,6 +168,9 @@
             </Setter>
         </Style>
     </Page.Resources>
+        
+        
+        
     <Border BorderThickness="10,10,10,10" CornerRadius="20">
         <Border.BorderBrush>
             <SolidColorBrush Color="White" Opacity="0.8"/>

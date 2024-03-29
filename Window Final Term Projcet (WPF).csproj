@@ -74,6 +74,9 @@
     <Compile Include="PAddHotel.xaml.cs">
       <DependentUpon>PAddHotel.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PBooking.xaml.cs">
+      <DependentUpon>PBooking.xaml</DependentUpon>
+    </Compile>
     <Compile Include="PCustomer.xaml.cs">
       <DependentUpon>PCustomer.xaml</DependentUpon>
     </Compile>
@@ -94,6 +97,9 @@
     </Compile>
     <Compile Include="PShowHotel.xaml.cs">
       <DependentUpon>PShowHotel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCBooking.xaml.cs">
+      <DependentUpon>UCBooking.xaml</DependentUpon>
     </Compile>
     <Compile Include="UCHotel.xaml.cs">
       <DependentUpon>UCHotel.xaml</DependentUpon>
@@ -145,6 +151,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="PBooking.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="PCustomer.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -170,6 +180,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="PShowHotel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCBooking.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
