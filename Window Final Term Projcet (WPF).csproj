@@ -36,6 +36,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="HandyControl, Version=3.5.1.0, Culture=neutral, PublicKeyToken=45be8712787a1e5b, processorArchitecture=MSIL">
+      <HintPath>packages\HandyControl.3.5.1\lib\net472\HandyControl.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.SqlClient, Version=4.6.1.6, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
@@ -269,7 +272,9 @@
   <ItemGroup>
     <Resource Include="Icon\calendarLogo.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="UCHotelChild\" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="BackgroundIMG\tom-barrett-M0AWNxnLaMw-unsplash.jpg" />
     <Resource Include="BackgroundIMG\luca-bravo-O453M2Liufs-unsplash.jpg" />
