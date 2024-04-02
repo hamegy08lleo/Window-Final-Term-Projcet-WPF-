@@ -26,10 +26,7 @@ namespace Window_Final_Term_Projcet__WPF_
                 SqlCommand cmd = new SqlCommand(sqlStr, conn);
                 if (cmd.ExecuteNonQuery() > 0)
                 {
-                       WNotification notification = new WNotification();
-                                        notification.Notification("Successfully");
-                                        notification.Show();
-                    //MessageBox.Show("Successfully");
+                    MessageBox.Show("Successfully");
                 }
             }
             catch (Exception ex)
