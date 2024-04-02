@@ -61,8 +61,8 @@
     </ApplicationDefinition>
     <Compile Include="CustomerSearch.cs" />
     <Compile Include="DAO.cs" />
-    <Compile Include="DataBase\Booking.cs" />
-    <Compile Include="DataBase\BookingDAO.cs" />
+    <Compile Include="Booking.cs" />
+    <Compile Include="BookingDAO.cs" />
     <Compile Include="DBConnection.cs" />
     <Compile Include="DebugWindow.xaml.cs">
       <DependentUpon>DebugWindow.xaml</DependentUpon>

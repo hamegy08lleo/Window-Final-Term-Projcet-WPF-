@@ -12,17 +12,34 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Window_Final_Term_Projcet__WPF_.DataBase;
 
 namespace Window_Final_Term_Projcet__WPF_
 {
-        /// <summary>
-        /// Interaction logic for UCBooking.xaml
-        /// </summary>
-        public partial class UCBooking : UserControl
+    /// <summary>
+    /// Interaction logic for UCBooking.xaml
+    /// </summary>
+    public partial class UCBooking : UserControl
+    {
+
+        private string bookingID; 
+        public UCBooking(string bookingID)
         {
-                public UCBooking()
-                {
-                        InitializeComponent();
-                }
+            InitializeComponent();
+            this.bookingID = bookingID;
         }
+
+        private void btnCancel_Click(object sender, RoutedEventArgs e)
+        {
+            BookingDAO bookingDAO = new BookingDAO();
+            bookingDAO.cancelBooking(bookingID);
+            FrameworkElement frameworkElement = this as FrameworkElement;
+            while (frameworkElement.GetType().ToString() != new PBooking().GetType().ToString())
+            {
+                frameworkElement = VisualTreeHelper.GetParent(frameworkElement) as FrameworkElement;
+            }
+            PBooking pBooking = frameworkElement as PBooking;
+            pBooking.NavigationService.Navigate(new PBooking()); 
+        }
+    }
 }
