@@ -173,7 +173,7 @@
         </Grid.RowDefinitions>
         <StackPanel Grid.Row="0" VerticalAlignment="Top" Panel.ZIndex="3" Height="125" HorizontalAlignment="Center">
                 <Label Content="City, Province" 
-                       VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="Black" Height="40" FontFamily="JetBrainsMono Nerd Font" FontSize="24" VerticalContentAlignment="Center"/>
+                       VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="Black" Height="40" FontFamily="JetBrainsMono Nerd Font" FontSize="24" VerticalContentAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}"/>
 
                 <ComboBox x:Name="cbbCity" 
                   Style="{DynamicResource theComboBox}"
@@ -194,7 +194,7 @@
         <StackPanel Grid.Row="1" HorizontalAlignment="Center" >
             
                 <Label Content="Room Type"
-                       VerticalAlignment="Top" HorizontalAlignment="Left"  Foreground="Black" Height="40" FontFamily="JetBrainsMono Nerd Font" FontSize="24" VerticalContentAlignment="Center"/>
+                       VerticalAlignment="Top" HorizontalAlignment="Left"  Foreground="Black" Height="40" FontFamily="JetBrainsMono Nerd Font" FontSize="24" VerticalContentAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}"/>
 
 
                 <ComboBox x:Name="cbbRoomType"
