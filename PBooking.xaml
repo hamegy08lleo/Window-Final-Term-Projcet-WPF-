@@ -22,13 +22,7 @@
                                         <Grid>
                                                 <StackPanel  x:Name ="spBooking" ScrollViewer.HorizontalScrollBarVisibility="Hidden"
                                                         ScrollViewer.VerticalScrollBarVisibility="Hidden" Margin="0,20,0,0">
-                                                        <local:UCBooking />
-                                                        <local:UCBooking />
-                                                        <local:UCBooking />
-                                                        <local:UCBooking />
-                                                        <local:UCBooking />
-                                                        <local:UCBooking />
-                                                        <local:UCBooking />
+
                                                 </StackPanel>
                                         </Grid>
                                 </ScrollViewer>
