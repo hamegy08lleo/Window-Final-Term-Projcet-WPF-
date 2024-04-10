@@ -38,14 +38,18 @@
                                         <RowDefinition Height="2"/>
                                         <RowDefinition Height="10"/>
                                 </Grid.RowDefinitions>
-                                <ToggleButton Content="Free Wifi" Grid.Row="1" Grid.Column="1">
-                                        <ToggleButton.Resources>
-                                                <Style TargetType="Border">
-                                                        <Setter Property="CornerRadius" Value="30"/>
-                                                        <Setter Property="Height" Value="50"/>
-                                                        <Setter Property="Width" Value="200"/>
+                                <ToggleButton x:Name="btnFreeWifi" Content="Free Wifi" Grid.Row="1" Grid.Column="1" BorderBrush="Black" Background="{x:Null}">
+                                        <ToggleButton.Style>
+                                                <Style TargetType="{x:Type ToggleButton}">
+                                                        <Setter Property="Background" Value="Green"/>                                           
+                                                        <Style.Triggers>
+                                                                <Trigger Property="IsChecked" Value="true">
+                                                                        <Setter Property="Background" Value="Red"/>
+                                                                </Trigger>
+                                                        </Style.Triggers>
+
                                                 </Style>
-                                        </ToggleButton.Resources>
+                                        </ToggleButton.Style>
                                 </ToggleButton>
                                 <CheckBox Content="Free Wifi" Grid.Row="3" Grid.Column="1"/>
                                 <CheckBox Content="Free Wifi" Grid.Row="5" Grid.Column="1"/>
