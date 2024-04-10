@@ -95,6 +95,12 @@
     <Compile Include="PManager.xaml.cs">
       <DependentUpon>PManager.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PostHotelChild\UCPostFacilities.xaml.cs">
+      <DependentUpon>UCPostFacilities.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PostHotelChild\UCPostGeneral.xaml.cs">
+      <DependentUpon>UCPostGeneral.xaml</DependentUpon>
+    </Compile>
     <Compile Include="PShowHotel.xaml.cs">
       <DependentUpon>PShowHotel.xaml</DependentUpon>
     </Compile>
@@ -130,6 +136,9 @@
     </Compile>
     <Compile Include="WindowRegister.xaml.cs">
       <DependentUpon>WindowRegister.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WNotifiaction.xaml.cs">
+      <DependentUpon>WNotifiaction.xaml</DependentUpon>
     </Compile>
     <Page Include="DebugWindow.xaml">
       <SubType>Designer</SubType>
@@ -176,6 +185,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="PManager.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PostHotelChild\UCPostFacilities.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PostHotelChild\UCPostGeneral.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -231,6 +248,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="WNotifiaction.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -275,6 +296,7 @@
     <Resource Include="BackgroundIMG\luca-bravo-O453M2Liufs-unsplash.jpg" />
     <Resource Include="BackgroundIMG\noHotel.png" />
     <Resource Include="BackgroundIMG\BackgroudHotel.jpg" />
+    <Resource Include="BackgroundIMG\ringing.png" />
     <Content Include="DataBase\CreateDataBase.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
