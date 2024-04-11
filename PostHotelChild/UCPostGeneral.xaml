@@ -222,7 +222,7 @@
                                                         </TextBox.Resources>
                                                 </TextBox>
                                                 <Rectangle Height="10"/>
-                                                <Label Content="OwnerName" FontSize="24" Height="50" Margin="25,0,0,0"/>
+                                                <Label Content="Owner Name" FontSize="24" Height="50" Margin="25,0,0,0"/>
                                                 <TextBox x:Name="txtOwnerName" Height="50" Padding="30,0,0,0" VerticalContentAlignment="Center" BorderBrush="Black" FontSize="24">
                                                         <TextBox.Resources>
                                                                 <Style TargetType="Border">

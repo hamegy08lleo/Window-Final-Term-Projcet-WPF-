@@ -19,10 +19,22 @@
                         <Grid>
                                 <ScrollViewer VerticalScrollBarVisibility="Hidden" UseLayoutRounding="True">
                                         <StackPanel>
-                                                <PostHotelChild:UCPostGeneral />
+                                                <PostHotelChild:UCPostGeneral x:Name="ucPostGeneral" />
                                                 <Rectangle Height="20"/>
-                                                <PostHotelChild:UCPostFacilities />
-                                                <Rectangle Height="20"/>
+                                                <PostHotelChild:UCPostFacilities x:Name="ucPostFacilities" />
+                                                <Rectangle Height="50"/>
+                                                <Button x:Name="btnPost" Content="Post" 
+                                                        FontSize="35" Height="80" Background="#FFFF5E1F" 
+                                                        Foreground="White" BorderBrush="{x:Null}" Width="500" 
+                                                        FontWeight="Bold" Click="btnPost_Click" >
+                                                        <Button.Resources>
+                                                                <Style TargetType="Border">
+                                                                        <Setter Property="CornerRadius" Value="30"/>
+                                                                </Style>
+                                                        </Button.Resources>
+                                                </Button>
+                                                <Rectangle Height="100"/>
+
 
                                         </StackPanel>
                                 </ScrollViewer>

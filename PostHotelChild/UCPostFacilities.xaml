@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Window_Final_Term_Projcet__WPF_.PostHotelChild"
              mc:Ignorable="d" 
-             d:DesignHeight="600" d:DesignWidth="800">
+             d:DesignHeight="400" d:DesignWidth="800">
         <Grid>
                 <Border BorderThickness="10" Padding="5" CornerRadius="20">
                         <Border.BorderBrush>
@@ -31,37 +31,81 @@
                                         <RowDefinition Height="90"/>
                                         <RowDefinition Height="2"/>
                                         <RowDefinition Height="90"/>
-                                        <RowDefinition Height="2"/>
-                                        <RowDefinition Height="90"/>
-                                        <RowDefinition Height="2"/>
-                                        <RowDefinition Height="90"/>
-                                        <RowDefinition Height="2"/>
                                         <RowDefinition Height="10"/>
                                 </Grid.RowDefinitions>
-                                <ToggleButton x:Name="btnFreeWifi" Content="Free Wifi" Grid.Row="1" Grid.Column="1" BorderBrush="Black" Background="{x:Null}">
-                                        <ToggleButton.Style>
-                                                <Style TargetType="{x:Type ToggleButton}">
-                                                        <Setter Property="Background" Value="Green"/>                                           
-                                                        <Style.Triggers>
-                                                                <Trigger Property="IsChecked" Value="true">
-                                                                        <Setter Property="Background" Value="Red"/>
-                                                                </Trigger>
-                                                        </Style.Triggers>
-
+                                <ToggleButton x:Name="btnSwimmingPool" Content="Swimming Pool" Grid.Row="1" Grid.Column="1" BorderBrush="Black" Background="{x:Null}" FontSize="24">
+                                        <ToggleButton.Resources>
+                                                <Style TargetType="Border">
+                                                        <Setter Property="CornerRadius" Value="20"/>
+                                                        <Setter Property="Height" Value="70"/>
+                                                        <Setter Property="Width" Value="250"/>
                                                 </Style>
-                                        </ToggleButton.Style>
+                                        </ToggleButton.Resources>
                                 </ToggleButton>
-                                <CheckBox Content="Free Wifi" Grid.Row="3" Grid.Column="1"/>
-                                <CheckBox Content="Free Wifi" Grid.Row="5" Grid.Column="1"/>
-                                <CheckBox Content="Free Wifi" Grid.Row="7" Grid.Column="1"/>
-                                <CheckBox Content="Free Wifi" Grid.Row="9" Grid.Column="1"/>
-                                <CheckBox Content="Free Wifi" Grid.Row="11" Grid.Column="1"/>
-                                <CheckBox Content="Free Wifi" Grid.Row="1" Grid.Column="3"/>
-                                <CheckBox Content="Free Wifi" Grid.Row="3" Grid.Column="3"/>
-                                <CheckBox Content="Free Wifi" Grid.Row="5" Grid.Column="3"/>
-                                <CheckBox Content="Free Wifi" Grid.Row="7" Grid.Column="3"/>
-                                <CheckBox Content="Free Wifi" Grid.Row="9" Grid.Column="3"/>
-                                <CheckBox Content="Free Wifi" Grid.Row="11" Grid.Column="3"/>
+                                <ToggleButton x:Name="btnCasino" Content="Casino" Grid.Row="3" Grid.Column="1" BorderBrush="Black" Background="{x:Null}" FontSize="24">
+                                        <ToggleButton.Resources>
+                                                <Style TargetType="Border">
+                                                        <Setter Property="CornerRadius" Value="20"/>
+                                                        <Setter Property="Height" Value="70"/>
+                                                        <Setter Property="Width" Value="250"/>
+                                                </Style>
+                                        </ToggleButton.Resources>
+                                </ToggleButton>
+                                <ToggleButton x:Name="btnWheelchairAccess" Content="Wheelchair Access" Grid.Row="5" Grid.Column="1" BorderBrush="Black" Background="{x:Null}" FontSize="24">
+                                        <ToggleButton.Resources>
+                                                <Style TargetType="Border">
+                                                        <Setter Property="CornerRadius" Value="20"/>
+                                                        <Setter Property="Height" Value="70"/>
+                                                        <Setter Property="Width" Value="250"/>
+                                                </Style>
+                                        </ToggleButton.Resources>
+                                </ToggleButton>
+                                <ToggleButton x:Name="btnParking" Content="Parking" Grid.Row="7" Grid.Column="1" BorderBrush="Black" Background="{x:Null}" FontSize="24">
+                                        <ToggleButton.Resources>
+                                                <Style TargetType="Border">
+                                                        <Setter Property="CornerRadius" Value="20"/>
+                                                        <Setter Property="Height" Value="70"/>
+                                                        <Setter Property="Width" Value="250"/>
+                                                </Style>
+                                        </ToggleButton.Resources>
+                                </ToggleButton>
+
+                                <ToggleButton x:Name="btnRestaurant" Content="Restaurant" Grid.Row="1" Grid.Column="3" BorderBrush="Black" Background="{x:Null}" FontSize="24">
+                                        <ToggleButton.Resources>
+                                                <Style TargetType="Border">
+                                                        <Setter Property="CornerRadius" Value="20"/>
+                                                        <Setter Property="Height" Value="70"/>
+                                                        <Setter Property="Width" Value="250"/>
+                                                </Style>
+                                        </ToggleButton.Resources>
+                                </ToggleButton>
+                                <ToggleButton x:Name="btnFitnessCenter" Content="Fitness Center" Grid.Row="3" Grid.Column="3" BorderBrush="Black" Background="{x:Null}" FontSize="24">
+                                        <ToggleButton.Resources>
+                                                <Style TargetType="Border">
+                                                        <Setter Property="CornerRadius" Value="20"/>
+                                                        <Setter Property="Height" Value="70"/>
+                                                        <Setter Property="Width" Value="250"/>
+                                                </Style>
+                                        </ToggleButton.Resources>
+                                </ToggleButton>
+                                <ToggleButton x:Name="btnAirportTransfer" Content="Airport Transfer" Grid.Row="7" Grid.Column="3" BorderBrush="Black" Background="{x:Null}" FontSize="24">
+                                        <ToggleButton.Resources>
+                                                <Style TargetType="Border">
+                                                        <Setter Property="CornerRadius" Value="20"/>
+                                                        <Setter Property="Height" Value="70"/>
+                                                        <Setter Property="Width" Value="250"/>
+                                                </Style>
+                                        </ToggleButton.Resources>
+                                </ToggleButton>
+                                <ToggleButton x:Name="btnMeetingFacilities" Content="Meeting Facilities" Grid.Row="5" Grid.Column="3" BorderBrush="Black" Background="{x:Null}" FontSize="24">
+                                        <ToggleButton.Resources>
+                                                <Style TargetType="Border">
+                                                        <Setter Property="CornerRadius" Value="20"/>
+                                                        <Setter Property="Height" Value="70"/>
+                                                        <Setter Property="Width" Value="250"/>
+                                                </Style>
+                                        </ToggleButton.Resources>
+                                </ToggleButton>
                         </Grid>
 
 
