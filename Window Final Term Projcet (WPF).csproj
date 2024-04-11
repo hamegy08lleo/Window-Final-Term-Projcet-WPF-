@@ -131,6 +131,9 @@
     <Compile Include="UCRoom.xaml.cs">
       <DependentUpon>UCRoom.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UCSmallLibary.xaml.cs">
+      <DependentUpon>UCSmallLibary.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WindowLogin.xaml.cs">
       <DependentUpon>WindowLogin.xaml</DependentUpon>
     </Compile>
@@ -237,6 +240,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UCRoom.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCSmallLibary.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
