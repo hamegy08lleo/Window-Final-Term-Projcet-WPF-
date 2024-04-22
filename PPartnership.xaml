@@ -198,7 +198,7 @@
                                                 Style="{DynamicResource theComboBox}"
                                                 ItemContainerStyle="{DynamicResource theComboBoxItem}"
                                                 VerticalAlignment="Top" Height="50" 
-                                                ScrollViewer.VerticalScrollBarVisibility="Hidden" Width="500" Padding="15,0,0,0" HorizontalAlignment="Center" SelectionChanged="cbbHotel_SelectionChanged">
+                                                ScrollViewer.VerticalScrollBarVisibility="Hidden" Width="500" Padding="15,0,0,0" HorizontalAlignment="Center">
 
 
                                         </ComboBox>
