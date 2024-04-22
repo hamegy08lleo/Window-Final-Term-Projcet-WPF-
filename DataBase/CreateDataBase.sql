@@ -75,9 +75,6 @@ SELECT * FROM Hotel
 SELECT * FROM Booking 
 
 
-drop table Room
-drop table Hotel
-drop table Booking
 
 
 
@@ -97,3 +94,6 @@ WHERE bookingID is null) as Q2 inner join Hotel on Hotel.hotelID = Q2.hotelID
 GROUP BY Hotel.hotelID, Hotel.hotelName, roomtype, city, address, price, rating) as Q3
 WHERE roomType = '2 Single Bed' AND city = 'Ho Chi Minh City'
 
+drop table Room
+drop table Hotel
+drop table Booking

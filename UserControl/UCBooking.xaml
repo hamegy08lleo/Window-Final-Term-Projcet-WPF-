@@ -19,21 +19,19 @@
                         <RowDefinition Height="100"/>
                         <RowDefinition Height="100"/>
                     </Grid.RowDefinitions>
-                <Label x:Name="lblHotelName" Grid.Row="0" Content="Booking title" FontSize="50" 
+                    <Label x:Name="lblHotelName" Grid.Row="0" Content="Booking title" FontSize="50" 
                        VerticalContentAlignment="Center" Padding="30,5,5,5" FontWeight="SemiBold"/>
-                                <Button x:Name="btnCancel" Grid.Column="1" Content="Cancel" BorderBrush="{x:Null}" Background="#FFBEE6FD" Height="100" Width="300" FontSize="24" FontWeight="Bold">
-                                        <Button.Resources>
-                                                <Style TargetType="Border">
-                                                        <Setter Property="CornerRadius" Value="25"/>
-                                                </Style>
-                                        </Button.Resources>
-                                </Button>
-                        </Grid>
-
-
-
-
-                </Border>
+                    <Label x:Name="lblRoomType" Grid.Row="1" Content="Booking title" FontSize="50" 
+                       VerticalContentAlignment="Center" Padding="30,5,5,5" FontWeight="SemiBold"/>
+                </Grid>
+                <Button x:Name="btnCancel" Grid.Column="1" Content="Cancel" BorderBrush="{x:Null}" Background="#FFBEE6FD" Height="100" Width="300" FontSize="24" FontWeight="Bold" Margin="50,40,50,46" Click="btnCancel_Click">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="25"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+            </Grid>
         </Border>
     </Border>
 </UserControl>

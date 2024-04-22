@@ -91,10 +91,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Objects\Booking.cs" />
+    <Compile Include="Objects\BookingDAO.cs" />
     <Compile Include="Objects\CustomerSearch.cs" />
     <Compile Include="Objects\DAO.cs" />
-    <Compile Include="DataBase\Booking.cs" />
-    <Compile Include="DataBase\BookingDAO.cs" />
     <Compile Include="Objects\DBConnection.cs" />
     <Compile Include="DebugWindow.xaml.cs">
       <DependentUpon>DebugWindow.xaml</DependentUpon>
