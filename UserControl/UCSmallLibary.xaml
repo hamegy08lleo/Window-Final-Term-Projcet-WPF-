@@ -1,0 +1,26 @@
+﻿<UserControl x:Class="Window_Final_Term_Projcet__WPF_.UCSmallLibary"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Window_Final_Term_Projcet__WPF_"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="330">
+                <Grid Height="300" Width="320">
+                        <Grid.RowDefinitions>
+                                <RowDefinition Height="200"/>
+                                <RowDefinition Height="100"/>
+                        </Grid.RowDefinitions>
+                        <Grid Grid.Row="1">
+                                <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="175"/>
+                                        <ColumnDefinition Width="175"/>
+                                </Grid.ColumnDefinitions>
+                        </Grid>
+                        <Image Source="/BackgroundIMG/BackgroudHotel.jpg" Grid.Row="0" Stretch="UniformToFill" VerticalAlignment="Bottom" Width="350" Height="200"/>
+                        <Image Source="/BackgroundIMG/luca-bravo-O453M2Liufs-unsplash.jpg" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right" Width="175" Stretch="UniformToFill"/>
+                        <Image Source="/BackgroundIMG/luca-bravo-O453M2Liufs-unsplash.jpg" Grid.Row="1" Grid.Column="1" Stretch="UniformToFill" Width="175" HorizontalAlignment="Left" Height="100"/>
+
+
+                </Grid>
+</UserControl>

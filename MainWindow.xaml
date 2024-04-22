@@ -24,7 +24,7 @@
                 <ColumnDefinition Width="350*"/>
                 <ColumnDefinition Width="480*"/>
             </Grid.ColumnDefinitions>
-            <Image Grid.Column ="0" x:Name="imgLogo"  Height="130" Width="130" Margin="30,0,0,0" Source="/HorizonTrailLogo.png" Stretch="UniformToFill" MouseLeftButtonDown="imgLogo_MouseDown" HorizontalAlignment="Left"/>
+            <Image Grid.Column ="0" x:Name="imgLogo"  Height="130" Width="130" Margin="30,0,0,0" Source="/BackgroundIMG/HorizonTrailLogo.png" Stretch="UniformToFill" MouseLeftButtonDown="imgLogo_MouseDown" HorizontalAlignment="Left"/>
             <Label Grid.Column ="0" x:Name="lblLogo" Content="Horizon Trail Travel" FontSize="48" FontFamily="9Slide03 ALLROUND GOTHIC DEMI.ttf##9Slide03 AllRoundGothic" HorizontalAlignment="Right" VerticalAlignment="Bottom" MouseLeftButtonDown="lblLogo_MouseDown" Margin="0,0,20,22"/>
 
             <StackPanel Grid.Column ="1" x:Name="pnlButton" 
