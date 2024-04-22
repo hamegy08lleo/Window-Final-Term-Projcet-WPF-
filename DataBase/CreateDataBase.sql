@@ -75,6 +75,12 @@ SELECT * FROM Hotel
 SELECT * FROM Booking 
 
 
+drop table Room
+drop table Hotel
+drop table Booking
+
+
+
 SELECT hotelID, hotelName, address, price, rating, ammount FROM
 (SELECT Hotel.hotelID, Hotel.hotelName, room.roomType, city, address, price, rating, count(roomID) as 'ammount'
 FROM 
