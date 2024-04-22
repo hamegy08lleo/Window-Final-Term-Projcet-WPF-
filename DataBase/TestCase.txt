@@ -1,0 +1,27 @@
+#Hotel#
+Bao cao tuan 11
+Ho Chi Minh
+1 Vo Van Ngan
+Nguyen Nam Hy
+LuuVinhTuong@itute.edu
+0908321456
+Pool Res Casino Air
+
+#Room#
+Bao cao tuan 11
+1 single
+1204204
+40
+1 single 1 double
+2140204
+1
+
+#search#
+Ho Chi Minh 
+1 single 
+hotel Bao cao tuan 11
+book 1
+
+1 single
+hotel Bao cao tuan 11
+book 1

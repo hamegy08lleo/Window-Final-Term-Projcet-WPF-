@@ -62,28 +62,28 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="CustomerSearch.cs" />
-    <Compile Include="DAO.cs" />
+    <Compile Include="Objects\CustomerSearch.cs" />
+    <Compile Include="Objects\DAO.cs" />
     <Compile Include="DataBase\Booking.cs" />
     <Compile Include="DataBase\BookingDAO.cs" />
-    <Compile Include="DBConnection.cs" />
+    <Compile Include="Objects\DBConnection.cs" />
     <Compile Include="DebugWindow.xaml.cs">
       <DependentUpon>DebugWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Hotel.cs" />
-    <Compile Include="HotelDAO.cs" />
-    <Compile Include="OwnerAddHotel.cs" />
-    <Compile Include="OwnerPostRoom.cs" />
-    <Compile Include="PAddHotel.xaml.cs">
+    <Compile Include="Objects\Hotel.cs" />
+    <Compile Include="Objects\HotelDAO.cs" />
+    <Compile Include="Objects\OwnerAddHotel.cs" />
+    <Compile Include="Objects\OwnerPostRoom.cs" />
+    <Compile Include="Partnership\PAddHotel.xaml.cs">
       <DependentUpon>PAddHotel.xaml</DependentUpon>
     </Compile>
-    <Compile Include="PBooking.xaml.cs">
+    <Compile Include="Booking\PBooking.xaml.cs">
       <DependentUpon>PBooking.xaml</DependentUpon>
     </Compile>
     <Compile Include="PCustomer.xaml.cs">
       <DependentUpon>PCustomer.xaml</DependentUpon>
     </Compile>
-    <Compile Include="PHotelDetail.xaml.cs">
+    <Compile Include="Result\PHotelDetail.xaml.cs">
       <DependentUpon>PHotelDetail.xaml</DependentUpon>
     </Compile>
     <Compile Include="PHotelDetailChild\PHotelDetailOverview.xaml.cs">
@@ -95,44 +95,56 @@
     <Compile Include="PHotelDetailChild\PHotelDetailRooms.xaml.cs">
       <DependentUpon>PHotelDetailRooms.xaml</DependentUpon>
     </Compile>
-    <Compile Include="PManager.xaml.cs">
+    <Compile Include="Partnership\PManager.xaml.cs">
       <DependentUpon>PManager.xaml</DependentUpon>
     </Compile>
-    <Compile Include="PShowHotel.xaml.cs">
+    <Compile Include="UserControl\PostHotelChild\UCPostFacilities.xaml.cs">
+      <DependentUpon>UCPostFacilities.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\PostHotelChild\UCPostGeneral.xaml.cs">
+      <DependentUpon>UCPostGeneral.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Partnership\PShowHotel.xaml.cs">
       <DependentUpon>PShowHotel.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UCBooking.xaml.cs">
+    <Compile Include="UserControl\UCBooking.xaml.cs">
       <DependentUpon>UCBooking.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UCHotel.xaml.cs">
+    <Compile Include="UserControl\UCHotel.xaml.cs">
       <DependentUpon>UCHotel.xaml</DependentUpon>
     </Compile>
-    <Compile Include="RoomSelection.cs" />
-    <Compile Include="UCHotelResult.xaml.cs">
+    <Compile Include="Objects\RoomSelection.cs" />
+    <Compile Include="UserControl\UCHotelResult.xaml.cs">
       <DependentUpon>UCHotelResult.xaml</DependentUpon>
     </Compile>
     <Compile Include="PHotelDetailChild\UClibary.xaml.cs">
       <DependentUpon>UClibary.xaml</DependentUpon>
     </Compile>
-    <Compile Include="PPartnership.xaml.cs">
+    <Compile Include="Partnership\PPartnership.xaml.cs">
       <DependentUpon>PPartnership.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Presult.xaml.cs">
+    <Compile Include="Result\Presult.xaml.cs">
       <DependentUpon>Presult.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Room.cs" />
-    <Compile Include="RoomDAO.cs" />
-    <Compile Include="UCInformation.xaml.cs">
+    <Compile Include="Objects\Room.cs" />
+    <Compile Include="Objects\RoomDAO.cs" />
+    <Compile Include="UserControl\UCInformation.xaml.cs">
       <DependentUpon>UCInformation.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UCRoom.xaml.cs">
+    <Compile Include="UserControl\UCRoom.xaml.cs">
       <DependentUpon>UCRoom.xaml</DependentUpon>
     </Compile>
-    <Compile Include="WindowLogin.xaml.cs">
+    <Compile Include="UserControl\UCSmallLibary.xaml.cs">
+      <DependentUpon>UCSmallLibary.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Login and Register\WindowLogin.xaml.cs">
       <DependentUpon>WindowLogin.xaml</DependentUpon>
     </Compile>
-    <Compile Include="WindowRegister.xaml.cs">
+    <Compile Include="Login and Register\WindowRegister.xaml.cs">
       <DependentUpon>WindowRegister.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WNotifiaction.xaml.cs">
+      <DependentUpon>WNotifiaction.xaml</DependentUpon>
     </Compile>
     <Page Include="DebugWindow.xaml">
       <SubType>Designer</SubType>
@@ -150,11 +162,11 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="PAddHotel.xaml">
+    <Page Include="Partnership\PAddHotel.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="PBooking.xaml">
+    <Page Include="Booking\PBooking.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -162,7 +174,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="PHotelDetail.xaml">
+    <Page Include="Result\PHotelDetail.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -178,23 +190,31 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="PManager.xaml">
+    <Page Include="Partnership\PManager.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="PShowHotel.xaml">
+    <Page Include="UserControl\PostHotelChild\UCPostFacilities.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="UCBooking.xaml">
+    <Page Include="UserControl\PostHotelChild\UCPostGeneral.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="UCHotel.xaml">
+    <Page Include="Partnership\PShowHotel.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="UCHotelResult.xaml">
+    <Page Include="UserControl\UCBooking.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControl\UCHotel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControl\UCHotelResult.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -202,11 +222,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="PPartnership.xaml">
+    <Page Include="Partnership\PPartnership.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Presult.xaml">
+    <Page Include="Result\Presult.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -218,19 +238,27 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="UCInformation.xaml">
+    <Page Include="UserControl\UCInformation.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="UCRoom.xaml">
+    <Page Include="UserControl\UCRoom.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="WindowLogin.xaml">
+    <Page Include="UserControl\UCSmallLibary.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="WindowRegister.xaml">
+    <Page Include="Login and Register\WindowLogin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Login and Register\WindowRegister.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WNotifiaction.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -264,7 +292,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="HorizonTrailLogo.png" />
+    <Resource Include="BackgroundIMG\HorizonTrailLogo.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Icon\calendar.png" />
@@ -276,10 +304,12 @@
     <Folder Include="UCHotelChild\" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="DataBase\TestCase.txt" />
     <Resource Include="BackgroundIMG\tom-barrett-M0AWNxnLaMw-unsplash.jpg" />
     <Resource Include="BackgroundIMG\luca-bravo-O453M2Liufs-unsplash.jpg" />
     <Resource Include="BackgroundIMG\noHotel.png" />
     <Resource Include="BackgroundIMG\BackgroudHotel.jpg" />
+    <Resource Include="BackgroundIMG\ringing.png" />
     <Content Include="DataBase\CreateDataBase.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

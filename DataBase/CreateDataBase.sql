@@ -74,6 +74,13 @@ SELECT * FROM Room
 SELECT * FROM Hotel 
 SELECT * FROM Booking 
 
+
+drop table Room
+drop table Hotel
+drop table Booking
+
+
+
 SELECT hotelID, hotelName, address, price, rating, ammount FROM
 (SELECT Hotel.hotelID, Hotel.hotelName, room.roomType, city, address, price, rating, count(roomID) as 'ammount'
 FROM 
@@ -89,10 +96,4 @@ Room left join Booking on Room.roomID = Booking.roomID) as Q1
 WHERE bookingID is null) as Q2 inner join Hotel on Hotel.hotelID = Q2.hotelID
 GROUP BY Hotel.hotelID, Hotel.hotelName, roomtype, city, address, price, rating) as Q3
 WHERE roomType = '2 Single Bed' AND city = 'Ho Chi Minh City'
-
-
-USE ManageRoom
-DROP TABLE Room
-DROP TABLE Hotel 
-DROP TABLE Booking
 
