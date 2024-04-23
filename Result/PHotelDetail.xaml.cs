@@ -29,20 +29,18 @@ namespace Window_Final_Term_Projcet__WPF_
         {
             InitializeComponent();
             PHotelDetailChild.PHotelDetailOverview pHotelDetailOverview = new PHotelDetailChild.PHotelDetailOverview();
-            HotelDAO hotelDAO = new HotelDAO();
             Hotel hotel = selection.Hotel;
             pHotelDetailOverview.lblHotelName.Content = hotel.hotelName;
             pHotelDetailOverview.lblAddress.Content = hotel.address;
             pHotelDetailOverview.lblRating.Content = hotel.rating;
             string ratingstar = "";
-            for (int i = 0; i < float.Parse(hotel.rating.ToString()); i++)
+            for (int i = 0; i < int.Parse(hotel.rating.ToString()); i++)
             {
                 ratingstar += "⭐";
             }
             pHotelDetailOverview.lblRating.Content = ratingstar;
-            //pHotelDetailOverview.lblPricOfRoom.Content = hotel.P
-            detailContent.Content = pHotelDetailOverview;
             this.selection = selection;
+            detailContent.Navigate(pHotelDetailOverview);
         }
 
         private void btnRooms_Click(object sender, RoutedEventArgs e)
@@ -59,20 +57,19 @@ namespace Window_Final_Term_Projcet__WPF_
         private void btnOverView_Click(object sender, RoutedEventArgs e)
         {
             PHotelDetailChild.PHotelDetailOverview pHotelDetailOverview = new PHotelDetailChild.PHotelDetailOverview();
-            HotelDAO hotelDAO = new HotelDAO();
             Hotel hotel = selection.Hotel;
             pHotelDetailOverview.lblHotelName.Content = hotel.hotelName;
             pHotelDetailOverview.lblAddress.Content = hotel.address;
             pHotelDetailOverview.lblRating.Content = hotel.rating;
-            //pHotelDetailOverview.lblPricOfRoom.Content = hotel.P
-            string ratingstar = "5";
-            //for (int i = 0; i < float.Parse(hotel.Rating.ToString()); i++)
-            //{
-            //    ratingstar += "⭐";
-            //}
+            pHotelDetailOverview.lblPricOfRoom.Content = selection.Price;
+            string ratingstar = "";
+            for (int i = 0; i < int.Parse(hotel.rating.ToString()); i++)
+            {
+                ratingstar += "⭐";
+            }
             pHotelDetailOverview.lblRating.Content = ratingstar;
 
-            detailContent.Content = pHotelDetailOverview;
+            detailContent.Navigate(pHotelDetailOverview);
 
 
         }

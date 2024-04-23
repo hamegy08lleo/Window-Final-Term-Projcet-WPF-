@@ -32,7 +32,7 @@ namespace Window_Final_Term_Projcet__WPF_
             InitializeComponent();
             foreach (var result in results)
             {
-                UCHotelResult ucResult = new UCHotelResult(result.Hotel, roomType);
+                UCHotelResult ucResult = new UCHotelResult(result.Hotel, roomType, result.Price.Value);
                 ucResult.lblHotelName.Content = result.Hotel.hotelName.ToString();
                 ucResult.lblAddress.Content = result.Hotel.address; 
                 ucResult.lblPrice.Content = result.Price.ToString() + "$";

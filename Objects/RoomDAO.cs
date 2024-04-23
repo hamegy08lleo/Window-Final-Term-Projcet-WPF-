@@ -95,6 +95,7 @@ namespace Window_Final_Term_Projcet__WPF_
                              Amount = q4.amount,
                          }); 
             
+            
             return query;
         }
 

@@ -20,10 +20,10 @@ namespace Window_Final_Term_Projcet__WPF_{
     public partial class UCHotelResult : UserControl
     {
         private RoomSelection selection;
-        public UCHotelResult(Hotel hotel, string roomType)
+        public UCHotelResult(Hotel hotel, string roomType, int price)
         {
             InitializeComponent();
-            this.selection = new RoomSelection(hotel, roomType);
+            this.selection = new RoomSelection(hotel, roomType, price);
         }
 
         public RoomSelection Selection { get => selection; set => selection = value; }
