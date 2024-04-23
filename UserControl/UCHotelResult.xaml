@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="1100">
         <Border BorderThickness="2" Width="1050" Height="300"  >
-                <Border CornerRadius="25" BorderBrush="Black" BorderThickness="5" Padding="0" Background="White">
+                <Border CornerRadius="0,25,25,0" BorderBrush="Black" BorderThickness="5" Padding="0" Background="White">
                         <Grid>
                                 <Grid.RowDefinitions>
                                         <RowDefinition Height="50"/>
@@ -16,9 +16,10 @@
                                 <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="350"/>
                                         <ColumnDefinition Width="500*"/>
-                                        <ColumnDefinition Width="250"/>
+                                        <ColumnDefinition Width="43.333"/>
+                                        <ColumnDefinition Width="206.667"/>
                                 </Grid.ColumnDefinitions>
-                                <Window_Final_Term_Projcet__WPF_:UCSmallLibary Grid.Column="0" Grid.RowSpan="2" HorizontalAlignment="Right" VerticalAlignment="Top"/>
+                                <Window_Final_Term_Projcet__WPF_:UCSmallLibary Grid.RowSpan="2" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,0,30,0" Width="320"/>
                                 <Grid Grid.Column="1" Grid.RowSpan="2">
                                         <Grid.RowDefinitions>
                                                 <RowDefinition Height="10"/>
@@ -29,28 +30,28 @@
                                         </Grid.RowDefinitions>
                                         <Label Name="lblHotelName" Grid.Row="1" Content="Tên của khách sạn" VerticalContentAlignment="Center" FontSize="40" Padding="20,5,5,5" FontWeight="SemiBold" FontStretch="Medium"/>
                                         <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="20,0,0,0" HorizontalAlignment="Left">
-                                                <Label Content="Rating: " VerticalContentAlignment="Center" Foreground="#FF4C4A4A"/>
+                                                <Label Content="Rating: " VerticalContentAlignment="Center" Foreground="#FF4C4A4A" FontSize="20"/>
                                                 <Label x:Name="lblRating" Content="10 sao" Grid.Row="2" Padding="5,5,5,5" FontSize="20" VerticalContentAlignment="Center"/>
                                         </StackPanel>
 
                                         <StackPanel Grid.Row="3" Orientation="Horizontal" Margin="20,0,0,0">
-                                                <Label Content="Address: " HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="#FF4C4A4A"/>
+                                                <Label Content="Address: " HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="#FF4C4A4A" FontSize="20"/>
                                                 <Label x:Name="lblAddress" Content="Sóc Trăng city" Grid.Row="3" Padding="5,5,5,5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20"/>
                                         </StackPanel>
                                         <StackPanel Grid.Row="4" Orientation="Horizontal" Margin="20,0,0,0">
-                                                <Label Content="Contact Us: " HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="#FF4C4A4A"/>
-                                                <Label x:Name="lblContact" Content="Số ĐiệnThoại để đây (anh chị gì đó)" Grid.Row="3" Padding="5,5,5,5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20"/>
+                                                <Label Content="Contact Us: " HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="#FF4C4A4A" FontSize="20"/>
+                                                <Label x:Name="lblContact" Content="0123.456.789 (Mr. Tường)" Grid.Row="3" Padding="5,5,5,5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20"/>
                                         </StackPanel>
                                 </Grid>
 
 
-                                <Rectangle Height="300" Width="5" Grid.Column="2" HorizontalAlignment="Left" Fill="Black" Margin="0,0,0,-14" Grid.RowSpan="2"/>
-                                <StackPanel Grid.Column="2" Orientation="Horizontal" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Top" Margin="0,33,0,0">
+                                <Rectangle Height="290" Width="5" Grid.Column="2" HorizontalAlignment="Left" Fill="Black" Grid.RowSpan="2" VerticalAlignment="Top"/>
+                                <StackPanel Grid.Column="3" Orientation="Horizontal" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top" Margin="2,33,0,0">
                                         <Label Content="Price:" FontWeight="DemiBold" Foreground="#FFBC7137" FontSize="30"/>
                                         <Label Name="lblPrice" Content="Price" VerticalAlignment="Center" FontWeight="DemiBold" Foreground="#FFBC7137" FontSize="30"/>
                                 </StackPanel>
 
-                                <Button x:Name="btnSelectRoom" Content="Select Room" Grid.Column="2" Width="200" Background="#FFFF5E1F" Height="70" BorderBrush="{x:Null}" FontWeight="Bold" Foreground="White" VerticalAlignment="Center" Margin="0,100,0,0" FontSize="30" Click="btnSelectRoom_Click" Grid.Row="1" HorizontalAlignment="Center">
+                                <Button x:Name="btnSelectRoom" Content="Select Room" Grid.Column="2" Width="208" Background="#FFFF5E1F" Height="70" BorderBrush="{x:Null}" FontWeight="Bold" Foreground="White" VerticalAlignment="Top" Margin="24,133,0,0" FontSize="30" Click="btnSelectRoom_Click" Grid.Row="1" HorizontalAlignment="Left" Grid.ColumnSpan="2">
                                         <Button.Resources>
                                                 <Style TargetType="Border">
                                                         <Setter Property="CornerRadius" Value="20"/>

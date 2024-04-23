@@ -79,7 +79,7 @@
                             Content="{TemplateBinding SelectionBoxItem}"
                             ContentTemplate="{TemplateBinding SelectionBoxItemTemplate}"
                             ContentTemplateSelector="{TemplateBinding ItemTemplateSelector}"
-                            Margin="10,3,30,3"
+                            Margin="20,3,0,3"
                             VerticalAlignment="Center"
                             HorizontalAlignment="Left" />
                             <TextBox x:Name="PART_EditableTextBox"
@@ -257,7 +257,7 @@
                 <Label Grid.Column="3" Content="Check-out"
                 VerticalAlignment="Top" Foreground="Black"
                 Height="40" FontFamily="JetBrainsMono Nerd Font" FontSize="18" 
-                VerticalContentAlignment="Center" Width="100" HorizontalAlignment="Left" Margin="10,0,0,0"/>
+                VerticalContentAlignment="Center" Width="110" HorizontalAlignment="Left" Margin="10,0,0,0"/>
 
                 <Label Grid.Column ="3" x:Name="lblCheckout"
            VerticalAlignment="Top" Height="50" VerticalContentAlignment="Center" 

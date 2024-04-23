@@ -75,7 +75,7 @@
                             Content="{TemplateBinding SelectionBoxItem}"
                             ContentTemplate="{TemplateBinding SelectionBoxItemTemplate}"
                             ContentTemplateSelector="{TemplateBinding ItemTemplateSelector}"
-                            Margin="10,3,30,3"
+                            Margin="30,3,30,3"
                             VerticalAlignment="Center"
                             HorizontalAlignment="Left" />
                             <TextBox x:Name="PART_EditableTextBox"
@@ -143,7 +143,7 @@
                     <ControlTemplate TargetType="ComboBoxItem">
                         <Border
                         Name="Border"
-                        Padding="10,0,0,0"
+                        Padding="15,0,0,0"
                         Margin="2"
                         BorderThickness="0,0,0,0"
                         CornerRadius="10"

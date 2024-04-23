@@ -14,7 +14,7 @@
                                         <ColumnDefinition Width="400"/>
                                 </Grid.ColumnDefinitions>
                                 <Rectangle Height="200" Width="5" Grid.Column="1" HorizontalAlignment="left" Fill="Black"/>
-                                <Label x:Name="lblBooking" Grid.Column="0" Content="Booking title" FontSize="50" 
+                                <Label x:Name="lblBooking" Grid.Column="0" Content="Booking title" FontSize="50"
                        VerticalContentAlignment="Center" Padding="30,5,5,5" FontWeight="SemiBold"/>
                                 <Button x:Name="btnCancel" Grid.Column="1" Content="Cancel" BorderBrush="{x:Null}" Background="#FFBEE6FD" Height="100" Width="300" FontSize="20" FontWeight="Bold">
                                         <Button.Resources>

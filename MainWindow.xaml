@@ -13,14 +13,14 @@
             <RowDefinition Height="850"/>
         </Grid.RowDefinitions>
         <Grid Grid.Row="0">
-            <Grid.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FFB8CFE9"/>
-                    <GradientStop Color="#FFD8E6F0" Offset="0.992"/>
-                    <GradientStop Color="#FFD7E5EF" Offset="0.887"/>
-                </LinearGradientBrush>
-            </Grid.Background>
-            <Grid.ColumnDefinitions>
+                        <Grid.Background>
+                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="#FFB8CFE9"/>
+                                        <GradientStop Color="#FFD8E6F0" Offset="0.992"/>
+                                        <GradientStop Color="#FFD7E5EF" Offset="0.887"/>
+                                </LinearGradientBrush>
+                        </Grid.Background>
+                        <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="350*"/>
                 <ColumnDefinition Width="480*"/>
             </Grid.ColumnDefinitions>

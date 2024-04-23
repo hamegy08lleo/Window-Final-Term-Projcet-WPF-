@@ -8,9 +8,9 @@
       d:DesignHeight="700" d:DesignWidth="1600"
       Title="PHotelDetailOverview">
 
-        <Border BorderThickness="20" Padding="10" CornerRadius="20" Width="1200" Height="700">
+        <Border BorderThickness="10" Padding="10" CornerRadius="20" Width="1200" Height="700">
                 <Border.BorderBrush>
-                        <SolidColorBrush Color="#FF7FC6E6" Opacity="0.9"/>
+                        <SolidColorBrush Color="#FF7FC6E6" Opacity="0.8"/>
                 </Border.BorderBrush>
                 <Border.Background>
                         <SolidColorBrush Color="White" Opacity="0.8"/>
@@ -18,9 +18,9 @@
 
                 <Grid>
                         <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="100"/>
+                                <ColumnDefinition Width="80"/>
                                 <ColumnDefinition Width="1000"/>
-                                <ColumnDefinition Width="100"/>
+                                <ColumnDefinition Width="80"/>
                         </Grid.ColumnDefinitions>
                         <Grid.RowDefinitions>
                                 <RowDefinition Height="10"/>
@@ -39,7 +39,7 @@
                                 </Grid.ColumnDefinitions>
 
                                 <Label Grid.Column ="0" Name="lblHotelName" 
-                   Content="Tên cái khách sạn ở đây nè" FontSize="36" FontWeight="Bold"/>
+                                Content="Tên cái khách sạn ở đây nè" FontSize="40" FontWeight="Bold"/>
 
                                 <Grid Grid.Column ="1">
                                         <Grid.RowDefinitions>
@@ -64,8 +64,14 @@
                                                 <RowDefinition Height="50"/>
                                                 <RowDefinition Height="50"/>
                                         </Grid.RowDefinitions>
-                                        <Label x:Name="lblRating" Grid.Row="0" Content="Để cái đánh giá ở đây cho người ta biết khách sạn nó sịn" Background="{x:Null}" FontSize="20"/>
-                                        <Label x:Name="lblAddress" Grid.Row="1" Content="Để cái địa chỉ dô cho người ta biết nó ở đâu nữa chứ" Background="{x:Null}" FontSize="20"/>
+                                        <StackPanel Orientation="Horizontal" Grid.Row="0" >
+                                                <Label Content="Star Rating: " FontSize="20" FontWeight="DemiBold"/>
+                                                <Label x:Name="lblRating" Content="1 ngàn sao" Background="{x:Null}" FontSize="20"/>
+                                        </StackPanel>
+                                        <StackPanel  Orientation="Horizontal" Grid.Row="1">
+                                                <Label Content="Address:" FontSize="20" FontWeight="DemiBold"/>
+                                                <Label x:Name="lblAddress" Content="Để cái địa chỉ dô cho người ta biết nó ở đâu nữa chứ" Background="{x:Null}" FontSize="20"/>
+                                        </StackPanel>
                                 </Grid>
                                 <Button Grid.Column="1" Name="btnSelectRoom"
                                         Content="Select Room" Background="#FFFF5E1F" Foreground="White" FontSize="32" BorderBrush="{x:Null}" FontWeight="ExtraBold" FontStretch="Expanded" Click="btnSelectRoom_Click" Height="70">
@@ -79,7 +85,6 @@
 
                         <Grid x:Name="GridAlbum"       Grid.Row="5" Grid.Column="1">
                                 <local:UClibary Grid.Column="1" HorizontalAlignment="Left" Margin="0,0,0,0" Grid.Row="5" VerticalAlignment="Top" Width="1400"/>
-
                         </Grid>
                 </Grid>
 
