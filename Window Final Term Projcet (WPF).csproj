@@ -39,6 +39,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="HandyControl, Version=3.5.1.0, Culture=neutral, PublicKeyToken=45be8712787a1e5b, processorArchitecture=MSIL">
       <HintPath>packages\HandyControl.3.5.1\lib\net472\HandyControl.dll</HintPath>
     </Reference>
@@ -64,6 +70,8 @@
     <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>packages\System.Runtime.CompilerServices.Unsafe.4.6.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
     </Reference>
@@ -91,7 +99,27 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Objects\Booking.cs" />
+    <Compile Include="Booking.cs">
+      <DependentUpon>ManageRoomModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Hotel.cs">
+      <DependentUpon>ManageRoomModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ManageRoomModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ManageRoomModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ManageRoomModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ManageRoomModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ManageRoomModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ManageRoomModel.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Objects\BookingDAO.cs" />
     <Compile Include="Objects\CustomerSearch.cs" />
     <Compile Include="Objects\DAO.cs" />
@@ -99,7 +127,6 @@
     <Compile Include="DebugWindow.xaml.cs">
       <DependentUpon>DebugWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Objects\Hotel.cs" />
     <Compile Include="Objects\HotelDAO.cs" />
     <Compile Include="Objects\OwnerAddHotel.cs" />
     <Compile Include="Objects\OwnerPostRoom.cs" />
@@ -127,6 +154,10 @@
     <Compile Include="Partnership\PManager.xaml.cs">
       <DependentUpon>PManager.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Room.cs">
+      <DependentUpon>ManageRoomModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SearchResult.cs" />
     <Compile Include="UserControl\PostHotelChild\UCPostFacilities.xaml.cs">
       <DependentUpon>UCPostFacilities.xaml</DependentUpon>
     </Compile>
@@ -155,7 +186,6 @@
     <Compile Include="Result\Presult.xaml.cs">
       <DependentUpon>Presult.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Objects\Room.cs" />
     <Compile Include="Objects\RoomDAO.cs" />
     <Compile Include="UserControl\UCInformation.xaml.cs">
       <DependentUpon>UCInformation.xaml</DependentUpon>
@@ -311,6 +341,13 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <Resource Include="Fonts\#9Slide03 ALLROUND GOTHIC DEMI.ttf" />
+    <EntityDeploy Include="ManageRoomModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ManageRoomModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="ManageRoomModel.edmx.diagram">
+      <DependentUpon>ManageRoomModel.edmx</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -333,6 +370,16 @@
     <Folder Include="UCHotelChild\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ManageRoomModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ManageRoomModel.edmx</DependentUpon>
+      <LastGenOutput>ManageRoomModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="ManageRoomModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ManageRoomModel.edmx</DependentUpon>
+      <LastGenOutput>ManageRoomModel.cs</LastGenOutput>
+    </Content>
     <Resource Include="DataBase\TestCase.txt" />
     <Resource Include="BackgroundIMG\tom-barrett-M0AWNxnLaMw-unsplash.jpg" />
     <Resource Include="BackgroundIMG\luca-bravo-O453M2Liufs-unsplash.jpg" />
@@ -340,6 +387,9 @@
     <Resource Include="BackgroundIMG\BackgroudHotel.jpg" />
     <Resource Include="BackgroundIMG\ringing.png" />
     <Content Include="DataBase\CreateDataBase.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\Avalonia.BuildServices.0.0.29\build\Avalonia.BuildServices.targets" Condition="Exists('packages\Avalonia.BuildServices.0.0.29\build\Avalonia.BuildServices.targets')" />

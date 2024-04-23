@@ -4,11 +4,11 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="bb651f8f914a4afe82eafa3f2cb67f50" Name="Diagram1">
+      <Diagram DiagramId="863c3479800f40479d0e18bb3a8a7476" Name="Diagram1">
         <EntityTypeShape EntityType="ManageRoomModel.Booking" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
         <EntityTypeShape EntityType="ManageRoomModel.Hotel" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="ManageRoomModel.Room" Width="1.5" PointX="3" PointY="1.25" IsExpanded="true" />
-        <AssociationConnector Association="ManageRoomModel.FK__Room__hotelID__1F63A897" ManuallyRouted="false" />
+        <AssociationConnector Association="ManageRoomModel.FK__Room__hotelID__3B0BC30C" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

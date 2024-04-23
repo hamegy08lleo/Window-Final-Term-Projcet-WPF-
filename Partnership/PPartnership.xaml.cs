@@ -25,24 +25,33 @@ namespace Window_Final_Term_Projcet__WPF_
         {
             InitializeComponent();
             HotelDAO hotelDAO = new HotelDAO();
-            DataTable dt = hotelDAO.listHotelName(); 
-            foreach(DataRow row in dt.Rows)
+            var hotels = hotelDAO.listHotel(); 
+            foreach(Hotel hotel in hotels)
             {
-                cbbHotel.Items.Add(row[0].ToString());
+
+                ComboBoxItem item = new ComboBoxItem();
+                item.Content = hotel.hotelName; 
+                item.Tag = hotel;
+                cbbHotel.Items.Add(item);
             }
-            
         }
 
         private void btnPost_Click(object sender, RoutedEventArgs e)
         {
             string roomType = cbbRoomType.Text;
-            string hotel = cbbHotel.Text;
+            Hotel hotel = cbbHotel.Tag as Hotel; 
             int price = int.Parse(txbPrice.Text);
             int amount = int.Parse(txbAmount.Text);
             OwnerPostRoom post = new OwnerPostRoom(roomType, hotel, price, amount);
-
             MainWindow mainWindow = Window.GetWindow(this) as MainWindow;
             mainWindow.RoomDAO.Add(post);
+        }
+
+        private void cbbHotel_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Hotel hotel = cbbHotel.Tag as Hotel;
+            MessageBox.Show("hello"); 
+            MessageBox.Show(hotel.hotelID.ToString()); 
         }
     }
 }

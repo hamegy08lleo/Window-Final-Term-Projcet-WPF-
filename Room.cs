@@ -15,7 +15,7 @@ namespace Window_Final_Term_Projcet__WPF_
     public partial class Room
     {
         public int roomID { get; set; }
-        public Nullable<int> hotelID { get; set; }
+        public int hotelID { get; set; }
         public string roomType { get; set; }
         public Nullable<int> price { get; set; }
     

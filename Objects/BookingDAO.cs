@@ -9,26 +9,43 @@ namespace Window_Final_Term_Projcet__WPF_.DataBase
 {
     internal class BookingDAO : DAO
     {
-        public BookingDAO() : base("Booking") { }
+        public BookingDAO() { }
         public void addBooking(RoomSelection selection)
         {
+            //RoomDAO roomDAO = new RoomDAO();
+            //int roomID = roomDAO.firstAvailableRoomID(selection); 
+            //string sqlStr = "INSERT INTO " +
+            //    $"Booking(roomID) " +
+            //    $"VALUES('{roomID}')";
+            //dBConnection.CommandExecute(sqlStr);
             RoomDAO roomDAO = new RoomDAO();
-            string roomID = roomDAO.firstAvailableRoomID(selection); 
-            string sqlStr = "INSERT INTO " +
-                $"Booking(roomID) " +
-                $"VALUES('{roomID}')";
-            dBConnection.CommandExecute(sqlStr);
+            int roomID = roomDAO.firstAvailableRoomID(selection);
+
+            dataBase.Booking.Add(new Booking
+            {
+                roomID = roomID,
+            });
+            dataBase.SaveChanges(); 
         }
-        public void cancelBooking(string bookingID)
+        public void cancelBooking(int bookingID)
         {
-            string sqlStr = $"DELETE FROM BOOKING WHERE bookingID = '{bookingID}'"; 
-            dBConnection.CommandExecute(sqlStr);
+            //string sqlStr = $"DELETE FROM BOOKING WHERE bookingID = '{bookingID}'"; 
+            //dBConnection.CommandExecute(sqlStr);
+            dataBase.Booking.Remove((from booking 
+                                    in dataBase.Booking 
+                                    where booking.bookingID == bookingID
+                                    select booking).FirstOrDefault());
+            dataBase.SaveChanges();
         }
-        public DataTable listBooking()
-        { 
-            string sqlStr = $"SELECT * FROM BOOKING";
-            DataTable dt = dBConnection.AdapterExecute(sqlStr);
-            return dt; 
+        public IQueryable<Booking> listBooking()
+        {
+            //string sqlStr = $"SELECT * FROM BOOKING";
+            //DataTable dt = dBConnection.AdapterExecute(sqlStr);
+            //return dt; 
+
+            var query = from booking in dataBase.Booking
+                        select booking;
+            return query; 
         }
     }
 }

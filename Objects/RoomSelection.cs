@@ -8,16 +8,16 @@ namespace Window_Final_Term_Projcet__WPF_
 {
     public class RoomSelection
     {
-        private string hotelID;
+        private Hotel hotel; 
         private string roomType;
 
-        public RoomSelection(string hotelID, string roomType)
+        public RoomSelection(Hotel hotel, string roomType)
         {
-            this.hotelID = hotelID;
+            this.hotel = hotel;
             this.roomType = roomType;
         }
 
-        public string HotelID { get => hotelID; set => hotelID = value; }
+        public Hotel Hotel { get => hotel; set => hotel = value; }
         public string RoomType { get => roomType; set => roomType = value; }
     }
 }

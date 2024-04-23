@@ -30,12 +30,12 @@ namespace Window_Final_Term_Projcet__WPF_
             InitializeComponent();
             PHotelDetailChild.PHotelDetailOverview pHotelDetailOverview = new PHotelDetailChild.PHotelDetailOverview();
             HotelDAO hotelDAO = new HotelDAO();
-            Hotel hotel = hotelDAO.getHotel(selection.HotelID);
-            pHotelDetailOverview.lblHotelName.Content = hotel.HotelName;
-            pHotelDetailOverview.lblAddress.Content = hotel.Address;
-            pHotelDetailOverview.lblRating.Content = hotel.Rating;
+            Hotel hotel = selection.Hotel;
+            pHotelDetailOverview.lblHotelName.Content = hotel.hotelName;
+            pHotelDetailOverview.lblAddress.Content = hotel.address;
+            pHotelDetailOverview.lblRating.Content = hotel.rating;
             string ratingstar = "";
-            for (int i = 0; i < float.Parse(hotel.Rating.ToString()); i++)
+            for (int i = 0; i < float.Parse(hotel.rating.ToString()); i++)
             {
                 ratingstar += "⭐";
             }
@@ -60,10 +60,10 @@ namespace Window_Final_Term_Projcet__WPF_
         {
             PHotelDetailChild.PHotelDetailOverview pHotelDetailOverview = new PHotelDetailChild.PHotelDetailOverview();
             HotelDAO hotelDAO = new HotelDAO();
-            Hotel hotel = hotelDAO.getHotel(selection.HotelID);
-            pHotelDetailOverview.lblHotelName.Content = hotel.HotelName;
-            pHotelDetailOverview.lblAddress.Content = hotel.Address;
-            pHotelDetailOverview.lblRating.Content = hotel.Rating;
+            Hotel hotel = selection.Hotel;
+            pHotelDetailOverview.lblHotelName.Content = hotel.hotelName;
+            pHotelDetailOverview.lblAddress.Content = hotel.address;
+            pHotelDetailOverview.lblRating.Content = hotel.rating;
             //pHotelDetailOverview.lblPricOfRoom.Content = hotel.P
             string ratingstar = "5";
             //for (int i = 0; i < float.Parse(hotel.Rating.ToString()); i++)

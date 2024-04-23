@@ -2,7 +2,7 @@ USE ManageRoom
 
 CREATE TABLE Room( 
 	roomID int identity, 	
-	hotelID int, 
+	hotelID int not null,
 	roomType varchar(100), 
 	price int, 
 	primary key(roomID)
@@ -68,6 +68,10 @@ VALUES('1 Couple Bed', '5', '200')
 INSERT INTO 
 Room(roomType, hotelID, price)
 VALUES('1 Couple Bed', '5', '200')
+
+INSERT INTO 
+Booking(roomID) 
+VALUES('6')
 
 
 SELECT * FROM Room

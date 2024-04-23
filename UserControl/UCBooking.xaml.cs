@@ -22,8 +22,8 @@ namespace Window_Final_Term_Projcet__WPF_
     public partial class UCBooking : UserControl
     {
 
-        private string bookingID; 
-        public UCBooking(string bookingID)
+        private int bookingID; 
+        public UCBooking(int bookingID)
         {
             InitializeComponent();
             this.bookingID = bookingID;
