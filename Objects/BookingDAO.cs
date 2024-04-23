@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,6 +18,17 @@ namespace Window_Final_Term_Projcet__WPF_.DataBase
                 $"Booking(roomID) " +
                 $"VALUES('{roomID}')";
             dBConnection.CommandExecute(sqlStr);
+        }
+        public void cancelBooking(string bookingID)
+        {
+            string sqlStr = $"DELETE FROM BOOKING WHERE bookingID = '{bookingID}'"; 
+            dBConnection.CommandExecute(sqlStr);
+        }
+        public DataTable listBooking()
+        { 
+            string sqlStr = $"SELECT * FROM BOOKING";
+            DataTable dt = dBConnection.AdapterExecute(sqlStr);
+            return dt; 
         }
     }
 }

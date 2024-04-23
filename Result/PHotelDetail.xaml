@@ -43,12 +43,9 @@
                     Content="Review" Click="btnReview_Click" Width="200" BorderBrush="{x:Null}" FontSize="24" Background="{x:Null}"  Foreground="#FF010000" FontWeight="SemiBold" FontStretch="Expanded" Height="80">
                         </Button>
 
-        </Grid>
+                </Grid>
                 <Grid Grid.Row ="3">
                         <Frame x:Name="detailContent" HorizontalContentAlignment="Stretch" Height="740" VerticalContentAlignment="Center" ScrollViewer.VerticalScrollBarVisibility="Disabled" VerticalAlignment="Top"/>
                 </Grid>
         </Grid>
-
-        
-        
 </Page>

@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace Window_Final_Term_Projcet__WPF_
 {
@@ -32,6 +34,22 @@ namespace Window_Final_Term_Projcet__WPF_
             this.rating = 5.0F;
             this.email = hotel.Email;   
             this.phoneNumber = hotel.PhoneNumber;
+        }
+        public Hotel(DataRow row)
+        {
+            try
+            {
+                this.hotelName = row[1].ToString();
+                this.city = row[2].ToString(); 
+                this.address = row[3].ToString();
+                this.email= row[4].ToString();  
+                this.phoneNumber = row[5].ToString();   
+                this.rating = float.Parse(row[6].ToString());       
+            }
+            catch (Exception ex) 
+            {
+                MessageBox.Show(ex.Message); 
+            }
         }
 
         public string HotelName { get => hotelName; set => hotelName = value; }

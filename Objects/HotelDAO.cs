@@ -57,5 +57,11 @@ namespace Window_Final_Term_Projcet__WPF_
             }
             return hotelID;
         }
+        public DataRow getDataRow(string hotelID)
+        {
+            string sqlStr = $"SELECT * FROM HOTEL WHERE hotelID = '{hotelID}'";
+            DataTable dt = dBConnection.AdapterExecute(sqlStr);
+            return dt.Rows[0]; 
+        }
     }
 }

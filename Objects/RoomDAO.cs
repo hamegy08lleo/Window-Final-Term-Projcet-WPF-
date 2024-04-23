@@ -64,5 +64,12 @@ namespace Window_Final_Term_Projcet__WPF_
             }
             return dt.Rows[0][0].ToString(); 
         }
+
+        public DataRow getDataRow(string roomID)
+        {
+            string sqlStr = $"SELECT * FROM ROOM WHERE roomID = '{roomID}'";
+            DataTable dt = dBConnection.AdapterExecute(sqlStr);
+            return dt.Rows[0]; 
+        }
     }
 }
