@@ -16,5 +16,7 @@ namespace Window_Final_Term_Projcet__WPF_
     {
         public int bookingID { get; set; }
         public int roomID { get; set; }
+    
+        public virtual Room Room { get; set; }
     }
 }

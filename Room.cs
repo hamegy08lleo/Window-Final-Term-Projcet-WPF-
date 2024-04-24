@@ -14,11 +14,19 @@ namespace Window_Final_Term_Projcet__WPF_
     
     public partial class Room
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Room()
+        {
+            this.Booking = new HashSet<Booking>();
+        }
+    
         public int roomID { get; set; }
         public int hotelID { get; set; }
         public string roomType { get; set; }
         public int price { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Booking> Booking { get; set; }
         public virtual Hotel Hotel { get; set; }
         public virtual SearchResult SearchResult { get; set; }
     }

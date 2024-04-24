@@ -43,7 +43,19 @@
           <Property Name="hotelID" Type="int" Nullable="false" />
           <Property Name="roomID" Type="int" Nullable="false" />
         </EntityType>
-        <Association Name="FK__Room__hotelID__79FD19BE">
+        <Association Name="FK__Booking__roomID__11D4A34F">
+          <End Role="Room" Type="Self.Room" Multiplicity="1" />
+          <End Role="Booking" Type="Self.Booking" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Room">
+              <PropertyRef Name="roomID" />
+            </Principal>
+            <Dependent Role="Booking">
+              <PropertyRef Name="roomID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Room__hotelID__1699586C">
           <End Role="Hotel" Type="Self.Hotel" Multiplicity="1" />
           <End Role="Room" Type="Self.Room" Multiplicity="*" />
           <ReferentialConstraint>
@@ -55,7 +67,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__SearchRes__hotel__7DCDAAA2">
+        <Association Name="FK__SearchRes__hotel__14B10FFA">
           <End Role="Hotel" Type="Self.Hotel" Multiplicity="1" />
           <End Role="SearchResult" Type="Self.SearchResult" Multiplicity="*" />
           <ReferentialConstraint>
@@ -67,7 +79,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__SearchRes__roomI__7EC1CEDB">
+        <Association Name="FK__SearchRes__roomI__15A53433">
           <End Role="Room" Type="Self.Room" Multiplicity="1" />
           <End Role="SearchResult" Type="Self.SearchResult" Multiplicity="0..1" />
           <ReferentialConstraint>
@@ -84,15 +96,19 @@
           <EntitySet Name="Hotel" EntityType="Self.Hotel" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Room" EntityType="Self.Room" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SearchResult" EntityType="Self.SearchResult" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK__Room__hotelID__79FD19BE" Association="Self.FK__Room__hotelID__79FD19BE">
+          <AssociationSet Name="FK__Booking__roomID__11D4A34F" Association="Self.FK__Booking__roomID__11D4A34F">
+            <End Role="Room" EntitySet="Room" />
+            <End Role="Booking" EntitySet="Booking" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Room__hotelID__1699586C" Association="Self.FK__Room__hotelID__1699586C">
             <End Role="Hotel" EntitySet="Hotel" />
             <End Role="Room" EntitySet="Room" />
           </AssociationSet>
-          <AssociationSet Name="FK__SearchRes__hotel__7DCDAAA2" Association="Self.FK__SearchRes__hotel__7DCDAAA2">
+          <AssociationSet Name="FK__SearchRes__hotel__14B10FFA" Association="Self.FK__SearchRes__hotel__14B10FFA">
             <End Role="Hotel" EntitySet="Hotel" />
             <End Role="SearchResult" EntitySet="SearchResult" />
           </AssociationSet>
-          <AssociationSet Name="FK__SearchRes__roomI__7EC1CEDB" Association="Self.FK__SearchRes__roomI__7EC1CEDB">
+          <AssociationSet Name="FK__SearchRes__roomI__15A53433" Association="Self.FK__SearchRes__roomI__15A53433">
             <End Role="Room" EntitySet="Room" />
             <End Role="SearchResult" EntitySet="SearchResult" />
           </AssociationSet>
@@ -109,6 +125,7 @@
           </Key>
           <Property Name="bookingID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="roomID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Room" Relationship="Self.FK__Booking__roomID__11D4A34F" FromRole="Booking" ToRole="Room" />
         </EntityType>
         <EntityType Name="Hotel">
           <Key>
@@ -121,8 +138,8 @@
           <Property Name="email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="phoneNumber" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
           <Property Name="rating" Type="Double" Nullable="false" />
-          <NavigationProperty Name="Room" Relationship="Self.FK__Room__hotelID__79FD19BE" FromRole="Hotel" ToRole="Room" />
-          <NavigationProperty Name="SearchResult" Relationship="Self.FK__SearchRes__hotel__7DCDAAA2" FromRole="Hotel" ToRole="SearchResult" />
+          <NavigationProperty Name="Room" Relationship="Self.FK__Room__hotelID__1699586C" FromRole="Hotel" ToRole="Room" />
+          <NavigationProperty Name="SearchResult" Relationship="Self.FK__SearchRes__hotel__14B10FFA" FromRole="Hotel" ToRole="SearchResult" />
         </EntityType>
         <EntityType Name="Room">
           <Key>
@@ -132,8 +149,9 @@
           <Property Name="hotelID" Type="Int32" Nullable="false" />
           <Property Name="roomType" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="price" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Hotel" Relationship="Self.FK__Room__hotelID__79FD19BE" FromRole="Room" ToRole="Hotel" />
-          <NavigationProperty Name="SearchResult" Relationship="Self.FK__SearchRes__roomI__7EC1CEDB" FromRole="Room" ToRole="SearchResult" />
+          <NavigationProperty Name="Booking" Relationship="Self.FK__Booking__roomID__11D4A34F" FromRole="Room" ToRole="Booking" />
+          <NavigationProperty Name="Hotel" Relationship="Self.FK__Room__hotelID__1699586C" FromRole="Room" ToRole="Hotel" />
+          <NavigationProperty Name="SearchResult" Relationship="Self.FK__SearchRes__roomI__15A53433" FromRole="Room" ToRole="SearchResult" />
         </EntityType>
         <EntityType Name="SearchResult">
           <Key>
@@ -143,10 +161,22 @@
           <Property Name="price" Type="Int32" Nullable="false" />
           <Property Name="hotelID" Type="Int32" Nullable="false" />
           <Property Name="roomID" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Hotel" Relationship="Self.FK__SearchRes__hotel__7DCDAAA2" FromRole="SearchResult" ToRole="Hotel" />
-          <NavigationProperty Name="Room" Relationship="Self.FK__SearchRes__roomI__7EC1CEDB" FromRole="SearchResult" ToRole="Room" />
+          <NavigationProperty Name="Hotel" Relationship="Self.FK__SearchRes__hotel__14B10FFA" FromRole="SearchResult" ToRole="Hotel" />
+          <NavigationProperty Name="Room" Relationship="Self.FK__SearchRes__roomI__15A53433" FromRole="SearchResult" ToRole="Room" />
         </EntityType>
-        <Association Name="FK__Room__hotelID__79FD19BE">
+        <Association Name="FK__Booking__roomID__11D4A34F">
+          <End Role="Room" Type="Self.Room" Multiplicity="1" />
+          <End Role="Booking" Type="Self.Booking" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Room">
+              <PropertyRef Name="roomID" />
+            </Principal>
+            <Dependent Role="Booking">
+              <PropertyRef Name="roomID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Room__hotelID__1699586C">
           <End Role="Hotel" Type="Self.Hotel" Multiplicity="1" />
           <End Role="Room" Type="Self.Room" Multiplicity="*" />
           <ReferentialConstraint>
@@ -158,7 +188,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__SearchRes__hotel__7DCDAAA2">
+        <Association Name="FK__SearchRes__hotel__14B10FFA">
           <End Role="Hotel" Type="Self.Hotel" Multiplicity="1" />
           <End Role="SearchResult" Type="Self.SearchResult" Multiplicity="*" />
           <ReferentialConstraint>
@@ -170,7 +200,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__SearchRes__roomI__7EC1CEDB">
+        <Association Name="FK__SearchRes__roomI__15A53433">
           <End Role="Room" Type="Self.Room" Multiplicity="1" />
           <End Role="SearchResult" Type="Self.SearchResult" Multiplicity="0..1" />
           <ReferentialConstraint>
@@ -187,15 +217,19 @@
           <EntitySet Name="Hotel" EntityType="Self.Hotel" />
           <EntitySet Name="Room" EntityType="Self.Room" />
           <EntitySet Name="SearchResult" EntityType="Self.SearchResult" />
-          <AssociationSet Name="FK__Room__hotelID__79FD19BE" Association="Self.FK__Room__hotelID__79FD19BE">
+          <AssociationSet Name="FK__Booking__roomID__11D4A34F" Association="Self.FK__Booking__roomID__11D4A34F">
+            <End Role="Room" EntitySet="Room" />
+            <End Role="Booking" EntitySet="Booking" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Room__hotelID__1699586C" Association="Self.FK__Room__hotelID__1699586C">
             <End Role="Hotel" EntitySet="Hotel" />
             <End Role="Room" EntitySet="Room" />
           </AssociationSet>
-          <AssociationSet Name="FK__SearchRes__hotel__7DCDAAA2" Association="Self.FK__SearchRes__hotel__7DCDAAA2">
+          <AssociationSet Name="FK__SearchRes__hotel__14B10FFA" Association="Self.FK__SearchRes__hotel__14B10FFA">
             <End Role="Hotel" EntitySet="Hotel" />
             <End Role="SearchResult" EntitySet="SearchResult" />
           </AssociationSet>
-          <AssociationSet Name="FK__SearchRes__roomI__7EC1CEDB" Association="Self.FK__SearchRes__roomI__7EC1CEDB">
+          <AssociationSet Name="FK__SearchRes__roomI__15A53433" Association="Self.FK__SearchRes__roomI__15A53433">
             <End Role="Room" EntitySet="Room" />
             <End Role="SearchResult" EntitySet="SearchResult" />
           </AssociationSet>
