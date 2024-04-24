@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -25,18 +27,18 @@ namespace Window_Final_Term_Projcet__WPF_
         {
             InitializeComponent();
         }
-        public Presult(DataTable result, string roomType)
+        public Presult(IQueryable<SearchResult> results, string roomType)
         {
             InitializeComponent();
-            foreach (DataRow row in result.Rows)
+            foreach (var result in results)
             {
-                UCHotelResult ucResult = new UCHotelResult(row[0].ToString(), roomType);
-                ucResult.lblHotelName.Content = row[1].ToString();
-                ucResult.lblAddress.Content = row[2].ToString();
-                ucResult.lblPrice.Content = row[3].ToString() + "$";
+                UCHotelResult ucResult = new UCHotelResult(result.Hotel, roomType, result.Price.Value);
+                ucResult.lblHotelName.Content = result.Hotel.hotelName.ToString();
+                ucResult.lblAddress.Content = result.Hotel.address; 
+                ucResult.lblPrice.Content = result.Price.ToString() + "$";
 
                 string rating = "";
-                for (int i = 0; i < float.Parse(row[4].ToString()); i++)
+                for (int i = 0; i < float.Parse(result.Hotel.rating.ToString()); i++)
                 {
                     rating += "⭐";
                 }

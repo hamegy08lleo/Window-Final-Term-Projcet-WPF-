@@ -19,5 +19,11 @@ namespace Window_Final_Term_Projcet__WPF_
 
         public string RoomType { get => roomType; set => roomType = value; }
         public string City { get => city; set => city = value; }
+
+        internal void Deconstruct(out string roomType, out string city)
+        {
+            roomType = this.roomType; 
+            city = this.city;
+        }
     }
 }

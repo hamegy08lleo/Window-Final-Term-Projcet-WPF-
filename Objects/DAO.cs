@@ -8,12 +8,10 @@ namespace Window_Final_Term_Projcet__WPF_
 {
     internal class DAO
     {
-        protected string tableName;
-        protected DBConnection dBConnection; 
-        public DAO(string tableName)
+        protected ManageRoomEntities dataBase; 
+        public DAO()
         {
-            this.tableName = tableName;
-            dBConnection = new DBConnection(Properties.Settings.Default.connStr); 
+            dataBase = new ManageRoomEntities();
         }
     }
 }

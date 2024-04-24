@@ -28,19 +28,17 @@ namespace Window_Final_Term_Projcet__WPF_
 
             BookingDAO bookingDAO = new BookingDAO();  
             RoomDAO roomDAO = new RoomDAO();
-            HotelDAO hotelDAO = new HotelDAO(); 
+            HotelDAO hotelDAO = new HotelDAO();
 
-            DataTable dt = bookingDAO.listBooking();
-            foreach(DataRow row in dt.Rows)
+            var bookings = bookingDAO.listBooking(); 
+            foreach(var booking in bookings)
             {
-                Booking booking = new Booking(row); 
+                Room room = roomDAO.getRoom(booking.roomID);
+                Hotel hotel = hotelDAO.getHotel(room.hotelID);
 
-                Room room = new Room(roomDAO.getDataRow(booking.RoomID));
-                Hotel hotel = new Hotel(hotelDAO.getDataRow(room.HotelID));
-
-                UCBooking ucBooking = new UCBooking(row[0].ToString());
-                ucBooking.lblHotelName.Content = $"{hotel.HotelName}";
-                ucBooking.lblRoomType.Content = $"{room.RoomType}";
+                UCBooking ucBooking = new UCBooking(booking.bookingID);
+                ucBooking.lblHotelName.Content = $"{hotel.hotelName}";
+                ucBooking.lblRoomType.Content = $"{room.roomType}";
                 this.spBooking.Children.Add(ucBooking);
             }
 

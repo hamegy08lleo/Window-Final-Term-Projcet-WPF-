@@ -25,11 +25,11 @@ namespace Window_Final_Term_Projcet__WPF_
         {
             InitializeComponent();
             HotelDAO hotelDAO = new HotelDAO();
-            DataTable dt = hotelDAO.listHotelName();
-            foreach (DataRow row in dt.Rows)
+            var hotels = hotelDAO.listHotel();
+            foreach (var hotel in hotels) 
             {
                 UCHotel ucHotel = new UCHotel();
-                ucHotel.lblHotelName.Content = row[0].ToString(); 
+                ucHotel.lblHotelName.Content = hotel.hotelName; 
                 this.spHotel.Children.Add(ucHotel); 
             }
         }
