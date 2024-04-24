@@ -39,8 +39,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-<<<<<<< HEAD
-=======
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -50,7 +48,6 @@
     <Reference Include="HandyControl, Version=3.5.1.0, Culture=neutral, PublicKeyToken=45be8712787a1e5b, processorArchitecture=MSIL">
       <HintPath>packages\HandyControl.3.5.1\lib\net472\HandyControl.dll</HintPath>
     </Reference>
->>>>>>> 9ead019692b4c02d25d1fb5c84ede985d2d1b3a5
     <Reference Include="System" />
     <Reference Include="System.Buffers, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\System.Buffers.4.4.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
@@ -344,9 +341,7 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <Resource Include="Fonts\#9Slide03 ALLROUND GOTHIC DEMI.ttf" />
-<<<<<<< HEAD
     <Resource Include="Fonts\JetBrainsMonoNLNerdFont-Regular.ttf" />
-=======
     <EntityDeploy Include="ManageRoomModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>ManageRoomModel.Designer.cs</LastGenOutput>
@@ -354,7 +349,6 @@
     <None Include="ManageRoomModel.edmx.diagram">
       <DependentUpon>ManageRoomModel.edmx</DependentUpon>
     </None>
->>>>>>> 9ead019692b4c02d25d1fb5c84ede985d2d1b3a5
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
