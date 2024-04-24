@@ -34,7 +34,7 @@ namespace Window_Final_Term_Projcet__WPF_
             pHotelDetailOverview.lblAddress.Content = hotel.address;
             pHotelDetailOverview.lblRating.Content = hotel.rating;
             string ratingstar = "";
-            for (int i = 0; i < int.Parse(hotel.rating.ToString()); i++)
+            for (int i = 0; i < float.Parse(hotel.rating.ToString()); i++)
             {
                 ratingstar += "⭐";
             }
@@ -63,7 +63,7 @@ namespace Window_Final_Term_Projcet__WPF_
             pHotelDetailOverview.lblRating.Content = hotel.rating;
             pHotelDetailOverview.lblPricOfRoom.Content = selection.Price;
             string ratingstar = "";
-            for (int i = 0; i < int.Parse(hotel.rating.ToString()); i++)
+            for (int i = 0; i < float.Parse(hotel.rating.ToString()); i++)
             {
                 ratingstar += "⭐";
             }

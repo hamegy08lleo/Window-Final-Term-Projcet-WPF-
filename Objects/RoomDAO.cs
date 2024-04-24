@@ -30,7 +30,6 @@ namespace Window_Final_Term_Projcet__WPF_
             //dBConnection.CommandExecute(sqlStr);
 
             var (roomType, hotel, price, amount) = post;
-            var db = new ManageRoomEntities();
             for (int i = 0; i < amount; i++)
             {
                 var room = new Room
@@ -39,14 +38,14 @@ namespace Window_Final_Term_Projcet__WPF_
                     price = price,
                     roomType = roomType,
                 };
-                db.Room.Add(room);
+                dataBase.Room.Add(room);
             }
+            dataBase.SaveChanges();
         }
 
-        public IQueryable<SearchResult> Search(CustomerSearch search)
+        public void Search(CustomerSearch search)
         {
-            var query = (from q4 in
-                            (from q2 in
+            var query = (from q2 in
                             (from q1 in
                              (from room in dataBase.Room
                               join booking in dataBase.Booking on room.roomID equals booking.roomID
@@ -67,36 +66,23 @@ namespace Window_Final_Term_Projcet__WPF_
                                  q1.roomID,
                                  q1.roomType,
                                  q1.price,
-                                 q1.bookingID,
                                  hotel,
                              })
-                             group q2
-                             by new
-                             {
-                                 q2.roomType,
-                                 q2.price,
-                                 q2.bookingID,
-                                 q2.hotel,
-                             } into q3
-                             select new
-                             {
-                                 q3.Key.roomType,
-                                 q3.Key.price,
-                                 q3.Key.bookingID,
-                                 q3.Key.hotel,
-                                 amount = q3.Count(),
-                             })
-                         where (q4.hotel.city == search.City) && (q4.roomType == search.RoomType)
-                         select new SearchResult {
-                             RoomType = q4.roomType,
-                             Price = q4.price,
-                             BookingID = q4.bookingID,
-                             Hotel = q4.hotel,
-                             Amount = q4.amount,
-                         }); 
-            
-            
-            return query;
+                         where(q2.hotel.city == search.City) && (q2.roomType == search.RoomType)
+                         select q2).ToList();
+            dataBase.SearchResult.RemoveRange(dataBase.SearchResult.ToList());
+            foreach (var result in query)
+            {
+                var searchResult = new SearchResult
+                {
+                    hotelID = result.hotel.hotelID,
+                    roomType = result.roomType,
+                    roomID = result.roomID,
+                    price = result.price,
+                };
+                dataBase.SearchResult.Add(searchResult);
+            }
+            dataBase.SaveChanges();
         }
 
         public int firstAvailableRoomID(RoomSelection selection)
@@ -116,16 +102,15 @@ namespace Window_Final_Term_Projcet__WPF_
             //}
             //return dt.Rows[0][0].ToString(); 
 
-            var db = new ManageRoomEntities();
-            var query = from hotel in db.Hotel
-                        join room in db.Room on hotel.hotelID equals room.roomID
-                        where hotel.hotelID == selection.Hotel.hotelID && room.roomType == selection.RoomType
-                        select new
-                        {
-                            room.roomID,
-                            hotel.hotelID,
-                            room.roomType,
-                        };
+            MessageBox.Show($"{selection.Hotel.hotelID.ToString()}, {selection.RoomType}");
+            var query = from q in dataBase.SearchResult
+                        where q.hotelID == selection.Hotel.hotelID && q.roomType == selection.RoomType
+                        select q;
+            MessageBox.Show(query.Count().ToString());
+            foreach (var q in query)
+            {
+                MessageBox.Show($"{q.roomType}, hehe");
+            }
             return query.FirstOrDefault().roomID;
         }
 

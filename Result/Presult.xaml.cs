@@ -15,6 +15,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Window_Final_Term_Projcet__WPF_.Objects;
 
 namespace Window_Final_Term_Projcet__WPF_
 {
@@ -26,16 +27,28 @@ namespace Window_Final_Term_Projcet__WPF_
         public Presult()
         {
             InitializeComponent();
-        }
-        public Presult(IQueryable<SearchResult> results, string roomType)
-        {
-            InitializeComponent();
-            foreach (var result in results)
+
+            var results = new SearchResultDAO().listResult();
+            var displayResults = from q in results
+                                 group q by new
+                                 {
+                                     q.Hotel,
+                                     q.price,
+                                     q.roomType,
+                                 } into q1
+                                 select new
+                                 {
+                                     Hotel = q1.Key.Hotel,
+                                     price = q1.Key.price,
+                                     roomType = q1.Key.roomType,
+                                     amount = q1.Count(),
+                                 };
+            foreach (var result in displayResults)
             {
-                UCHotelResult ucResult = new UCHotelResult(result.Hotel, roomType, result.Price.Value);
+                UCHotelResult ucResult = new UCHotelResult(result.Hotel, result.roomType, result.price);
                 ucResult.lblHotelName.Content = result.Hotel.hotelName.ToString();
                 ucResult.lblAddress.Content = result.Hotel.address; 
-                ucResult.lblPrice.Content = result.Price.ToString() + "$";
+                ucResult.lblPrice.Content = result.price.ToString() + "$";
 
                 string rating = "";
                 for (int i = 0; i < float.Parse(result.Hotel.rating.ToString()); i++)

@@ -130,6 +130,7 @@
     <Compile Include="Objects\HotelDAO.cs" />
     <Compile Include="Objects\OwnerAddHotel.cs" />
     <Compile Include="Objects\OwnerPostRoom.cs" />
+    <Compile Include="Objects\SearchResultDAO.cs" />
     <Compile Include="Partnership\PAddHotel.xaml.cs">
       <DependentUpon>PAddHotel.xaml</DependentUpon>
     </Compile>
@@ -157,7 +158,9 @@
     <Compile Include="Room.cs">
       <DependentUpon>ManageRoomModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="SearchResult.cs" />
+    <Compile Include="SearchResult.cs">
+      <DependentUpon>ManageRoomModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="UserControl\PostHotelChild\UCPostFacilities.xaml.cs">
       <DependentUpon>UCPostFacilities.xaml</DependentUpon>
     </Compile>

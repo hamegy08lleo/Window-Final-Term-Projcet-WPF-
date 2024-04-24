@@ -3,14 +3,14 @@ USE ManageRoom
 CREATE TABLE Room( 
 	roomID int identity, 	
 	hotelID int not null,
-	roomType varchar(100), 
-	price int, 
+	roomType varchar(100) not null, 
+	price int not null, 
 	primary key(roomID)
 )
 
 CREATE TABLE Hotel( 
 	hotelID int identity,
-	hotelName varchar(100) unique, 
+	hotelName varchar(100) unique not null, 
 	city varchar(100) not null, 
 	address varchar(100) not null, 
 	email varchar(100), 
@@ -22,7 +22,23 @@ CREATE TABLE Hotel(
 CREATE TABLE Booking( 
 	bookingID int IDENTITY, 
 	roomID int not null,
+    FOREIGN KEY ([roomID]) REFERENCES [dbo].[Room] ([roomID]), 
 )
+
+CREATE TABLE [dbo].[SearchResult] (
+    [roomType] VARCHAR (100) NOT NULL,
+    [price]    INT           NOT NULL,
+    [hotelID]  INT           NOT NULL,
+    [roomID]   INT           NOT NULL,
+    CONSTRAINT [PK_SearchResult] PRIMARY KEY CLUSTERED ([roomID]),
+    FOREIGN KEY ([hotelID]) REFERENCES [dbo].[Hotel] ([hotelID]),
+    FOREIGN KEY ([roomID]) REFERENCES [dbo].[Room] ([roomID])
+);
+
+
+
+
+
 
 ALTER TABLE Room WITH CHECK ADD FOREIGN KEY(hotelID) REFERENCES Hotel(hotelID)
 ALTER TABLE Booking WITH CHECK ADD PRIMARY KEY(bookingID, roomID)
@@ -77,6 +93,7 @@ VALUES('6')
 SELECT * FROM Room
 SELECT * FROM Hotel 
 SELECT * FROM Booking 
+SELECT * FROM SearchResult
 
 
 
@@ -101,3 +118,5 @@ WHERE roomType = '2 Single Bed' AND city = 'Ho Chi Minh City'
 drop table Room
 drop table Hotel
 drop table Booking
+drop table SearchResult
+

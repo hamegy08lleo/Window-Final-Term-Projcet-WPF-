@@ -39,7 +39,8 @@ namespace Window_Final_Term_Projcet__WPF_
         private void btnPost_Click(object sender, RoutedEventArgs e)
         {
             string roomType = cbbRoomType.Text;
-            Hotel hotel = cbbHotel.Tag as Hotel; 
+            Hotel hotel = (cbbHotel.SelectedItem as ComboBoxItem).Tag as Hotel;
+            MessageBox.Show(hotel.hotelName);
             int price = int.Parse(txbPrice.Text);
             int amount = int.Parse(txbAmount.Text);
             OwnerPostRoom post = new OwnerPostRoom(roomType, hotel, price, amount);
@@ -47,11 +48,5 @@ namespace Window_Final_Term_Projcet__WPF_
             mainWindow.RoomDAO.Add(post);
         }
 
-        private void cbbHotel_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            Hotel hotel = cbbHotel.Tag as Hotel;
-            MessageBox.Show("hello"); 
-            MessageBox.Show(hotel.hotelID.ToString()); 
-        }
     }
 }
