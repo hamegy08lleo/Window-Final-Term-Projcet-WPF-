@@ -5,22 +5,22 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Window_Final_Term_Projcet__WPF_"
       mc:Ignorable="d" 
-      d:DesignHeight="850" d:DesignWidth="1600"
+      d:DesignHeight="851" d:DesignWidth="1600"
       Title="PHotelDetail">
 
     <Grid>
         <Grid.Background>
-            <SolidColorBrush Color="#FF4FFFC9" Opacity="0.3"/>
+            <SolidColorBrush Color="White" Opacity="0.6"/>
         </Grid.Background>
         <Grid.RowDefinitions>
-            <RowDefinition Height="5"/>
+            <RowDefinition Height="0"/>
             <RowDefinition Height="80"/>
             <RowDefinition Height="5"/>
             <RowDefinition Height="740"/>
-            <RowDefinition Height="20"/>
+            <RowDefinition Height="25"/>
         </Grid.RowDefinitions>
 
-        <Grid Grid.Row="01">
+        <Grid Grid.Row="01" Background="White">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="20"/>
                 <ColumnDefinition Width="200"/>
@@ -31,46 +31,21 @@
                 <ColumnDefinition Width="940"/>
             </Grid.ColumnDefinitions>
 
-            <Button Grid.Column="1" x:Name="btnOverView"
-                    Content="OverView" Click="btnOverView_Click" Width="200" BorderBrush="{x:Null}" FontSize="24" Background="#026aad"  Foreground="White" FontWeight="SemiBold" FontStretch="Expanded" Height="80" >
-                <Button.Resources>
-                    <Style TargetType="Border">
-                        <Setter Property="CornerRadius" Value="25"/>
-                    </Style>
-                </Button.Resources>
-            </Button>
+                        <Button Grid.Column="1" x:Name="btnOverView"
+                    Content="OverView" Click="btnOverView_Click" Width="200" BorderBrush="{x:Null}" FontSize="24" Background="{x:Null}"  Foreground="Black" FontWeight="SemiBold" FontStretch="Expanded" Height="80" >
+                        </Button>
 
-            <Button Grid.Column="3" x:Name="btnRooms"
-                    Content="Rooms"  Click="btnRooms_Click" Width="200" BorderBrush="{x:Null}" FontSize="24" Background="#026aad"  Foreground="White" FontWeight="SemiBold" FontStretch="Expanded" Height="80" >
-                <Button.Resources>
-                    <Style TargetType="Border">
-                        <Setter Property="CornerRadius" Value="25"/>
-                    </Style>
-                </Button.Resources>
-            </Button>
+                        <Button Grid.Column="3" x:Name="btnRooms"
+                    Content="Rooms"  Click="btnRooms_Click" Width="200" BorderBrush="{x:Null}" FontSize="24" Background="{x:Null}"  Foreground="Black" FontWeight="SemiBold" FontStretch="Expanded" Height="80" >
+                        </Button>
 
-            <Button Grid.Column="5" x:Name="btnReview"
-                    Content="Review" Click="btnReview_Click" Width="200" BorderBrush="{x:Null}" FontSize="24" Background="#026aad"  Foreground="White" FontWeight="SemiBold" FontStretch="Expanded" Height="80">
-                <Button.Resources>
-                    <Style TargetType="Border">
-                        <Setter Property="CornerRadius" Value="25"/>
-                    </Style>
-                </Button.Resources>
-            </Button>
+                        <Button Grid.Column="5" x:Name="btnReview"
+                    Content="Review" Click="btnReview_Click" Width="200" BorderBrush="{x:Null}" FontSize="24" Background="{x:Null}"  Foreground="#FF010000" FontWeight="SemiBold" FontStretch="Expanded" Height="80">
+                        </Button>
 
-        </Grid>
+                </Grid>
                 <Grid Grid.Row ="3">
                         <Frame x:Name="detailContent" HorizontalContentAlignment="Stretch" Height="740" VerticalContentAlignment="Center" ScrollViewer.VerticalScrollBarVisibility="Disabled" VerticalAlignment="Top"/>
-
-
-                        <StackPanel>
-                                
-                        </StackPanel>
-                        
-                        
                 </Grid>
         </Grid>
-
-        
-        
 </Page>

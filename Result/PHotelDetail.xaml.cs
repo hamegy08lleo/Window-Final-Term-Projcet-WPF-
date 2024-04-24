@@ -29,6 +29,7 @@ namespace Window_Final_Term_Projcet__WPF_
         {
             InitializeComponent();
             PHotelDetailChild.PHotelDetailOverview pHotelDetailOverview = new PHotelDetailChild.PHotelDetailOverview();
+            HotelDAO hotelDAO = new HotelDAO();
             Hotel hotel = selection.Hotel;
             pHotelDetailOverview.lblHotelName.Content = hotel.hotelName;
             pHotelDetailOverview.lblAddress.Content = hotel.address;
@@ -39,8 +40,9 @@ namespace Window_Final_Term_Projcet__WPF_
                 ratingstar += "⭐";
             }
             pHotelDetailOverview.lblRating.Content = ratingstar;
+            //pHotelDetailOverview.lblPricOfRoom.Content = hotel.P
+            detailContent.Content = pHotelDetailOverview;
             this.selection = selection;
-            detailContent.Navigate(pHotelDetailOverview);
         }
 
         private void btnRooms_Click(object sender, RoutedEventArgs e)
@@ -57,6 +59,7 @@ namespace Window_Final_Term_Projcet__WPF_
         private void btnOverView_Click(object sender, RoutedEventArgs e)
         {
             PHotelDetailChild.PHotelDetailOverview pHotelDetailOverview = new PHotelDetailChild.PHotelDetailOverview();
+            HotelDAO hotelDAO = new HotelDAO();
             Hotel hotel = selection.Hotel;
             pHotelDetailOverview.lblHotelName.Content = hotel.hotelName;
             pHotelDetailOverview.lblAddress.Content = hotel.address;
@@ -69,7 +72,7 @@ namespace Window_Final_Term_Projcet__WPF_
             }
             pHotelDetailOverview.lblRating.Content = ratingstar;
 
-            detailContent.Navigate(pHotelDetailOverview);
+            detailContent.Content = pHotelDetailOverview;
 
 
         }

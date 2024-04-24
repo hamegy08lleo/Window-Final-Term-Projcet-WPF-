@@ -95,9 +95,9 @@
                                                 </ScrollViewer>
                                         </Grid>
                                 </Border>
-                                <ScrollViewer Grid.Column="1" Width="1120" Padding="0,10,0,0">
+                                <ScrollViewer Grid.Column="1" Width="1070" Padding="0,10,0,0" HorizontalAlignment="Left" VerticalScrollBarVisibility="Hidden">
                                         <StackPanel  x:Name ="spResult" ScrollViewer.HorizontalScrollBarVisibility="Hidden"
-                                        ScrollViewer.VerticalScrollBarVisibility="Hidden" HorizontalAlignment="Left">
+                                        ScrollViewer.VerticalScrollBarVisibility="Hidden" HorizontalAlignment="Center">
 
                                         </StackPanel>
                                 </ScrollViewer>

@@ -6,6 +6,6 @@
         xmlns:local="clr-namespace:Window_Final_Term_Projcet__WPF_"
         mc:Ignorable="d"
         Title="DebugWindow" Height="450" Width="800">
-    <Grid>
-    </Grid>
+        <Grid>
+        </Grid>
 </Window>
