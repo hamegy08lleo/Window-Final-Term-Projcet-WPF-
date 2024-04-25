@@ -44,7 +44,8 @@ namespace Window_Final_Term_Projcet__WPF_
             int amount = int.Parse(txbAmount.Text);
             OwnerPostRoom post = new OwnerPostRoom(roomType, hotel, price, amount);
             MainWindow mainWindow = Window.GetWindow(this) as MainWindow;
-            mainWindow.RoomDAO.Add(post);
+            var roomDAO = new RoomDAO(); 
+            roomDAO.Add(post);
         }
 
         private void cbbHotel_SelectionChanged(object sender, SelectionChangedEventArgs e)

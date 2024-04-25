@@ -21,7 +21,6 @@ namespace Window_Final_Term_Projcet__WPF_
     /// </summary>
     public partial class MainWindow : Window
     {
-        private RoomDAO roomDAO = new RoomDAO();
         public MainWindow()
         {
             InitializeComponent();
@@ -77,7 +76,6 @@ namespace Window_Final_Term_Projcet__WPF_
 
         public Frame MainContent { get { return mainContent; } set { mainContent = value; } }
 
-        internal RoomDAO RoomDAO { get => roomDAO; set => roomDAO = value; }
 
         private void btnBooking_Click(object sender, RoutedEventArgs e)
         {
