@@ -36,17 +36,17 @@ namespace Window_Final_Term_Projcet__WPF_.PHotelDetailChild
             return frameworkElement as PHotelDetail;
         }
 
-        private void btnChoose_Click(object sender, RoutedEventArgs e)
+        public void btnChoose_Click(object sender, RoutedEventArgs e)
         {
             MainWindow mainWindow = Window.GetWindow(this) as MainWindow;
             if (mainWindow.customerID == null)
             {
-                WindowLogin windowLogin = new WindowLogin();
-                windowLogin.Show();
+                mainWindow.btnLogin_Click(sender, e); 
                 return;
             }
             BookingDAO bookingDAO = new BookingDAO();
-            bookingDAO.addBooking(pHotelDetail().Selection);
+            var customerID = mainWindow.customerID; 
+            bookingDAO.addBooking(pHotelDetail().Selection, customerID.Value);
             mainWindow.mainContent.Content = new PBooking(); 
         }
     }

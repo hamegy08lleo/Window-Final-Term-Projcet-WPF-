@@ -8,58 +8,68 @@
       d:DesignHeight="850" d:DesignWidth="1600"
       Title="PManager">
 
-        <Grid Height="850" Width="1600">
-                <Grid.Background>
-                        <SolidColorBrush Color="#FFD3FAFF" Opacity="0.3"/>
-                </Grid.Background>
-                <Grid.RowDefinitions>
-                        <RowDefinition Height="10"/>
-                        <RowDefinition Height="80"/>
-                        <RowDefinition Height="5"/>
-                        <RowDefinition Height="740"/>
-                        <RowDefinition Height="10"/>
-                </Grid.RowDefinitions>
-                <Grid Grid.Row="1" Name="gMenu">
-                        <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="10"/>
-                                <ColumnDefinition Width="200"/>
-                                <ColumnDefinition Width="10"/>
-                                <ColumnDefinition Width="200"/>
-                                <ColumnDefinition Width="10"/>
-                                <ColumnDefinition Width="200"/>
+    <Grid Height="850" Width="1600">
+        <Grid.Background>
+            <SolidColorBrush Color="#FFD3FAFF" Opacity="0.3"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="5"/>
+            <RowDefinition Height="740"/>
+            <RowDefinition Height="10"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="1" Name="gMenu">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="10"/>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="10"/>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="10"/>
+                <ColumnDefinition Width="200"/>
 
-                        </Grid.ColumnDefinitions>
+            </Grid.ColumnDefinitions>
 
-                        <Button Content="My Business" x:Name="btnMyBusiness" Grid.Column="1" Background="#FF36ADF9" BorderBrush="{x:Null}" Foreground="White" FontSize="24" FontWeight="SemiBold" Click="btnMyBusiness_Click">
-                                <Button.Resources>
-                                        <Style TargetType="Border">
-                                                <Setter Property="CornerRadius" Value="25"/>
-                                        </Style>
-                                </Button.Resources>
-                        </Button>
+            <Button Content="My Business" x:Name="btnMyBusiness" Grid.Column="1" 
+                                Background="#FF36ADF9" BorderBrush="{x:Null}" 
+                                Foreground="White" FontSize="24" FontWeight="SemiBold" 
+                                Click="btnMyBusiness_Click"
+                                >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="25"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
 
-                        <Button Content="More Business" x:Name="btnMoreBusiness" Grid.Column="3" Background="#FF36ADF9" BorderBrush="{x:Null}" Foreground="White" FontSize="24" FontWeight="SemiBold" Click="btnMoreBusiness_Click">
-                                <Button.Resources>
-                                        <Style TargetType="Border">
-                                                <Setter Property="CornerRadius" Value="25"/>
-                                        </Style>
-                                </Button.Resources>
-                        </Button>
+            <Button Content="More Business" x:Name="btnMoreBusiness" Grid.Column="3" Background="#FF36ADF9" BorderBrush="{x:Null}" 
+                                Foreground="White" FontSize="24" 
+                                FontWeight="SemiBold" Click="btnMoreBusiness_Click"
+                               >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="25"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
 
-                        <Button Content="More Rooms" x:Name="btnMoreRooms" Grid.Column="5" Background="#FF36ADF9" BorderBrush="{x:Null}" Foreground="White" FontSize="24" FontWeight="SemiBold" Click="btnMoreRooms_Click">
-                                <Button.Resources>
-                                        <Style TargetType="Border">
-                                                <Setter Property="CornerRadius" Value="25"/>
-                                        </Style>
-                                </Button.Resources>
-                        </Button>
+            <Button Content="More Rooms" x:Name="btnMoreRooms" Grid.Column="5" Background="#FF36ADF9" BorderBrush="{x:Null}" 
+                                Foreground="White" FontSize="24" 
+                                FontWeight="SemiBold" Click="btnMoreRooms_Click"
+                                >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="25"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
 
-                </Grid>
-                <Grid Grid.Row="3" Name="gContent">
-                        <Frame x:Name="mainContent" HorizontalAlignment="Center" VerticalAlignment="Center">
-
-                        </Frame>
-
-                </Grid>
         </Grid>
+        <Grid Grid.Row="3" Name="gContent">
+            <Frame x:Name="mainContent" HorizontalAlignment="Center" VerticalAlignment="Center">
+
+            </Frame>
+
+        </Grid>
+    </Grid>
 </Page>

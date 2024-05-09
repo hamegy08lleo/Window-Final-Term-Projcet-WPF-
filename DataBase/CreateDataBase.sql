@@ -96,8 +96,8 @@ VALUES('Horizon Travel ST', '5.0', 'Soc Trang', '77 Hoang Dieu', '017745632', 'q
 
 CREATE TABLE Booking( 
 	customerID int foreign key references Customer(customerID) not null, 
-	checkin date not null, 
-	checkout date not null, 
+	checkin date, 
+	checkout date,  
 	bookingID int IDENTITY, 
 	roomID int not null,
     FOREIGN KEY ([roomID]) REFERENCES [dbo].[Room] ([roomID]), 

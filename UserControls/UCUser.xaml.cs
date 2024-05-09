@@ -10,23 +10,24 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Window_Final_Term_Projcet__WPF_
+namespace Window_Final_Term_Projcet__WPF_.UserControls
 {
     /// <summary>
-    /// Interaction logic for WNotifiaction.xaml
+    /// Interaction logic for UCUser.xaml
     /// </summary>
-    public partial class WNotifiaction : Window
+    public partial class UCUser : System.Windows.Controls.UserControl
     {
-        public WNotifiaction()
+        public UCUser()
         {
             InitializeComponent();
         }
-        public void Notification(string mess)
+
+        private void btnLogout_Click(object sender, RoutedEventArgs e)
         {
-            this.lblMess.Content = mess;
-            this.ShowDialog(); 
+
         }
     }
 }

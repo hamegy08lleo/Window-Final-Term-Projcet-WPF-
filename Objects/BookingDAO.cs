@@ -4,13 +4,14 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace Window_Final_Term_Projcet__WPF_.DataBase
 {
     internal class BookingDAO : DAO
     {
         public BookingDAO() { }
-        public void addBooking(RoomSelection selection)
+        public void addBooking(RoomSelection selection, int customerID)
         {
             //RoomDAO roomDAO = new RoomDAO();
             //int roomID = roomDAO.firstAvailableRoomID(selection); 
@@ -24,6 +25,7 @@ namespace Window_Final_Term_Projcet__WPF_.DataBase
             dataBase.Booking.Add(new Booking
             {
                 roomID = roomID,
+                customerID = customerID,
             });
             dataBase.SaveChanges(); 
         }

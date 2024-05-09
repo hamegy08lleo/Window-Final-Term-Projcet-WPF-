@@ -154,6 +154,7 @@
     <Compile Include="Objects\HotelDAO.cs" />
     <Compile Include="Objects\ImageDAO.cs" />
     <Compile Include="Objects\OwnerAddHotel.cs" />
+    <Compile Include="Objects\OwnerDAO.cs" />
     <Compile Include="Objects\OwnerPostRoom.cs" />
     <Compile Include="Objects\SearchResultDAO.cs" />
     <Compile Include="Owner.cs">
@@ -235,6 +236,9 @@
     </Compile>
     <Compile Include="Login and Register\WindowRegister.xaml.cs">
       <DependentUpon>WindowRegister.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UCUser.xaml.cs">
+      <DependentUpon>UCUser.xaml</DependentUpon>
     </Compile>
     <Compile Include="WNotifiaction.xaml.cs">
       <DependentUpon>WNotifiaction.xaml</DependentUpon>
@@ -360,6 +364,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Login and Register\WindowRegister.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\UCUser.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

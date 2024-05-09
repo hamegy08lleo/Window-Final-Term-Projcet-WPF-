@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Xaml;
+using Window_Final_Term_Projcet__WPF_.Objects;
 
 namespace Window_Final_Term_Projcet__WPF_
 {
@@ -55,29 +56,39 @@ namespace Window_Final_Term_Projcet__WPF_
             windowRegist.ShowDialog();
         }
 
-        private void btnLogin_Click(object sender, RoutedEventArgs e)
+        public void btnLogin_Click(object sender, RoutedEventArgs e)
         {
             WindowLogin windowLogin = new WindowLogin();
-            bool? result = windowLogin.ShowDialog(); 
+            bool? result = windowLogin.ShowDialog();
             if (result == true)
             {
                 customerID = windowLogin.userID;
                 MessageBox.Show(customerID.Value.ToString());
             }
+            this.btnLogin.Visibility = Visibility.Collapsed;
+            this.btnRegister.Visibility = Visibility.Collapsed;
+            this.btnLogout.Visibility = Visibility.Visible;
+            this.btnBooking.Visibility = Visibility.Visible;
+            CustomerDAO customerDAO = new CustomerDAO();
+            var username = customerDAO.getUsername(customerID.Value);
+            this.btnUsername.Content = username;
+            this.btnUsername.Visibility = Visibility.Visible;
         }
 
         private void btnPartnership_Click(object sender, RoutedEventArgs e)
         {
             if (this.btnPartnership.Content.ToString() == "Partnership")
             {
-                    mainContent.Content = new PManager();
-                    this.btnPartnership.Content = "Customer";
+                mainContent.Content = new PManager();
+                this.btnBooking.Visibility = Visibility.Collapsed;
+                this.btnLogout_Click(sender, e);  
+                this.btnPartnership.Content = "Customer";
             }
             else
             {
-                    mainContent.Content = new Pcustomer();
-                    this.btnPartnership.Content = "Partnership";
-                    
+                mainContent.Content = new Pcustomer();
+                this.btnPartnership.Content = "Partnership";
+
             }
         }
 
@@ -86,7 +97,17 @@ namespace Window_Final_Term_Projcet__WPF_
 
         private void btnBooking_Click(object sender, RoutedEventArgs e)
         {
-                this.mainContent.Content = new PBooking();
+            this.mainContent.Content = new PBooking();
+        }
+
+        private void btnLogout_Click(object sender, RoutedEventArgs e)
+        {
+            this.btnLogin.Visibility = Visibility.Visible;
+            this.btnRegister.Visibility = Visibility.Visible;
+            this.btnLogout.Visibility = Visibility.Collapsed;
+            this.btnUsername.Visibility = Visibility.Collapsed;
+            this.btnBooking.Visibility = Visibility.Collapsed;
+            this.customerID = null;
         }
     }
 }

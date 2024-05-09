@@ -78,7 +78,7 @@ namespace Window_Final_Term_Projcet__WPF_
         private void btnRegister_Click(object sender, RoutedEventArgs e)
         {
                 WindowRegister windowRegister = new WindowRegister();
-                        this.Close();
+                this.Close();
                 windowRegister.ShowDialog();
         }
     }

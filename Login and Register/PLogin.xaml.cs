@@ -21,6 +21,7 @@ namespace Window_Final_Term_Projcet__WPF_.Login_and_Register
     /// </summary>
     public partial class PLogin : Page
     {
+        public int? userID; 
         public PLogin()
         {
             InitializeComponent();
@@ -29,7 +30,7 @@ namespace Window_Final_Term_Projcet__WPF_.Login_and_Register
         {
             if (txtUsername.Text == "Username or email")
             {
-                txtUsername.Foreground = new SolidColorBrush(Colors.Black);
+                txtUsername.Foreground = new SolidColorBrush(Colors.Black); 
                 txtUsername.Text = "";
             }
         }
@@ -38,8 +39,8 @@ namespace Window_Final_Term_Projcet__WPF_.Login_and_Register
         {
             if (string.IsNullOrEmpty(txtUsername.Text))
             {
-                txtUsername.Foreground = new SolidColorBrush(Colors.Gray);
-                txtUsername.Text = "Username or email";
+                txtUsername.Foreground = new SolidColorBrush(Colors.Gray); 
+                txtUsername.Text = "Username or email"; 
             }
         }
 
@@ -48,9 +49,9 @@ namespace Window_Final_Term_Projcet__WPF_.Login_and_Register
             if (txtPassword.Text == "Password")
             {
                 pabPassword.Password = "";
-                txtPassword.Text = "";
+                txtPassword.Text = ""; 
                 txtPassword.Visibility = Visibility.Collapsed;
-                pabPassword.Focus();
+                pabPassword.Focus(); 
             }
         }
         private void pabPassword_LostFocus(object sender, RoutedEventArgs e)
@@ -58,20 +59,36 @@ namespace Window_Final_Term_Projcet__WPF_.Login_and_Register
             if (pabPassword.Password == "")
             {
                 txtPassword.Foreground = new SolidColorBrush(Colors.Gray);
-                txtPassword.Visibility = Visibility.Visible;
+                txtPassword.Visibility = Visibility.Visible; 
                 txtPassword.Text = "Password";
             }
         }
 
+        PManager GetPManager()
+        {
+            FrameworkElement frameworkElement = this; 
+            while (frameworkElement.GetType() != new PManager().GetType())
+            {
+                frameworkElement = VisualTreeHelper.GetParent(frameworkElement) as FrameworkElement;
+            }
+            return frameworkElement as PManager;
+        }
+
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
-            CustomerDAO customerDAO = new CustomerDAO();
-
+            OwnerDAO ownerDAO = new OwnerDAO();
+            var ownerID = ownerDAO.validateLogin(txtUsername.Text, pabPassword.Password); 
+            if (ownerID != null) {
+                this.userID = ownerID;
+                PManager pManager = GetPManager();
+                pManager.mainContent.Navigate(new PShowHotel()); 
+            }
         }
 
         private void btnRegister_Click(object sender, RoutedEventArgs e)
         {
-
+                WindowRegister windowRegister = new WindowRegister();
+                windowRegister.ShowDialog();
         }
 
     }

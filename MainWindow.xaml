@@ -1,4 +1,4 @@
-﻿<Window x:Class="Window_Final_Term_Projcet__WPF_.MainWindow"
+﻿<Window xmlns:UserControls="clr-namespace:Window_Final_Term_Projcet__WPF_.UserControls"  x:Class="Window_Final_Term_Projcet__WPF_.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -45,7 +45,8 @@
                 <Button x:Name="btnBooking" 
                     Content="Booking" DockPanel.Dock="Right" 
                         Width="180"  Height="80" FontSize="24" 
-                        Margin="5,10,5,0" FontWeight="Bold" Click="btnBooking_Click">
+                        Margin="5,10,5,0" FontWeight="Bold" Click="btnBooking_Click"
+                        Visibility="Collapsed">
                     <Button.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" Value="10"/>
@@ -63,7 +64,9 @@
                 <Button x:Name="btnLogin" BorderThickness="4,4,4,4"
                         Content="Login" DockPanel.Dock="Right" 
                         Width="180" Height="80" FontSize="24" 
-                        Margin="5,10,5,0" Padding="1,1,1,1" FontWeight="Bold" BorderBrush="#FF36ADF9" Foreground="#FF090000" Click="btnLogin_Click">
+                        Margin="5,10,5,0" Padding="1,1,1,1" FontWeight="Bold" BorderBrush="#FF36ADF9" 
+                        Foreground="#FF090000" 
+                        Click="btnLogin_Click">
                     <Button.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" Value="10"/>
@@ -85,13 +88,68 @@
                 <Button x:Name="btnRegister" 
                         Content="Register" DockPanel.Dock="Right"
                         Width="180" Height="80" FontSize="24"
-                        Margin="5,10,10,0" Background="#FF36ADF9" BorderBrush="#FF36ADF9" FontWeight="Bold" Foreground="White" Click="btnRegister_Click">
+                        Margin="5,10,10,0" 
+                        Background="#FF36ADF9" 
+                        BorderBrush="#FF36ADF9" 
+                        FontWeight="Bold" Foreground="White" 
+                        Click="btnRegister_Click"
+                        Visibility="Visible">
                     <Button.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" Value="10"/>
                         </Style>
                     </Button.Resources>
                 </Button>
+                <Button x:Name="btnLogout" BorderThickness="4,4,4,4"
+                        Content="Logout" DockPanel.Dock="Right" 
+                        Width="180" Height="80" FontSize="24" 
+                        Margin="5,10,5,0" Padding="1,1,1,1"
+                        FontWeight="Bold" BorderBrush="#FF36ADF9" 
+                        Foreground="#FF090000" 
+                        Click="btnLogout_Click"
+                        Visibility="Collapsed">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="10"/>
+
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="BorderBrush" Value="Black" />
+
+                                </Trigger>
+                            </Style.Triggers>
+
+                        </Style>
+                    </Button.Resources>
+                    <Button.Background>
+                        <SolidColorBrush Color="#FF010F18" Opacity="0"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="btnUsername" BorderThickness="4,4,4,4"
+                        Content="Username" DockPanel.Dock="Right" 
+                        Width="180" Height="80" FontSize="24" 
+                        Margin="5,10,5,0" Padding="1,1,1,1"
+                        FontWeight="Bold" BorderBrush="#FF36ADF9" 
+                        Foreground="#FF090000" 
+                        Visibility="Collapsed">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="10"/>
+
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="BorderBrush" Value="Black" />
+
+                                </Trigger>
+                            </Style.Triggers>
+
+                        </Style>
+                    </Button.Resources>
+                    <Button.Background>
+                        <SolidColorBrush Color="#FF010F18" Opacity="0"/>
+                    </Button.Background>
+                </Button>
+
             </StackPanel>
         </Grid>
         <Grid Grid.Row="1" x:Name="gBackGround">

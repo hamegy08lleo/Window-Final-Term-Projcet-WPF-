@@ -6,27 +6,26 @@ using System.Threading.Tasks;
 
 namespace Window_Final_Term_Projcet__WPF_.Objects
 {
-    internal class CustomerDAO : DAO
+    internal class OwnerDAO : DAO
     {
-        public CustomerDAO() { }   
-
+        public OwnerDAO() { }
         public bool isUniqueUsername(string username)
         {
-            var query = from q in dataBase.Customer
+            var query = from q in dataBase.Owner
                         where q.username == username
                         select q;
             return query.Count() == 0; 
         }
         public bool isUniqueEmail(string email)
         {
-            var query = from q in dataBase.Customer
+            var query = from q in dataBase.Owner
                         where q.email == email
                         select q;
             return query.Count() == 0; 
         }
         public bool isUniquePhoneNumber(string phoneNumber)
         {
-            var query = from q in dataBase.Customer
+            var query = from q in dataBase.Owner
                         where q.phoneNumber == phoneNumber
                         select q;
             return query.Count() == 0; 
@@ -38,7 +37,7 @@ namespace Window_Final_Term_Projcet__WPF_.Objects
                 new WNotifiaction().Notification("Empty username or password");
                 return null; 
             }
-            var query = from q in dataBase.Customer
+            var query = from q in dataBase.Owner
                         where q.username == username
                         select q;
             if (query.Count() > 0 )
@@ -56,7 +55,7 @@ namespace Window_Final_Term_Projcet__WPF_.Objects
                 return null; 
             }
             new WNotifiaction().Notification("Success!");
-            return user.customerID;
+            return user.ownerID;
         }
 
         public bool validateRegister(String username, String email, String phoneNumber)
@@ -76,22 +75,22 @@ namespace Window_Final_Term_Projcet__WPF_.Objects
 
         public int register(String username, String password, String email, String phoneNumber)
         {
-            Customer customer = new Customer
+            Owner owner = new Owner
             {
                 username = username,
                 password = password,
                 email = email,
                 phoneNumber = phoneNumber, 
             };
-            dataBase.Customer.Add(customer); 
+            dataBase.Owner.Add(owner); 
             dataBase.SaveChanges();
             new WNotifiaction().Notification("Success!"); 
-            return customer.customerID; 
+            return owner.ownerID; 
         }
         public string getUsername(int id)
         {
-            var query = from q in dataBase.Customer
-                        where q.customerID == id
+            var query = from q in dataBase.Owner
+                        where q.ownerID == id
                         select q; 
             return query.FirstOrDefault().username;
         }
