@@ -349,6 +349,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="Window Final Term Project.drawio" />
     <Resource Include="Fonts\#9Slide03 ALLROUND GOTHIC DEMI.ttf" />
     <Resource Include="Fonts\JetBrainsMonoNLNerdFont-Regular.ttf" />
     <EntityDeploy Include="ManageRoomModel.edmx">
