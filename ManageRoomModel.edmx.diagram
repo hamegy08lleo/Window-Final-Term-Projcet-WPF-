@@ -4,19 +4,24 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="095c1735242348eda2fedb866bf59764" Name="Diagram1" ZoomLevel="63">
-        <EntityTypeShape EntityType="ManageRoomModel.Booking" Width="1.5" PointX="8.25" PointY="5" IsExpanded="true" />
-        <EntityTypeShape EntityType="ManageRoomModel.Hotel" Width="1.5" PointX="0.75" PointY="3.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="ManageRoomModel.Room" Width="1.5" PointX="4.125" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="ManageRoomModel.SearchResult" Width="1.5" PointX="8.25" PointY="0.625" IsExpanded="true" />
-        <AssociationConnector Association="ManageRoomModel.FK__Booking__roomID__11D4A34F" ManuallyRouted="false" />
-        <AssociationConnector Association="ManageRoomModel.FK__Room__hotelID__1699586C" ManuallyRouted="false" />
-        <AssociationConnector Association="ManageRoomModel.FK__SearchRes__hotel__14B10FFA" ManuallyRouted="false" />
-        <AssociationConnector Association="ManageRoomModel.FK__SearchRes__roomI__15A53433" ManuallyRouted="false" />
-        <EntityTypeShape EntityType="ManageRoomModel.Customer" Width="1.5" PointX="3" PointY="7.875" />
-        <EntityTypeShape EntityType="ManageRoomModel.Owner" Width="1.5" PointX="0.75" PointY="0.75" />
-        <AssociationConnector Association="ManageRoomModel.FK__Booking__custome__6B44E613" />
-        <AssociationConnector Association="ManageRoomModel.FK__Hotel__ownerID__695C9DA1" />
+      <Diagram DiagramId="2e98aec651b04331a20bc84a3fac9acd" Name="Diagram1" ZoomLevel="67">
+        <EntityTypeShape EntityType="ManageRoomModel.Booking" Width="1.5" PointX="7.5" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManageRoomModel.Customer" Width="1.5" PointX="3.25" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManageRoomModel.Hotel" Width="1.5" PointX="3" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManageRoomModel.ImageItem" Width="1.5" PointX="7.5" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManageRoomModel.Owner" Width="1.5" PointX="0.75" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManageRoomModel.Room" Width="1.5" PointX="5.25" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManageRoomModel.SearchResult" Width="1.5" PointX="7.5" PointY="2.5" IsExpanded="true" />
+        <AssociationConnector Association="ManageRoomModel.FK__Booking__custome__09946309" ManuallyRouted="false" />
+        <AssociationConnector Association="ManageRoomModel.FK__Booking__roomID__0A888742" ManuallyRouted="false" />
+        <AssociationConnector Association="ManageRoomModel.FK__Hotel__ownerID__07AC1A97" ManuallyRouted="false" />
+        <AssociationConnector Association="ManageRoomModel.FK__ImageItem__hotel__131DCD43" ManuallyRouted="false" />
+        <AssociationConnector Association="ManageRoomModel.FK__Room__hotelID__0F4D3C5F" ManuallyRouted="false" />
+        <AssociationConnector Association="ManageRoomModel.FK__SearchRes__hotel__0D64F3ED" ManuallyRouted="false" />
+        <AssociationConnector Association="ManageRoomModel.FK__ImageItem__roomI__1411F17C" ManuallyRouted="false" />
+        <AssociationConnector Association="ManageRoomModel.FK__SearchRes__roomI__0E591826" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="ManageRoomModel.Facility" Width="1.5" PointX="4.5" PointY="1.5" />
+        <AssociationConnector Association="ManageRoomModel.HotelFacility" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -7,6 +7,26 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-            
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"></RowDefinition>
+            <RowDefinition Height="350"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Button Grid.Row="0" x:Name="btnAddImage" Content="Add Image"
+                HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center"
+                Height="53" Width="300" Background="#FFFF5E1F" Foreground="White" FontSize="24" FontWeight="Bold" Click="btnAddImage_Click">
+
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="20"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <ScrollViewer Width="600"  HorizontalScrollBarVisibility="Visible" Grid.Row="1" x:Name="svImageScroll">
+            <StackPanel 
+                Orientation="Horizontal" 
+                Height="350" x:Name="stpImageContainer"
+                Width="600">
+            </StackPanel>
+        </ScrollViewer>
     </Grid>
 </UserControl>

@@ -18,6 +18,7 @@ namespace Window_Final_Term_Projcet__WPF_
         public Room()
         {
             this.Booking = new HashSet<Booking>();
+            this.ImageItem = new HashSet<ImageItem>();
         }
     
         public int roomID { get; set; }
@@ -28,6 +29,8 @@ namespace Window_Final_Term_Projcet__WPF_
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Booking> Booking { get; set; }
         public virtual Hotel Hotel { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ImageItem> ImageItem { get; set; }
         public virtual SearchResult SearchResult { get; set; }
     }
 }

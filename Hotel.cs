@@ -17,8 +17,10 @@ namespace Window_Final_Term_Projcet__WPF_
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Hotel()
         {
+            this.ImageItem = new HashSet<ImageItem>();
             this.Room = new HashSet<Room>();
             this.SearchResult = new HashSet<SearchResult>();
+            this.Facility = new HashSet<Facility>();
         }
     
         public int hotelID { get; set; }
@@ -30,10 +32,14 @@ namespace Window_Final_Term_Projcet__WPF_
         public double rating { get; set; }
         public int ownerID { get; set; }
     
+        public virtual Owner Owner { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ImageItem> ImageItem { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Room> Room { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<SearchResult> SearchResult { get; set; }
-        public virtual Owner Owner { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Facility> Facility { get; set; }
     }
 }

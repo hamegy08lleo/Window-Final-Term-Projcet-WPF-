@@ -12,15 +12,18 @@ namespace Window_Final_Term_Projcet__WPF_
     using System;
     using System.Collections.Generic;
     
-    public partial class Booking
+    public partial class Facility
     {
-        public int customerID { get; set; }
-        public System.DateTime checkin { get; set; }
-        public System.DateTime checkout { get; set; }
-        public int bookingID { get; set; }
-        public int roomID { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Facility()
+        {
+            this.Hotel = new HashSet<Hotel>();
+        }
     
-        public virtual Customer Customer { get; set; }
-        public virtual Room Room { get; set; }
+        public int facilityID { get; set; }
+        public string facilityName { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Hotel> Hotel { get; set; }
     }
 }

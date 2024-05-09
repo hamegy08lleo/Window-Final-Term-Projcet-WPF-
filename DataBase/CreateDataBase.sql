@@ -39,6 +39,7 @@ CREATE TABLE Room(
 )
 
 
+
 INSERT INTO 
 Room(roomType, hotelID, price)
 VALUES('1 Single Bed', '1', '100')
@@ -65,7 +66,7 @@ VALUES('1 Couple Bed', '5', '200')
 
 CREATE TABLE Hotel( 
 	hotelID int identity,
-	hotelName varchar(100) unique not null, 
+	hotelName varchar(100) not null, 
 	city varchar(100) not null, 
 	address varchar(100) not null, 
 	email varchar(100), 
@@ -121,6 +122,26 @@ ALTER TABLE Room WITH CHECK ADD FOREIGN KEY(hotelID) REFERENCES Hotel(hotelID)
 ALTER TABLE Booking WITH CHECK ADD PRIMARY KEY(bookingID, roomID)
 
 
+CREATE TABLE ImageItem ( 
+	imageID int identity primary key, 
+	imagePath varchar(100),
+	hotelID int foreign key references Hotel(hotelID) not null, 
+	roomID int foreign key references room(roomID),
+)
+
+INSERT INTO ImageItem(imagePath, HotelID)
+VALUES('IMG/1.png', 1)
+
+CREATE TABLE Facility( 
+	facilityID int identity primary key, 
+	facilityName nvarchar(100) not null unique,
+)
+
+CREATE TABLE HotelFacility( 
+	facilityID int not null foreign key references Facility(facilityID),
+	hotelID int not null foreign key references Hotel(hotelID)
+	primary key(facilityID, hotelID)
+)
 
 
 SELECT * FROM Room
@@ -129,10 +150,9 @@ SELECT * FROM Booking
 SELECT * FROM SearchResult
 SELECT * FROM Customer
 SELECT * FROM Owner
-
-
-
-
+SELECT * FROM ImageItem
+SELECT * FROM Facility
+SELECT * FROM HotelFacility
 
 SELECT hotelID, hotelName, address, price, rating, ammount FROM
 (SELECT Hotel.hotelID, Hotel.hotelName, room.roomType, city, address, price, rating, count(roomID) as 'ammount'
@@ -140,7 +160,6 @@ FROM
 Room inner join Hotel on Hotel.hotelID = Room.hotelID
 group by Hotel.hotelName, Hotel.hotelID, room.roomType, city, address, price, rating) as tmp
 WHERE roomType = '2 Single Bed' AND city = 'Ho Chi Minh City'
-
 SELECT hotelID, hotelName, address, price, rating, amount FROM
 (SELECT Hotel.hotelID, Hotel.hotelName, roomType, city, address, price, rating, count(roomID) as 'amount' FROM
 (SELECT * FROM
@@ -150,10 +169,12 @@ WHERE bookingID is null) as Q2 inner join Hotel on Hotel.hotelID = Q2.hotelID
 GROUP BY Hotel.hotelID, Hotel.hotelName, roomtype, city, address, price, rating) as Q3
 WHERE roomType = '2 Single Bed' AND city = 'Ho Chi Minh City'
 
+drop table Facility
+drop table HotelFacility
+drop table ImageItem
 drop table Booking
-drop table SearchResult
-drop table Customer
 drop table Room
 drop table Hotel
+drop table SearchResult
 drop table Owner
-
+drop table Customer

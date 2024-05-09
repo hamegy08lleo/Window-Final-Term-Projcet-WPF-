@@ -113,7 +113,13 @@
     <Compile Include="Customer.cs">
       <DependentUpon>ManageRoomModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Facility.cs">
+      <DependentUpon>ManageRoomModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Hotel.cs">
+      <DependentUpon>ManageRoomModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ImageItem.cs">
       <DependentUpon>ManageRoomModel.tt</DependentUpon>
     </Compile>
     <Compile Include="ManageRoomModel.Context.cs">
@@ -139,6 +145,7 @@
       <DependentUpon>DebugWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Objects\HotelDAO.cs" />
+    <Compile Include="Objects\ImageDAO.cs" />
     <Compile Include="Objects\OwnerAddHotel.cs" />
     <Compile Include="Objects\OwnerPostRoom.cs" />
     <Compile Include="Objects\SearchResultDAO.cs" />
@@ -364,9 +371,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="Window Final Term Project.drawio" />
-    <Resource Include="Fonts\#9Slide03 ALLROUND GOTHIC DEMI.ttf" />
-    <Resource Include="Fonts\JetBrainsMonoNLNerdFont-Regular.ttf" />
     <EntityDeploy Include="ManageRoomModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>ManageRoomModel.Designer.cs</LastGenOutput>
@@ -374,6 +378,9 @@
     <None Include="ManageRoomModel.edmx.diagram">
       <DependentUpon>ManageRoomModel.edmx</DependentUpon>
     </None>
+    <None Include="Window Final Term Project.drawio" />
+    <Resource Include="Fonts\#9Slide03 ALLROUND GOTHIC DEMI.ttf" />
+    <Resource Include="Fonts\JetBrainsMonoNLNerdFont-Regular.ttf" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

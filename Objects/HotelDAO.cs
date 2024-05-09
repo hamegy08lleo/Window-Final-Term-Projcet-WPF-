@@ -11,22 +11,28 @@ namespace Window_Final_Term_Projcet__WPF_
     internal class HotelDAO : DAO
     {
         public HotelDAO() { }
-        public void addHotel(OwnerAddHotel add)
+        public int addHotel(OwnerAddHotel add)
         {
             //string sqlStr = $"INSERT INTO Hotel(hotelName, city, address, email, phoneNumber, rating)" +
             //    $"VALUES('{add.HotelName}', '{add.City}', '{add.Address}', '{add.Email}', '{add.PhoneNumber}', '5.0')";
             //dBConnection.CommandExecute(sqlStr); 
-            var db = new ManageRoomEntities(); 
-            Hotel hotel = new Hotel {
+            var db = new ManageRoomEntities();
+            Hotel hotel = new Hotel();
+            hotel = new Hotel
+            {
                 hotelName = add.HotelName,
-                city = add.City,   
+                city = add.City,
                 address = add.Address,
                 email = add.Email,
                 phoneNumber = add.PhoneNumber,
-                rating = 5.0
+                rating = 5.0,
+                ownerID = add.OwnerID,
             };
             db.Hotel.Add(hotel);
-            db.SaveChanges(); 
+            db.SaveChanges();
+
+            new WNotifiaction(); 
+            return hotel.hotelID; 
         }
         public Hotel getHotel(int id)
         {

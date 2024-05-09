@@ -23,6 +23,7 @@
                         <Rectangle Height="20"/>
                         <PostHotelChild:UCPostFacilities x:Name="ucPostFacilities" />
                         <Rectangle Height="20"/>
+                        <PostHotelChild1:UCPostImage x:Name="ucPostImage"/>
                         <Rectangle Height="50"/>
                         <Button x:Name="btnPost" Content="Post" 
                                                         FontSize="35" Height="80" Background="#FFFF5E1F" 
@@ -35,8 +36,6 @@
                             </Button.Resources>
                         </Button>
                         <Rectangle Height="100"/>
-
-
                     </StackPanel>
                 </ScrollViewer>
             </Grid>

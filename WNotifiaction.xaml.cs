@@ -14,18 +14,20 @@ using System.Windows.Shapes;
 
 namespace Window_Final_Term_Projcet__WPF_
 {
-        /// <summary>
-        /// Interaction logic for WNotifiaction.xaml
-        /// </summary>
-        public partial class WNotifiaction : Window
+    /// <summary>
+    /// Interaction logic for WNotifiaction.xaml
+    /// </summary>
+    public partial class WNotifiaction : Window
+    {
+        public WNotifiaction()
         {
-                public WNotifiaction()
-                {
-                        InitializeComponent();
-                }
-                public void Notification(string mess)
-                {
-                        this.lblMess.Content = mess;
-                }
+            InitializeComponent();
+            this.Notification("Success!"); 
         }
+        public void Notification(string mess)
+        {
+            this.lblMess.Content = mess;
+            this.Show(); 
+        }
+    }
 }
