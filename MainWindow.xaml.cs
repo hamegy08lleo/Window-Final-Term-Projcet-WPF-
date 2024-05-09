@@ -21,8 +21,8 @@ namespace Window_Final_Term_Projcet__WPF_
     /// </summary>
     public partial class MainWindow : Window
     {
-        public int? customerID = 1;
-        public int? ownerID = 1;
+        public int? customerID = null;
+        public int? ownerID = null;
         public MainWindow()
         {
             InitializeComponent();
@@ -58,7 +58,12 @@ namespace Window_Final_Term_Projcet__WPF_
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
             WindowLogin windowLogin = new WindowLogin();
-            windowLogin.ShowDialog();
+            bool? result = windowLogin.ShowDialog(); 
+            if (result == true)
+            {
+                customerID = windowLogin.userID;
+                MessageBox.Show(customerID.Value.ToString());
+            }
         }
 
         private void btnPartnership_Click(object sender, RoutedEventArgs e)
