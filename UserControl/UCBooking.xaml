@@ -6,15 +6,22 @@
              xmlns:local="clr-namespace:Window_Final_Term_Projcet__WPF_"
              mc:Ignorable="d" 
                   d:DesignHeight="200" d:DesignWidth="1000">
-        <Border BorderThickness="2" Width="1000" Height="200">
-                <Border CornerRadius="25" BorderThickness="05" BorderBrush="Black" Padding="0" Background="White">
-                        <Grid>
-                                <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="600"/>
-                                        <ColumnDefinition Width="400"/>
-                                </Grid.ColumnDefinitions>
-                                <Rectangle Height="200" Width="5" Grid.Column="1" HorizontalAlignment="left" Fill="Black"/>
-                                <Label x:Name="lblBooking" Grid.Column="0" Content="Booking title" FontSize="50"
+    <Border BorderThickness="2" Width="1000" Height="200">
+        <Border CornerRadius="25" BorderThickness="05" BorderBrush="Black" Padding="0" Background="White">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="600"/>
+                    <ColumnDefinition Width="400"/>
+                </Grid.ColumnDefinitions>
+                <Rectangle Height="200" Width="5" Grid.Column="1" HorizontalAlignment="left" Fill="Black"/>
+                <Grid Grid.Column ="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="100"/>
+                        <RowDefinition Height="100"/>
+                    </Grid.RowDefinitions>
+                    <Label x:Name="lblHotelName" Grid.Row="0" Content="Booking title" FontSize="50" 
+                       VerticalContentAlignment="Center" Padding="30,5,5,5" FontWeight="SemiBold"/>
+                    <Label x:Name="lblRoomType" Grid.Row="1" Content="Booking title" FontSize="50" 
                        VerticalContentAlignment="Center" Padding="30,5,5,5" FontWeight="SemiBold"/>
                 </Grid>
                 <Button x:Name="btnCancel" Grid.Column="1" Content="Cancel" BorderBrush="{x:Null}" Background="#FFBEE6FD" Height="100" Width="300" FontSize="24" FontWeight="Bold" Margin="50,40,50,46" Click="btnCancel_Click">
