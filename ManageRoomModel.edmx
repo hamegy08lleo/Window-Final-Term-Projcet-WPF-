@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="ManageRoomModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="ManageRoomModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Booking">
           <Key>
             <PropertyRef Name="bookingID" />
@@ -43,7 +43,7 @@
           <Property Name="hotelID" Type="int" Nullable="false" />
           <Property Name="roomID" Type="int" Nullable="false" />
         </EntityType>
-        <Association Name="FK__Booking__roomID__11D4A34F">
+        <Association Name="FK__Booking__roomID__3BCADD1B">
           <End Role="Room" Type="Self.Room" Multiplicity="1" />
           <End Role="Booking" Type="Self.Booking" Multiplicity="*" />
           <ReferentialConstraint>
@@ -55,7 +55,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Room__hotelID__1699586C">
+        <Association Name="FK__Room__hotelID__408F9238">
           <End Role="Hotel" Type="Self.Hotel" Multiplicity="1" />
           <End Role="Room" Type="Self.Room" Multiplicity="*" />
           <ReferentialConstraint>
@@ -67,7 +67,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__SearchRes__hotel__14B10FFA">
+        <Association Name="FK__SearchRes__hotel__3EA749C6">
           <End Role="Hotel" Type="Self.Hotel" Multiplicity="1" />
           <End Role="SearchResult" Type="Self.SearchResult" Multiplicity="*" />
           <ReferentialConstraint>
@@ -79,7 +79,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__SearchRes__roomI__15A53433">
+        <Association Name="FK__SearchRes__roomI__3F9B6DFF">
           <End Role="Room" Type="Self.Room" Multiplicity="1" />
           <End Role="SearchResult" Type="Self.SearchResult" Multiplicity="0..1" />
           <ReferentialConstraint>
@@ -96,25 +96,24 @@
           <EntitySet Name="Hotel" EntityType="Self.Hotel" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Room" EntityType="Self.Room" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SearchResult" EntityType="Self.SearchResult" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK__Booking__roomID__11D4A34F" Association="Self.FK__Booking__roomID__11D4A34F">
+          <AssociationSet Name="FK__Booking__roomID__3BCADD1B" Association="Self.FK__Booking__roomID__3BCADD1B">
             <End Role="Room" EntitySet="Room" />
             <End Role="Booking" EntitySet="Booking" />
           </AssociationSet>
-          <AssociationSet Name="FK__Room__hotelID__1699586C" Association="Self.FK__Room__hotelID__1699586C">
+          <AssociationSet Name="FK__Room__hotelID__408F9238" Association="Self.FK__Room__hotelID__408F9238">
             <End Role="Hotel" EntitySet="Hotel" />
             <End Role="Room" EntitySet="Room" />
           </AssociationSet>
-          <AssociationSet Name="FK__SearchRes__hotel__14B10FFA" Association="Self.FK__SearchRes__hotel__14B10FFA">
+          <AssociationSet Name="FK__SearchRes__hotel__3EA749C6" Association="Self.FK__SearchRes__hotel__3EA749C6">
             <End Role="Hotel" EntitySet="Hotel" />
             <End Role="SearchResult" EntitySet="SearchResult" />
           </AssociationSet>
-          <AssociationSet Name="FK__SearchRes__roomI__15A53433" Association="Self.FK__SearchRes__roomI__15A53433">
+          <AssociationSet Name="FK__SearchRes__roomI__3F9B6DFF" Association="Self.FK__SearchRes__roomI__3F9B6DFF">
             <End Role="Room" EntitySet="Room" />
             <End Role="SearchResult" EntitySet="SearchResult" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="ManageRoomModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">

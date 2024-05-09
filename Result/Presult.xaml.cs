@@ -45,18 +45,8 @@ namespace Window_Final_Term_Projcet__WPF_
                                  };
             foreach (var result in displayResults)
             {
-                UCHotelResult ucResult = new UCHotelResult(result.Hotel, result.roomType, result.price);
-                ucResult.lblHotelName.Content = result.Hotel.hotelName.ToString();
-                ucResult.lblAddress.Content = result.Hotel.address; 
-                ucResult.lblPrice.Content = result.price.ToString() + "$";
-
-                string rating = "";
-                for (int i = 0; i < float.Parse(result.Hotel.rating.ToString()); i++)
-                {
-                    rating += "⭐";
-                }
-                ucResult.lblRating.Content = rating;
-                ucResult.btnSelectRoom.Click += ucResult.btnSelectRoom_Click;
+                var selection = new RoomSelection(result.Hotel, result.roomType, result.price, result.amount);
+                UCHotelResult ucResult = new UCHotelResult(selection);
                 this.spResult.Children.Add(ucResult);
             }
             StackPanel nullHotel = new StackPanel();

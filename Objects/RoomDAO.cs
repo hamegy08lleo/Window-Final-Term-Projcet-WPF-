@@ -102,7 +102,6 @@ namespace Window_Final_Term_Projcet__WPF_
             //}
             //return dt.Rows[0][0].ToString(); 
 
-            MessageBox.Show($"{selection.Hotel.hotelID.ToString()}, {selection.RoomType}");
             var query = from q in dataBase.SearchResult
                         where q.hotelID == selection.Hotel.hotelID && q.roomType == selection.RoomType
                         select q;
