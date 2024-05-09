@@ -10,21 +10,20 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Window_Final_Term_Projcet__WPF_
+namespace Window_Final_Term_Projcet__WPF_.Login_and_Register
 {
-    /// <summary>
-    /// Interaction logic for WindowRegister.xaml
-    /// </summary>
-    public partial class WindowRegister : Window
-    {
-        public WindowRegister()
+        /// <summary>
+        /// Interaction logic for PLogin.xaml
+        /// </summary>
+        public partial class PLogin : Page
         {
-            InitializeComponent();
-        }
-
-
+                public PLogin()
+                {
+                        InitializeComponent();
+                }
                 private void txtUsername_GotFocus(object sender, RoutedEventArgs e)
                 {
                         if (txtUsername.Text == "Username or email")
@@ -65,13 +64,13 @@ namespace Window_Final_Term_Projcet__WPF_
 
                 private void btnLogin_Click(object sender, RoutedEventArgs e)
                 {
-                        WindowLogin windowLogin = new WindowLogin();
-                        this.Close();
-                        windowLogin.ShowDialog();
+
                 }
-                private void btnSubmit_Click(object sender, RoutedEventArgs e)
+
+                private void btnRegister_Click(object sender, RoutedEventArgs e)
                 {
 
                 }
+
         }
 }

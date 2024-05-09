@@ -49,8 +49,8 @@ namespace Window_Final_Term_Projcet__WPF_
         }
         private void btnRegister_Click(object sender, RoutedEventArgs e)
         {
-            WindowLogin windowLogin = new WindowLogin();
-            windowLogin.ShowDialog();
+            WindowRegister windowRegist = new WindowRegister();
+            windowRegist.ShowDialog();
         }
 
         private void btnLogin_Click(object sender, RoutedEventArgs e)
