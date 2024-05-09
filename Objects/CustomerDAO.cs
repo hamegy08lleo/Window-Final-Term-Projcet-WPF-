@@ -9,7 +9,29 @@ namespace Window_Final_Term_Projcet__WPF_.Objects
     internal class CustomerDAO : DAO
     {
         public CustomerDAO() { }   
-        public int? validateUser(String username, String password)
+
+        public bool isUniqueUsername(string username)
+        {
+            var query = from q in dataBase.Customer
+                        where q.username == username
+                        select q;
+            return query.Count() == 0; 
+        }
+        public bool isUniqueEmail(string email)
+        {
+            var query = from q in dataBase.Customer
+                        where q.email == email
+                        select q;
+            return query.Count() == 0; 
+        }
+        public bool isUniquePhoneNumber(string phoneNumber)
+        {
+            var query = from q in dataBase.Customer
+                        where q.phoneNumber == phoneNumber
+                        select q;
+            return query.Count() == 0; 
+        }
+        public int? validateLogin(String username, String password)
         {
             if (String.IsNullOrEmpty(username) || String.IsNullOrEmpty(password)) 
             {
@@ -35,6 +57,36 @@ namespace Window_Final_Term_Projcet__WPF_.Objects
             }
             new WNotifiaction().Notification("Success!");
             return user.customerID;
+        }
+
+        public bool validateRegister(String username, String email, String phoneNumber)
+        {
+            if (String.IsNullOrEmpty (username))
+            {
+                new WNotifiaction().Notification("username must be non empty");
+                return false; 
+            }
+            if (!isUniqueEmail(email) || !isUniquePhoneNumber(phoneNumber) || !isUniqueUsername(username))
+            {
+                new WNotifiaction().Notification("username, email or phone number existed");
+                return false; 
+            }
+            return true; 
+        }
+
+        public int register(String username, String password, String email, String phoneNumber)
+        {
+            Customer customer = new Customer
+            {
+                username = username,
+                password = password,
+                email = email,
+                phoneNumber = phoneNumber, 
+            };
+            dataBase.Customer.Add(customer); 
+            dataBase.SaveChanges();
+            new WNotifiaction().Notification("Success!"); 
+            return customer.customerID; 
         }
     }
 }

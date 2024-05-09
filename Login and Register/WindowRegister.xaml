@@ -76,7 +76,7 @@
                                 <Image Source="/BackgroundIMG/person.png" Stretch="Fill" Width="35" Height="35" VerticalAlignment="Top"/>
 
                                 <TextBox x:Name="txtName" Text ="Name" Foreground="Gray" FontSize="20" Height="35" 
-                                        VerticalAlignment="Top" HorizontalAlignment="Left" Width="300"  GotFocus="txtUsername_GotFocus" LostFocus="txtUsername_LostFocus" BorderBrush="Black" Padding="10,2,0,0">
+                                        VerticalAlignment="Top" HorizontalAlignment="Left" Width="300"  GotFocus="txtName_GotFocus" LostFocus="txtName_LostFocus" BorderBrush="Black" Padding="10,2,0,0">
                                         <TextBox.Resources>
                                                 <Style TargetType="Border">
                                                         <Setter Property="CornerRadius" Value="20"/>
@@ -89,7 +89,7 @@
                                 <Image Source="/BackgroundIMG/gmail.png" Stretch="Fill" Width="30" Height="30" VerticalAlignment="Top" Margin="3,2,0,0"/>
 
                                 <TextBox x:Name="txtEmail" Text ="Email" Foreground="Gray" FontSize="20" Height="35" 
-                VerticalAlignment="Top" HorizontalAlignment="Left" Width="300"  GotFocus="txtUsername_GotFocus" LostFocus="txtUsername_LostFocus" BorderBrush="Black" Padding="10,2,0,0" Margin="2,0,0,0">
+                VerticalAlignment="Top" HorizontalAlignment="Left" Width="300"  GotFocus="txtEmail_GotFocus" LostFocus="txtEmail_LostFocus" BorderBrush="Black" Padding="10,2,0,0" Margin="2,0,0,0">
                                         <TextBox.Resources>
                                                 <Style TargetType="Border">
                                                         <Setter Property="CornerRadius" Value="20"/>
@@ -102,7 +102,7 @@
                         <StackPanel Grid.Row="5" Orientation="Horizontal">
                                 <Image Source="/BackgroundIMG/phone.png" Stretch="Fill" Width="35" Height="35" VerticalAlignment="Top"/>
                                 <TextBox x:Name="txtPhone" Text ="Phone number" Foreground="Gray" FontSize="20" Height="35" 
-                                        VerticalAlignment="Top" HorizontalAlignment="Left" Width="300"  GotFocus="txtUsername_GotFocus" LostFocus="txtUsername_LostFocus" BorderBrush="Black" Padding="10,2,0,0">
+                                        VerticalAlignment="Top" HorizontalAlignment="Left" Width="300"  GotFocus="txtPhone_GotFocus" LostFocus="txtPhone_LostFocus" BorderBrush="Black" Padding="10,2,0,0">
                                         <TextBox.Resources>
                                                 <Style TargetType="Border">
                                                         <Setter Property="CornerRadius" Value="20"/>

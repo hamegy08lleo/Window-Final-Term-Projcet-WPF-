@@ -67,7 +67,7 @@ namespace Window_Final_Term_Projcet__WPF_
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
             CustomerDAO customerDAO = new CustomerDAO();
-            var customerID = customerDAO.validateUser(txtUsername.Text, pabPassword.Password); 
+            var customerID = customerDAO.validateLogin(txtUsername.Text, pabPassword.Password); 
             if (customerID != null) {
                 this.userID = customerID;
                 this.DialogResult = true; 

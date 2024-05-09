@@ -113,6 +113,7 @@
     <Compile Include="Customer.cs">
       <DependentUpon>ManageRoomModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Objects\CustomerDAO.cs" />
     <Compile Include="Facility.cs">
       <DependentUpon>ManageRoomModel.tt</DependentUpon>
     </Compile>
