@@ -61,6 +61,17 @@ namespace Window_Final_Term_Projcet__WPF_
                 txtPassword.Text = "Password";
             }
         }
-        
+
+        private void btnLogin_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnRegister_Click(object sender, RoutedEventArgs e)
+        {
+                WindowRegister windowRegister = new WindowRegister();
+                        this.Close();
+                windowRegister.ShowDialog();
+        }
     }
 }

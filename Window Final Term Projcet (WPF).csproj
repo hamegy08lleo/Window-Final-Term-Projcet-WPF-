@@ -119,6 +119,12 @@
     <Compile Include="Hotel.cs">
       <DependentUpon>ManageRoomModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Login and Register\PLogin.xaml.cs">
+      <DependentUpon>PLogin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Login and Register\PRegister.xaml.cs">
+      <DependentUpon>PRegister.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ImageItem.cs">
       <DependentUpon>ManageRoomModel.tt</DependentUpon>
     </Compile>
@@ -233,6 +239,14 @@
       <DependentUpon>WNotifiaction.xaml</DependentUpon>
     </Compile>
     <Page Include="DebugWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Login and Register\PLogin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Login and Register\PRegister.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -403,6 +417,12 @@
     <Folder Include="UCHotelChild\" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="BackgroundIMG\gmail.png" />
+    <Resource Include="BackgroundIMG\person.png" />
+    <Resource Include="BackgroundIMG\locked-computer.png" />
+    <Resource Include="BackgroundIMG\fabio-comparelli-uq2E2V4LhCY-unsplash.jpg" />
+    <Resource Include="BackgroundIMG\login.jpg" />
+    <Resource Include="BackgroundIMG\phone.png" />
     <Content Include="ManageRoomModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>ManageRoomModel.edmx</DependentUpon>
