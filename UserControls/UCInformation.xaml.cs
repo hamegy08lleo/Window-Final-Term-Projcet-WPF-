@@ -15,14 +15,15 @@ using System.Windows.Shapes;
 
 namespace Window_Final_Term_Projcet__WPF_
 {
-        /// <summary>
-        /// Interaction logic for UCRoom.xaml
-        /// </summary>
-        public partial class UCRoom : UserControl
+    /// <summary>
+    /// Interaction logic for UCInformation.xaml
+    /// </summary>
+    public partial class UCInformation : System.Windows.Controls.UserControl
+    {
+        public UCInformation()
         {
-                public UCRoom()
-                {
-                        InitializeComponent();
-                }
+            InitializeComponent();
         }
+
+    }
 }

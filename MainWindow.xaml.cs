@@ -21,6 +21,8 @@ namespace Window_Final_Term_Projcet__WPF_
     /// </summary>
     public partial class MainWindow : Window
     {
+        public int? customerID = null;
+        public int? ownerID = null;
         public MainWindow()
         {
             InitializeComponent();

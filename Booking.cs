@@ -16,7 +16,11 @@ namespace Window_Final_Term_Projcet__WPF_
     {
         public int bookingID { get; set; }
         public int roomID { get; set; }
+        public int customerID { get; set; }
+        public System.DateTime checkin { get; set; }
+        public System.DateTime checkout { get; set; }
     
         public virtual Room Room { get; set; }
+        public virtual Customer Customer { get; set; }
     }
 }

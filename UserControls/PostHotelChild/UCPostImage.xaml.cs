@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Window_Final_Term_Projcet__WPF_.PHotelDetailChild
+namespace Window_Final_Term_Projcet__WPF_.UserControl.PostHotelChild
 {
     /// <summary>
-    /// Interaction logic for UClibary.xaml
+    /// Interaction logic for UCPostImage.xaml
     /// </summary>
-    public partial class UClibary : System.Windows.Controls.UserControl
+    public partial class UCPostImage : System.Windows.Controls.UserControl
     {
-        public UClibary()
+        public UCPostImage()
         {
             InitializeComponent();
         }

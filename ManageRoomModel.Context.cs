@@ -29,5 +29,7 @@ namespace Window_Final_Term_Projcet__WPF_
         public virtual DbSet<Hotel> Hotel { get; set; }
         public virtual DbSet<Room> Room { get; set; }
         public virtual DbSet<SearchResult> SearchResult { get; set; }
+        public virtual DbSet<Customer> Customer { get; set; }
+        public virtual DbSet<Owner> Owner { get; set; }
     }
 }

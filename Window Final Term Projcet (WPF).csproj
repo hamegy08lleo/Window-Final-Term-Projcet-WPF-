@@ -66,6 +66,7 @@
     <Reference Include="System.Data.SqlClient, Version=4.6.1.6, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>packages\System.Data.SqlClient.4.8.6\lib\net461\System.Data.SqlClient.dll</HintPath>
     </Reference>
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
       <Private>True</Private>
@@ -87,6 +88,7 @@
     <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
     </Reference>
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -106,6 +108,9 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Booking.cs">
+      <DependentUpon>ManageRoomModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Customer.cs">
       <DependentUpon>ManageRoomModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Hotel.cs">
@@ -137,6 +142,9 @@
     <Compile Include="Objects\OwnerAddHotel.cs" />
     <Compile Include="Objects\OwnerPostRoom.cs" />
     <Compile Include="Objects\SearchResultDAO.cs" />
+    <Compile Include="Owner.cs">
+      <DependentUpon>ManageRoomModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Partnership\PAddHotel.xaml.cs">
       <DependentUpon>PAddHotel.xaml</DependentUpon>
     </Compile>
@@ -167,23 +175,26 @@
     <Compile Include="SearchResult.cs">
       <DependentUpon>ManageRoomModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="UserControl\PostHotelChild\UCPostFacilities.xaml.cs">
+    <Compile Include="UserControls\PostHotelChild\UCPostFacilities.xaml.cs">
       <DependentUpon>UCPostFacilities.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UserControl\PostHotelChild\UCPostGeneral.xaml.cs">
+    <Compile Include="UserControls\PostHotelChild\UCPostGeneral.xaml.cs">
       <DependentUpon>UCPostGeneral.xaml</DependentUpon>
     </Compile>
     <Compile Include="Partnership\PShowHotel.xaml.cs">
       <DependentUpon>PShowHotel.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UserControl\UCBooking.xaml.cs">
+    <Compile Include="UserControls\PostHotelChild\UCPostImage.xaml.cs">
+      <DependentUpon>UCPostImage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UCBooking.xaml.cs">
       <DependentUpon>UCBooking.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UserControl\UCHotel.xaml.cs">
+    <Compile Include="UserControls\UCHotel.xaml.cs">
       <DependentUpon>UCHotel.xaml</DependentUpon>
     </Compile>
     <Compile Include="Objects\RoomSelection.cs" />
-    <Compile Include="UserControl\UCHotelResult.xaml.cs">
+    <Compile Include="UserControls\UCHotelResult.xaml.cs">
       <DependentUpon>UCHotelResult.xaml</DependentUpon>
     </Compile>
     <Compile Include="PHotelDetailChild\UClibary.xaml.cs">
@@ -196,13 +207,13 @@
       <DependentUpon>Presult.xaml</DependentUpon>
     </Compile>
     <Compile Include="Objects\RoomDAO.cs" />
-    <Compile Include="UserControl\UCInformation.xaml.cs">
+    <Compile Include="UserControls\UCInformation.xaml.cs">
       <DependentUpon>UCInformation.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UserControl\UCRoom.xaml.cs">
+    <Compile Include="UserControls\UCRoom.xaml.cs">
       <DependentUpon>UCRoom.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UserControl\UCSmallLibary.xaml.cs">
+    <Compile Include="UserControls\UCSmallLibary.xaml.cs">
       <DependentUpon>UCSmallLibary.xaml</DependentUpon>
     </Compile>
     <Compile Include="Login and Register\WindowLogin.xaml.cs">
@@ -262,11 +273,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="UserControl\PostHotelChild\UCPostFacilities.xaml">
+    <Page Include="UserControls\PostHotelChild\UCPostFacilities.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="UserControl\PostHotelChild\UCPostGeneral.xaml">
+    <Page Include="UserControls\PostHotelChild\UCPostGeneral.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -274,15 +285,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="UserControl\UCBooking.xaml">
+    <Page Include="UserControls\PostHotelChild\UCPostImage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="UserControl\UCHotel.xaml">
+    <Page Include="UserControls\UCBooking.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="UserControl\UCHotelResult.xaml">
+    <Page Include="UserControls\UCHotel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\UCHotelResult.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -306,15 +321,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="UserControl\UCInformation.xaml">
+    <Page Include="UserControls\UCInformation.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="UserControl\UCRoom.xaml">
+    <Page Include="UserControls\UCRoom.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="UserControl\UCSmallLibary.xaml">
+    <Page Include="UserControls\UCSmallLibary.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

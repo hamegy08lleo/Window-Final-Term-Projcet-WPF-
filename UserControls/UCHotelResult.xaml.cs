@@ -18,9 +18,14 @@ namespace Window_Final_Term_Projcet__WPF_
     /// <summary>
     /// Interaction logic for UCHotelResult.xaml
     /// </summary>
-    public partial class UCHotelResult : UserControl
+    public partial class UCHotelResult : System.Windows.Controls.UserControl
     {
         private RoomSelection selection;
+
+        public UCHotelResult()
+        {
+        }
+
         public UCHotelResult(RoomSelection selection)
         {
             InitializeComponent();

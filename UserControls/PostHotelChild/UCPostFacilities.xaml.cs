@@ -18,7 +18,7 @@ namespace Window_Final_Term_Projcet__WPF_.PostHotelChild
         /// <summary>
         /// Interaction logic for UCPostFacilities.xaml
         /// </summary>
-        public partial class UCPostFacilities : UserControl
+        public partial class UCPostFacilities : System.Windows.Controls.UserControl
         {
                 public UCPostFacilities()
                 {

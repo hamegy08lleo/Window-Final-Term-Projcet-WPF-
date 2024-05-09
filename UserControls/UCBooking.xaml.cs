@@ -19,7 +19,7 @@ namespace Window_Final_Term_Projcet__WPF_
     /// <summary>
     /// Interaction logic for UCBooking.xaml
     /// </summary>
-    public partial class UCBooking : UserControl
+    public partial class UCBooking : System.Windows.Controls.UserControl
     {
 
         private int bookingID; 

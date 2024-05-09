@@ -12,28 +12,22 @@ namespace Window_Final_Term_Projcet__WPF_
     using System;
     using System.Collections.Generic;
     
-    public partial class Hotel
+    public partial class Owner
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Hotel()
+        public Owner()
         {
-            this.Room = new HashSet<Room>();
-            this.SearchResult = new HashSet<SearchResult>();
+            this.Hotel = new HashSet<Hotel>();
         }
     
-        public int hotelID { get; set; }
-        public string hotelName { get; set; }
-        public string city { get; set; }
-        public string address { get; set; }
+        public int ownerID { get; set; }
+        public string username { get; set; }
+        public string password { get; set; }
+        public string name { get; set; }
         public string email { get; set; }
         public string phoneNumber { get; set; }
-        public double rating { get; set; }
-        public int ownerID { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Room> Room { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<SearchResult> SearchResult { get; set; }
-        public virtual Owner Owner { get; set; }
+        public virtual ICollection<Hotel> Hotel { get; set; }
     }
 }

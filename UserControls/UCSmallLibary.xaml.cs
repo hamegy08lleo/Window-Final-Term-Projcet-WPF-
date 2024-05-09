@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace Window_Final_Term_Projcet__WPF_
 {
         /// <summary>
-        /// Interaction logic for UCHotel.xaml
+        /// Interaction logic for UCSmallLibary.xaml
         /// </summary>
-        public partial class UCHotel : UserControl
+        public partial class UCSmallLibary : System.Windows.Controls.UserControl
         {
-                public UCHotel()
+                public UCSmallLibary()
                 {
                         InitializeComponent();
                 }

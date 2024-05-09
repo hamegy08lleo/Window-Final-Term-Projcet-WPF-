@@ -38,9 +38,15 @@ namespace Window_Final_Term_Projcet__WPF_.PHotelDetailChild
 
         private void btnChoose_Click(object sender, RoutedEventArgs e)
         {
+            MainWindow mainWindow = Window.GetWindow(this) as MainWindow;
+            if (mainWindow.customerID == null)
+            {
+                WindowLogin windowLogin = new WindowLogin();
+                windowLogin.Show();
+                return;
+            }
             BookingDAO bookingDAO = new BookingDAO();
             bookingDAO.addBooking(pHotelDetail().Selection);
-            MainWindow mainWindow = Window.GetWindow(this) as MainWindow;
             mainWindow.mainContent.Content = new PBooking(); 
         }
     }

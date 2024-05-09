@@ -13,17 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Window_Final_Term_Projcet__WPF_
+namespace Window_Final_Term_Projcet__WPF_.PostHotelChild
 {
-    /// <summary>
-    /// Interaction logic for UCInformation.xaml
-    /// </summary>
-    public partial class UCInformation : UserControl
-    {
-        public UCInformation()
+        /// <summary>
+        /// Interaction logic for UCPostGeneral.xaml
+        /// </summary>
+        public partial class UCPostGeneral : System.Windows.Controls.UserControl
         {
-            InitializeComponent();
+                public UCPostGeneral()
+                {
+                        InitializeComponent();
+                }
         }
-
-    }
 }

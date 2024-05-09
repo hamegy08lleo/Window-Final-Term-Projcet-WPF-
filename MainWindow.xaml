@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Window_Final_Term_Projcet__WPF_"
         mc:Ignorable="d"
-        Title="horizon Trail Travel" Height="1000" Width="1600" ResizeMode="NoResize">
+        Title="horizon Trail Travel" Height="1000" Width="1600" ResizeMode="CanResize">
     <Grid Name="gMainWindow"  ScrollViewer.VerticalScrollBarVisibility="Disabled">
 
         <Grid.RowDefinitions>
