@@ -64,22 +64,22 @@ namespace Window_Final_Term_Projcet__WPF_
             {
                 customerID = windowLogin.userID;
                 MessageBox.Show(customerID.Value.ToString());
+                this.btnLogin.Visibility = Visibility.Collapsed;
+                this.btnRegister.Visibility = Visibility.Collapsed;
+                this.btnLogout.Visibility = Visibility.Visible;
+                this.btnBooking.Visibility = Visibility.Visible;
+                CustomerDAO customerDAO = new CustomerDAO();
+                var username = customerDAO.getUsername(customerID.Value);
+                this.btnUsername.Content = username;
+                this.btnUsername.Visibility = Visibility.Visible;
             }
-            this.btnLogin.Visibility = Visibility.Collapsed;
-            this.btnRegister.Visibility = Visibility.Collapsed;
-            this.btnLogout.Visibility = Visibility.Visible;
-            this.btnBooking.Visibility = Visibility.Visible;
-            CustomerDAO customerDAO = new CustomerDAO();
-            var username = customerDAO.getUsername(customerID.Value);
-            this.btnUsername.Content = username;
-            this.btnUsername.Visibility = Visibility.Visible;
         }
 
         private void btnPartnership_Click(object sender, RoutedEventArgs e)
         {
             if (this.btnPartnership.Content.ToString() == "Partnership")
             {
-                mainContent.Content = new PManager();
+                mainContent.Content = new PManager(ownerID);
                 this.btnBooking.Visibility = Visibility.Collapsed;
                 this.btnLogout_Click(sender, e);  
                 this.btnPartnership.Content = "Customer";

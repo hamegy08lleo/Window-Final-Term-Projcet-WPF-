@@ -21,20 +21,26 @@ namespace Window_Final_Term_Projcet__WPF_
     /// </summary>
     public partial class PManager : Page
     {
-        public PManager()
+        public int? ownerID;
+        public PManager() {
+            InitializeComponent();
+            this.mainContent.Content = new PLogin();
+        }
+        public PManager(int? ownerID)
         {
             InitializeComponent();
             this.mainContent.Content = new PLogin();
+            this.ownerID = ownerID;
         }
 
         private void btnMoreRooms_Click(object sender, RoutedEventArgs e)
         {
-            this.mainContent.Content = new PPartnership();
+            this.mainContent.Content = new PPartnership(ownerID.Value);
         }
 
         private void btnMyBusiness_Click(object sender, RoutedEventArgs e)
         {
-            this.mainContent.Content = new PShowHotel();
+            this.mainContent.Content = new PShowHotel(ownerID.Value);
         }
 
         private void btnMoreBusiness_Click(object sender, RoutedEventArgs e)

@@ -34,7 +34,7 @@
                                 Background="#FF36ADF9" BorderBrush="{x:Null}" 
                                 Foreground="White" FontSize="24" FontWeight="SemiBold" 
                                 Click="btnMyBusiness_Click"
-                                >
+                                Visibility="Collapsed">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="25"/>
@@ -45,7 +45,7 @@
             <Button Content="More Business" x:Name="btnMoreBusiness" Grid.Column="3" Background="#FF36ADF9" BorderBrush="{x:Null}" 
                                 Foreground="White" FontSize="24" 
                                 FontWeight="SemiBold" Click="btnMoreBusiness_Click"
-                               >
+                                Visibility="Collapsed">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="25"/>
@@ -56,7 +56,7 @@
             <Button Content="More Rooms" x:Name="btnMoreRooms" Grid.Column="5" Background="#FF36ADF9" BorderBrush="{x:Null}" 
                                 Foreground="White" FontSize="24" 
                                 FontWeight="SemiBold" Click="btnMoreRooms_Click"
-                                >
+                                Visibility="Collapsed">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="25"/>

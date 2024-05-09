@@ -79,9 +79,13 @@ namespace Window_Final_Term_Projcet__WPF_.Login_and_Register
             OwnerDAO ownerDAO = new OwnerDAO();
             var ownerID = ownerDAO.validateLogin(txtUsername.Text, pabPassword.Password); 
             if (ownerID != null) {
-                this.userID = ownerID;
+                this.userID = ownerID.Value;
+                MainWindow mainWindow = Window.GetWindow(this) as MainWindow;
+                mainWindow.ownerID = ownerID;
+                MessageBox.Show(mainWindow.ownerID.ToString()); 
                 PManager pManager = GetPManager();
-                pManager.mainContent.Navigate(new PShowHotel()); 
+                pManager.ownerID = ownerID.Value; 
+                pManager.mainContent.Navigate(new PShowHotel(ownerID.Value));
             }
         }
 

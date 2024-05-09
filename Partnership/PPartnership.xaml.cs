@@ -21,11 +21,14 @@ namespace Window_Final_Term_Projcet__WPF_
     /// </summary>
     public partial class PPartnership : Page
     {
-        public PPartnership()
+        public int ownerID;
+        public PPartnership(int ownerID)
         {
             InitializeComponent();
             HotelDAO hotelDAO = new HotelDAO();
-            var hotels = hotelDAO.listHotel(); 
+            MainWindow mainWindow = Window.GetWindow(this) as MainWindow;
+            this.ownerID = ownerID;
+            var hotels = hotelDAO.listHotel(ownerID); 
             foreach(Hotel hotel in hotels)
             {
 

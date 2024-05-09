@@ -21,11 +21,13 @@ namespace Window_Final_Term_Projcet__WPF_
     /// </summary>
     public partial class PShowHotel : Page
     {
-        public PShowHotel()
+        public int ownerID;
+        public PShowHotel(int ownerID)
         {
             InitializeComponent();
             HotelDAO hotelDAO = new HotelDAO();
-            var hotels = hotelDAO.listHotel();
+            this.ownerID = ownerID;
+            var hotels = hotelDAO.listHotel(ownerID);
             foreach (var hotel in hotels) 
             {
                 UCHotel ucHotel = new UCHotel();

@@ -56,7 +56,7 @@ namespace Window_Final_Term_Projcet__WPF_
             return query.FirstOrDefault();
         }
 
-        public IQueryable<Hotel> listHotel()
+        public IQueryable<Hotel> listHotel(int ownerID)
         {
             //string sqlStr = "SELECT hotelName FROM " +
             //    "Hotel";
@@ -64,6 +64,7 @@ namespace Window_Final_Term_Projcet__WPF_
             //return dt; 
             var db = new ManageRoomEntities();
             var query = from q in db.Hotel
+                        where q.ownerID == ownerID
                         select q;
             return query; 
         }
