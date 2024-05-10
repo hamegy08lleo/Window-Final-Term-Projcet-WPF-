@@ -7,10 +7,10 @@
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="1100">
         <Border BorderThickness="2" Width="1050" Height="300"  >
-                <Border CornerRadius="0,25,25,0" BorderBrush="Black" BorderThickness="5" Padding="0" Background="White">
+                <Border CornerRadius="25" BorderBrush="Black" BorderThickness="5" Padding="0" Background="White">
                         <Grid>
                                 <Grid.RowDefinitions>
-                                        <RowDefinition Height="50"/>
+                                        <RowDefinition Height="0"/>
                                         <RowDefinition Height="107*"/>
                                 </Grid.RowDefinitions>
                                 <Grid.ColumnDefinitions>
@@ -19,7 +19,12 @@
                                         <ColumnDefinition Width="43.333"/>
                                         <ColumnDefinition Width="206.667"/>
                                 </Grid.ColumnDefinitions>
-                                <Window_Final_Term_Projcet__WPF_:UCSmallLibary Grid.RowSpan="2" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,0,30,0" Width="320"/>
+                <Border x:Name="bImage" CornerRadius="22,0,0,22" Grid.Row="1" >
+                    <Border.Background>
+                        <ImageBrush x:Name="ibImage" ImageSource="/BackgroundIMG/BackgroundHotel.jpg"/>
+                    </Border.Background>
+                </Border>
+                                <Image x:Name="imgHotel"  Grid.RowSpan="2" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,0,30,0" Width="320"/>
                                 <Grid Grid.Column="1" Grid.RowSpan="2">
                                         <Grid.RowDefinitions>
                                                 <RowDefinition Height="10"/>

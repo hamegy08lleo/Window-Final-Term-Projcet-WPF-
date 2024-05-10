@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Window_Final_Term_Projcet__WPF_.Objects;
 
 namespace Window_Final_Term_Projcet__WPF_
 {
@@ -42,6 +44,20 @@ namespace Window_Final_Term_Projcet__WPF_
             }
             this.lblRating.Content = rating;
             this.btnSelectRoom.Click += this.btnSelectRoom_Click;
+            ImageDAO imageDAO = new ImageDAO();
+            var bitmapImage = imageDAO.get(selection.Hotel); 
+            if (bitmapImage == null)
+            {
+                string path = Environment.CurrentDirectory;
+                string path1 = Directory.GetParent(path).Parent.FullName;
+                ibImage.ImageSource = new BitmapImage(new Uri( path1 + "\\BackgroundIMG\\BackgroundHotel.jpg"));
+                //D:\University\Nam_2\Windows\WPF\BackgroundIMG\
+            }
+            else
+            {
+                ibImage.ImageSource = bitmapImage;
+            }
+            
         }
 
         public RoomSelection Selection { get => selection; set => selection = value; }

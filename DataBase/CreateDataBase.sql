@@ -129,8 +129,6 @@ CREATE TABLE ImageItem (
 	roomID int foreign key references room(roomID),
 )
 
-INSERT INTO ImageItem(imagePath, HotelID)
-VALUES('IMG/1.png', 1)
 
 CREATE TABLE Facility( 
 	facilityID int identity primary key, 
@@ -169,12 +167,12 @@ WHERE bookingID is null) as Q2 inner join Hotel on Hotel.hotelID = Q2.hotelID
 GROUP BY Hotel.hotelID, Hotel.hotelName, roomtype, city, address, price, rating) as Q3
 WHERE roomType = '2 Single Bed' AND city = 'Ho Chi Minh City'
 
-drop table Facility
 drop table HotelFacility
+drop table Facility
 drop table ImageItem
 drop table Booking
+drop table SearchResult
 drop table Room
 drop table Hotel
-drop table SearchResult
 drop table Owner
 drop table Customer

@@ -86,6 +86,9 @@ namespace Window_Final_Term_Projcet__WPF_.Login_and_Register
                 PManager pManager = GetPManager();
                 pManager.ownerID = ownerID.Value; 
                 pManager.mainContent.Navigate(new PShowHotel(ownerID.Value));
+                pManager.btnMoreBusiness.Visibility = Visibility.Visible;
+                pManager.btnMyBusiness.Visibility = Visibility.Visible;
+                pManager.btnMoreRooms.Visibility = Visibility.Visible;
             }
         }
 
