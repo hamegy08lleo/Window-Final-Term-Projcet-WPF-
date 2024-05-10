@@ -49,5 +49,8 @@ namespace Window_Final_Term_Projcet__WPF_
             roomDAO.Add(post);
         }
 
+        private void cbbHotel_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+        }
     }
 }
