@@ -27,7 +27,7 @@ namespace Window_Final_Term_Projcet__WPF_
 
                 private void txtUsername_GotFocus(object sender, RoutedEventArgs e)
                 {
-                        if (txtUsername.Text == "Username or email")
+                        if (txtUsername.Text == "Username")
                         {
                                 txtUsername.Foreground = new SolidColorBrush(Colors.Black);
                                 txtUsername.Text = "";
@@ -39,7 +39,7 @@ namespace Window_Final_Term_Projcet__WPF_
                         if (string.IsNullOrEmpty(txtUsername.Text))
                         {
                                 txtUsername.Foreground = new SolidColorBrush(Colors.Gray);
-                                txtUsername.Text = "Username or email";
+                                txtUsername.Text = "Username";
                         }
                 }
 
@@ -72,6 +72,60 @@ namespace Window_Final_Term_Projcet__WPF_
                 private void btnSubmit_Click(object sender, RoutedEventArgs e)
                 {
 
+                }
+
+                private void txtName_GotFocus(object sender, RoutedEventArgs e)
+                {
+                        if (txtName.Text == "Name")
+                        {
+                                txtName.Foreground = new SolidColorBrush(Colors.Black);
+                                txtName.Text = "";
+                        }
+                }
+
+                private void txtName_LostFocus(object sender, RoutedEventArgs e)
+                {
+                        if (string.IsNullOrEmpty(txtName.Text))
+                        {
+                                txtName.Foreground = new SolidColorBrush(Colors.Gray);
+                                txtName.Text = "Name";
+                        }
+                }
+
+                private void txtEmail_LostFocus(object sender, RoutedEventArgs e)
+                {
+                        if (string.IsNullOrEmpty(txtEmail.Text))
+                        {
+                                txtEmail.Foreground = new SolidColorBrush(Colors.Gray);
+                                txtEmail.Text = "Email";
+                        }
+                }
+
+                private void txtEmail_GotFocus(object sender, RoutedEventArgs e)
+                {
+                        if (txtEmail.Text == "Email")
+                        {
+                                txtEmail.Foreground = new SolidColorBrush(Colors.Black);
+                                txtEmail.Text = "";
+                        }
+                }
+
+                private void txtPhone_GotFocus(object sender, RoutedEventArgs e)
+                {
+                        if (txtPhone.Text == "Phone number")
+                        {
+                                txtPhone.Foreground = new SolidColorBrush(Colors.Black);
+                                txtPhone.Text = "";
+                        }
+                }
+
+                private void txtPhone_LostFocus(object sender, RoutedEventArgs e)
+                {
+                        if (string.IsNullOrEmpty(txtPhone.Text))
+                        {
+                                txtPhone.Foreground = new SolidColorBrush(Colors.Gray);
+                                txtPhone.Text = "Phone number";
+                        }
                 }
         }
 }

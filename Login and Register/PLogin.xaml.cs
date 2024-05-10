@@ -69,7 +69,8 @@ namespace Window_Final_Term_Projcet__WPF_.Login_and_Register
 
                 private void btnRegister_Click(object sender, RoutedEventArgs e)
                 {
-
+                        MainWindow mainWindow = new MainWindow();
+                        mainWindow.mainContent.Content = new PRegister();
                 }
 
         }

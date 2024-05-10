@@ -5,10 +5,125 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Window_Final_Term_Projcet__WPF_.Login_and_Register"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="600" d:DesignWidth="700"
       Title="PRegister">
 
-    <Grid>
-        
-    </Grid>
+        <Grid Background="White">
+                <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="300"/>
+                        <ColumnDefinition Width="440*"/>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0">
+                        <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="10"/>
+                        </Grid.ColumnDefinitions>
+                        <Image Source="/BackgroundIMG/login.jpg" HorizontalAlignment="Left" VerticalAlignment="Top" Height="600" Stretch="Fill" />
+                </Grid>
+                <Grid Grid.Column="1">
+                        <Grid.RowDefinitions>
+                                <RowDefinition Height="130"/>
+                                <RowDefinition Height="50"/>
+                                <RowDefinition Height="50"/>
+                                <RowDefinition Height="50"/>
+                                <RowDefinition Height="50"/>
+                                <RowDefinition Height="50"/>
+                                <RowDefinition Height="140"/>
+                                <RowDefinition Height="100"/>
+
+                        </Grid.RowDefinitions>
+                        <Grid Grid.Row="0">
+                                <StackPanel>
+                                        <StackPanel Orientation="Horizontal">
+                                                <Label Content="We are" FontSize="22" VerticalContentAlignment="Bottom" Foreground="#FF989898" FontWeight="Bold"/>
+                                                <Label Content="Horizon Trail Travel" FontSize="30" VerticalContentAlignment="Bottom" Padding="5,5,5,1.5" FontWeight="Bold"/>
+                                        </StackPanel>
+                                        <StackPanel>
+                                                <Label Content="Thrilled to have your hotel on our platform!" FontSize="16"/>
+                                                <Label Content="Excited for our journey together!" FontSize="16"/>
+
+                                        </StackPanel>
+                                </StackPanel>
+                        </Grid>
+                        <StackPanel Grid.Row ="1" Orientation="Horizontal">
+
+                                <Image Source="/BackgroundIMG/person.png" Stretch="Fill" Width="35" Height="35" VerticalAlignment="Top"/>
+
+                                <TextBox x:Name="txtUsername" Text ="Username" Foreground="Gray" FontSize="20" Height="35" 
+                                VerticalAlignment="Top" HorizontalAlignment="Left" Width="300"  GotFocus="txtUsername_GotFocus" LostFocus="txtUsername_LostFocus" BorderBrush="Black" Padding="10,2,0,0">
+                                        <TextBox.Resources>
+                                                <Style TargetType="Border">
+                                                        <Setter Property="CornerRadius" Value="20"/>
+                                                </Style>
+                                        </TextBox.Resources>
+                                </TextBox>
+                        </StackPanel>
+                        <Image Source="/BackgroundIMG/locked-computer.png" Grid.Row="2"  Stretch="Fill" Width="28" Height="24" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="3,5.9,0,0"/>
+
+                        <PasswordBox x:Name="pabPassword" FontSize="20" Height="35" 
+                            VerticalAlignment="Top" HorizontalAlignment="Left" Width="300" Grid.Row="2" 
+                            LostFocus="pabPassword_LostFocus" Margin="35,0,0,0" Padding="10,2,0,0" BorderBrush="{x:Null}">
+                        </PasswordBox>
+                        <TextBox x:Name="txtPassword" Text ="Password" Foreground="Gray" FontSize="20" Height="35" 
+                        VerticalAlignment="Top" HorizontalAlignment="Left" Width="300" 
+                        Grid.Row="2" GotFocus="txtPassword_GotFocus" Margin="35,0,0,0" Padding="10,2,0,0" BorderBrush="Black">
+                                <TextBox.Resources>
+                                        <Style TargetType="Border">
+                                                <Setter Property="CornerRadius" Value="20"/>
+                                        </Style>
+                                </TextBox.Resources>
+                        </TextBox>
+
+                        <StackPanel Grid.Row="3" Orientation="Horizontal">
+                                <Image Source="/BackgroundIMG/person.png" Stretch="Fill" Width="35" Height="35" VerticalAlignment="Top"/>
+
+                                <TextBox x:Name="txtName" Text ="Name" Foreground="Gray" FontSize="20" Height="35" 
+                                VerticalAlignment="Top" HorizontalAlignment="Left" Width="300"  GotFocus="txtUsername_GotFocus" LostFocus="txtUsername_LostFocus" BorderBrush="Black" Padding="10,2,0,0">
+                                        <TextBox.Resources>
+                                                <Style TargetType="Border">
+                                                        <Setter Property="CornerRadius" Value="20"/>
+                                                </Style>
+                                        </TextBox.Resources>
+                                </TextBox>
+                        </StackPanel>
+
+                        <StackPanel Grid.Row="4" Orientation="Horizontal">
+                                <Image Source="/BackgroundIMG/gmail.png" Stretch="Fill" Width="30" Height="30" VerticalAlignment="Top" Margin="3,2,0,0"/>
+
+                                <TextBox x:Name="txtEmail" Text ="Email" Foreground="Gray" FontSize="20" Height="35" 
+        VerticalAlignment="Top" HorizontalAlignment="Left" Width="300"  GotFocus="txtUsername_GotFocus" LostFocus="txtUsername_LostFocus" BorderBrush="Black" Padding="10,2,0,0" Margin="2,0,0,0">
+                                        <TextBox.Resources>
+                                                <Style TargetType="Border">
+                                                        <Setter Property="CornerRadius" Value="20"/>
+                                                </Style>
+                                        </TextBox.Resources>
+                                </TextBox>
+                        </StackPanel>
+
+
+                        <StackPanel Grid.Row="5" Orientation="Horizontal">
+                                <Image Source="/BackgroundIMG/phone.png" Stretch="Fill" Width="35" Height="35" VerticalAlignment="Top"/>
+                                <TextBox x:Name="txtPhone" Text ="Phone number" Foreground="Gray" FontSize="20" Height="35" 
+                                VerticalAlignment="Top" HorizontalAlignment="Left" Width="300"  GotFocus="txtUsername_GotFocus" LostFocus="txtUsername_LostFocus" BorderBrush="Black" Padding="10,2,0,0">
+                                        <TextBox.Resources>
+                                                <Style TargetType="Border">
+                                                        <Setter Property="CornerRadius" Value="20"/>
+                                                </Style>
+                                        </TextBox.Resources>
+                                </TextBox>
+                        </StackPanel>
+
+
+                        <Grid Grid.Row="6">
+                                <Button x:Name="btnSubmit" Width="150" Height="50" HorizontalAlignment="Center" VerticalAlignment="Top" Content="Submit" FontSize="16" FontWeight="SemiBold" BorderBrush="{x:Null}" Background="#FF44DBFE" Foreground="Black" Margin="0,18,0,0" Click="btnSubmit_Click">
+                                        <Button.Resources>
+                                                <Style TargetType="Border">
+                                                        <Setter Property="CornerRadius" Value="30"/>
+                                                </Style>
+                                        </Button.Resources>
+                                </Button>
+                                <Button x:Name="btnLogin" Content="You already have an account ?" Background="{x:Null}" BorderBrush="{x:Null}" Margin="151,93,0,0" Click="btnLogin_Click" Height="50" Width="189" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                        </Grid>
+                </Grid>
+        </Grid>
 </Page>
