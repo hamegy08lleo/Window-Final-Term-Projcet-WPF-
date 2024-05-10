@@ -37,8 +37,8 @@
                                                 <Label Content="Horizon Trail Travel" FontSize="30" VerticalContentAlignment="Bottom" Padding="5,5,5,1.5" FontWeight="Bold"/>
                                         </StackPanel>
                                         <StackPanel>
-                                                <Label Content="Welcome back! Log in to your" FontSize="16"/>
-                                                <Label Content="account to view your deal" FontSize="16"/>
+                                                <Label Content="The world is a book, and those who do not travel " FontSize="16"/>
+                                                <Label Content="read only one page. So let's start exploring!" FontSize="16"/>
 
                                         </StackPanel>
                                 </StackPanel>
@@ -76,7 +76,7 @@
                                 <Image Source="/BackgroundIMG/person.png" Stretch="Fill" Width="35" Height="35" VerticalAlignment="Top"/>
 
                                 <TextBox x:Name="txtName" Text ="Name" Foreground="Gray" FontSize="20" Height="35" 
-                                        VerticalAlignment="Top" HorizontalAlignment="Left" Width="300"  GotFocus="txtName_GotFocus" LostFocus="txtName_LostFocus" BorderBrush="Black" Padding="10,2,0,0">
+                                        VerticalAlignment="Top" HorizontalAlignment="Left" Width="300" BorderBrush="Black" Padding="10,2,0,0" GotFocus="txtName_GotFocus" LostFocus="txtName_LostFocus">
                                         <TextBox.Resources>
                                                 <Style TargetType="Border">
                                                         <Setter Property="CornerRadius" Value="20"/>
@@ -89,7 +89,7 @@
                                 <Image Source="/BackgroundIMG/gmail.png" Stretch="Fill" Width="30" Height="30" VerticalAlignment="Top" Margin="3,2,0,0"/>
 
                                 <TextBox x:Name="txtEmail" Text ="Email" Foreground="Gray" FontSize="20" Height="35" 
-                VerticalAlignment="Top" HorizontalAlignment="Left" Width="300"  GotFocus="txtEmail_GotFocus" LostFocus="txtEmail_LostFocus" BorderBrush="Black" Padding="10,2,0,0" Margin="2,0,0,0">
+                VerticalAlignment="Top" HorizontalAlignment="Left" Width="300" BorderBrush="Black" Padding="10,2,0,0" Margin="2,0,0,0" LostFocus="txtEmail_LostFocus" GotFocus="txtEmail_GotFocus">
                                         <TextBox.Resources>
                                                 <Style TargetType="Border">
                                                         <Setter Property="CornerRadius" Value="20"/>
@@ -102,7 +102,7 @@
                         <StackPanel Grid.Row="5" Orientation="Horizontal">
                                 <Image Source="/BackgroundIMG/phone.png" Stretch="Fill" Width="35" Height="35" VerticalAlignment="Top"/>
                                 <TextBox x:Name="txtPhone" Text ="Phone number" Foreground="Gray" FontSize="20" Height="35" 
-                                        VerticalAlignment="Top" HorizontalAlignment="Left" Width="300"  GotFocus="txtPhone_GotFocus" LostFocus="txtPhone_LostFocus" BorderBrush="Black" Padding="10,2,0,0">
+                                        VerticalAlignment="Top" HorizontalAlignment="Left" Width="300" BorderBrush="Black" Padding="10,2,0,0" GotFocus="txtPhone_GotFocus" LostFocus="txtPhone_LostFocus">
                                         <TextBox.Resources>
                                                 <Style TargetType="Border">
                                                         <Setter Property="CornerRadius" Value="20"/>
