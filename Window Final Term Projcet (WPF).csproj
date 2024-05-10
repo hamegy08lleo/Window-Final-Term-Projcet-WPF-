@@ -190,6 +190,9 @@
     <Compile Include="SearchResult.cs">
       <DependentUpon>ManageRoomModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\Comment.xaml.cs">
+      <DependentUpon>Comment.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\PostHotelChild\UCPostFacilities.xaml.cs">
       <DependentUpon>UCPostFacilities.xaml</DependentUpon>
     </Compile>
@@ -198,9 +201,6 @@
     </Compile>
     <Compile Include="Partnership\PShowHotel.xaml.cs">
       <DependentUpon>PShowHotel.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="UserControls\PostHotelChild\UCPostImage.xaml.cs">
-      <DependentUpon>UCPostImage.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserControls\UCBooking.xaml.cs">
       <DependentUpon>UCBooking.xaml</DependentUpon>
@@ -299,6 +299,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="UserControls\Comment.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UserControls\PostHotelChild\UCPostFacilities.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -308,10 +312,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Partnership\PShowHotel.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="UserControls\PostHotelChild\UCPostImage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
