@@ -63,7 +63,6 @@ namespace Window_Final_Term_Projcet__WPF_
             if (result == true)
             {
                 customerID = windowLogin.userID;
-                MessageBox.Show(customerID.Value.ToString());
                 this.btnLogin.Visibility = Visibility.Collapsed;
                 this.btnRegister.Visibility = Visibility.Collapsed;
                 this.btnLogout.Visibility = Visibility.Visible;
@@ -82,11 +81,15 @@ namespace Window_Final_Term_Projcet__WPF_
                 mainContent.Content = new PManager(ownerID);
                 this.btnBooking.Visibility = Visibility.Collapsed;
                 this.btnLogout_Click(sender, e);  
+                this.btnLogin.Visibility= Visibility.Collapsed;
+                this.btnRegister.Visibility= Visibility.Collapsed;
                 this.btnPartnership.Content = "Customer";
             }
             else
             {
                 mainContent.Content = new Pcustomer();
+                this.btnLogin.Visibility= Visibility.Visible;
+                this.btnRegister.Visibility= Visibility.Visible;
                 this.btnPartnership.Content = "Partnership";
 
             }

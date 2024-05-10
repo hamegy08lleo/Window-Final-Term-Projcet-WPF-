@@ -31,8 +31,6 @@ namespace Window_Final_Term_Projcet__WPF_.DataBase
         }
         public void cancelBooking(int bookingID)
         {
-            //string sqlStr = $"DELETE FROM BOOKING WHERE bookingID = '{bookingID}'"; 
-            //dBConnection.CommandExecute(sqlStr);
             dataBase.Booking.Remove((from booking 
                                     in dataBase.Booking 
                                     where booking.bookingID == bookingID

@@ -105,11 +105,6 @@ namespace Window_Final_Term_Projcet__WPF_
             var query = from q in dataBase.SearchResult
                         where q.hotelID == selection.Hotel.hotelID && q.roomType == selection.RoomType
                         select q;
-            MessageBox.Show(query.Count().ToString());
-            foreach (var q in query)
-            {
-                MessageBox.Show($"{q.roomType}, hehe");
-            }
             return query.FirstOrDefault().roomID;
         }
 

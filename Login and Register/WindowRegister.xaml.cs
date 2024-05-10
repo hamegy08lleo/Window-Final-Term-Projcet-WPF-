@@ -97,7 +97,6 @@ namespace Window_Final_Term_Projcet__WPF_
             if (customerDAO.validateRegister(username, email, phoneNumber))
             {
                 var customerID = customerDAO.register(username, password, email, phoneNumber);
-                MessageBox.Show(customerID.ToString()); 
             }; 
 
         }

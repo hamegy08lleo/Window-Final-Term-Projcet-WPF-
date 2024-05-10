@@ -53,6 +53,7 @@ namespace Window_Final_Term_Projcet__WPF_
             {
                 imageDAO.add(imagePath, hotelID);    
             }
+            new WNotifiaction().Notification("Success"); 
         }
     }
 }

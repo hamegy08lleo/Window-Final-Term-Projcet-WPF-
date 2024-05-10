@@ -1,0 +1,132 @@
+[33m0538cf9[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mNam-Hy[m[33m, [m[1;31morigin/Nam-Hy[m[33m)[m merge VinhTuong
+[33macd11fc[m[33m ([m[1;31morigin/VinhTuong[m[33m, [m[1;32mVinhTuong[m[33m)[m fix uc
+[33m1ec2346[m able to show image now
+[33mb88e29e[m Merge branch 'master' into VinhTuong
+[33m4991bc6[m diverge hotels for each owner
+[33m4780b1c[m able to login and register owner now
+[33mdf76efc[m now can register
+[33mcc39b60[m now can login
+[33mfc3d1c6[m merge VinhTuong into Nam-Hy and now can login
+[33mf55a58f[m now can insert hotel images
+[33m8a58e94[m WindowLogin and WindowRegister
+[33m2cb364d[m fix UC and add more tables
+[33m50f120d[m[33m ([m[1;31morigin/master[m[33m, [m[1;32mmaster[m[33m)[m add user to database
+[33mdbedee6[m fix result
+[33mc36ca9f[m fix merging
+[33md789f48[m Merge branch 'Nam-Hy'
+[33m380a292[m Fix UCBooking
+[33m4b3f021[m fix UCBooking
+[33meb74f0e[m remove avalonia
+[33m9f76be8[m generalize roomDAO
+[33m1bc0d7e[m remove avalonia
+[33m29c894a[m small fix
+[33m485443c[m fix linq query logic
+[33m1ac5578[m fix linq query logic
+[33m7016ffc[m[33m ([m[1;31morigin/BugByWallLiu[m[33m)[m Revert "small fix"
+[33me3a971a[m Merge branch 'master' of https://github.com/hamegy08lleo/Window-Final-Term-Projcet-WPF-
+[33m2fd69f1[m WallLiu merge master
+[33mc9f14aa[m fix UI HotelResult, star rating
+[33m9ead019[m small fix
+[33mf90f383[m convert into linq
+[33m31f4d3d[m try fix nuget problem
+[33m6791788[m add entity
+[33m0617433[m fix
+[33m21c07f1[m Merge branch 'master' into Nam-Hy
+[33m494903f[m merge WallLiu branch
+[33mf8f5598[m reformat xaml
+[33m09e1275[m[33m ([m[1;32mWallLiu[m[33m)[m Packing item into folder and change logo path correctly
+[33m5a9295d[m complete scale Result hotel
+[33m8c158f2[m make PAddHotel can get value 2 UC
+[33m9930e57[m test some thing in UCPostChild
+[33m302e8a6[m Complete all UCPostHotel
+[33m29c954e[m Revert "adjust something in UC"
+[33ma3047ea[m adjust something in UC
+[33m25c2c09[m Revert "Bug: add Handyy Control, fix lable displaying"
+[33m071cb44[m Bug: add Handyy Control, fix lable displaying
+[33m5819d1a[m completed Bookings, now can actually show the bookings and cancel it
+[33mfbf2762[m adjust something in UC
+[33m66ffc40[m fix uc
+[33meb83cce[m rating icon config
+[33m950475f[m fix UI
+[33m05c6b19[m allow Add Hotel and completing Overview
+[33m5deac0d[m resolve merge conflict
+[33mf13052a[m resolve merge
+[33m9ba8225[m can now book
+[33m4ea728a[m UChotel UCRoom PAddHotel PManager PShoeHotel
+[33m076327d[m PAddHotel and PPartnership
+[33m9eccdc5[m add PAddHotel + PShowHotel
+[33m96058ae[m Merge branch 'master' into WallLiu
+[33m49ccf21[m sync database
+[33m1c917bd[m create PManager PShowHotel
+[33ma3e5e11[m connect DAO to UI
+[33mbbcebff[m Merge branch 'master' into Nam-Hy
+[33me4b241e[m merge master
+[33m3756435[m Merge branch 'master' into Nam-Hy
+[33m14d4491[m move createDataBase into Database folder
+[33mbad31f6[m Scale all PHotelDetail child and make them lung linh huyen ao
+[33m3f610b1[m change DAO and Database
+[33mea2d666[m scale UChotelres
+[33m5a86cb1[m scale main window + PCus + PPart + image of maincontent
+[33m073284c[m reconstruct CreateDataBase.sql
+[33m5623c3f[m update code create table
+[33m66bf8bb[m add event to button with roomDAO
+[33md975550[m resolve conflict
+[33mf2b5e32[m move UCHotelResult to WPF
+[33m29b8b82[m Merge branch 'Nam-Hy' of https://github.com/hamegy08lleo/Window-Final-Term-Projcet-WPF- into Nam-Hy
+[33me8aae70[m test event of search page in mainwwindow
+[33mb925804[m add dbconnection, roomDao, and more
+[33m2e41d63[m Hotel name in PPartnership
+[33m090ab2d[m Update Window Final Term Project.drawio
+[33m17d9197[m  create PPartnership
+[33m2b998db[m Update Window Final Term Project.drawio
+[33ma9ef132[m Update Window Final Term Project.drawio
+[33m78c4a8c[m Update Window Final Term Project.drawio
+[33m13e2440[m delete some trash file and and sql back to project
+[33mf5405d7[m fix overview bugs
+[33mef50f0c[m Update Window Final Term Project.drawio
+[33m774f656[m Added Window Final Term Project.drawio
+[33mf90962d[m create folder Diagram
+[33m0ef1dc1[m fix sql file not exit
+[33m15fd17e[m completing
+[33mfe5bfee[m create db and sql code
+[33mc83f339[m adjust name some button and these event in hotel detail
+[33m9b710b7[m solved font problem
+[33m2239ea3[m add a trash looking item into child page of Hotel Detail Page
+[33mc69a018[m Hotel detail and there child in new folder
+[33m4a91e1a[m Add Presult
+[33m3cb4688[m Fixing Branch
+[33m498136b[m fixing branch
+[33mdd375c8[m merge from master
+[33m3cdbd77[m adjust grid at pCustomer and mainwindow
+[33m0cea3e8[m  fix MainWindow by putting it into new Grid with rows and columns definition
+[33m5b01ffb[m Merge branch 'master' into Nam-Hy
+[33m342bc55[m testing window login with Wall_liu
+[33m61b3c5d[m PCustomer checkin checkout duration load
+[33m3118105[m layout checkin checkout and duration
+[33mc32b438[m add more button in pCustomer
+[33m6b53f40[m corner radius in PCustomer
+[33m215c737[m Window Login with grid
+[33m55e0dc7[m PCustomer checkin checkout duration load
+[33mba9076e[m layout checkin checkout and duration
+[33m0258d69[m Row Defiinition for Window Login
+[33m758aed9[m placeholder for login window
+[33m0e693c3[m add more button in pCustomer
+[33md52d3bc[m corner radius in PCustomer
+[33m5a428d4[m Delete CustomerPage
+[33mec4eb6a[m Window Login and Register
+[33m1acfabe[m Window Login and Register
+[33m853eacb[m fix PageCustomer
+[33m7a9ce03[m fix register button
+[33m1c70064[m Window Login
+[33m0e18881[m WindowLogin
+[33m4682812[m Create README.md
+[33mbf97cd8[m load content when click button
+[33md29083e[m adjust size and test cusmtorPage
+[33me8a247a[m UCInformation
+[33m582aa30[m UCInformation
+[33m036118c[m wall Liu font p2
+[33m0fd47b0[m add more font problem :V
+[33ma1c596c[m main window and font
+[33mcb27777[m mainWindow
+[33m9db7622[m Add project files.
+[33m1471325[m Add .gitattributes and .gitignore.

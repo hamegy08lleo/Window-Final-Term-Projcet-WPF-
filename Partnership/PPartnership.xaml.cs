@@ -50,6 +50,7 @@ namespace Window_Final_Term_Projcet__WPF_
             MainWindow mainWindow = Window.GetWindow(this) as MainWindow;
             var roomDAO = new RoomDAO(); 
             roomDAO.Add(post);
+            new WNotifiaction().Notification("Success!"); 
         }
 
         private void cbbHotel_SelectionChanged(object sender, SelectionChangedEventArgs e)
